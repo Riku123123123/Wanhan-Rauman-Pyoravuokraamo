@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanhan Rauman Pyörävuokraus</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" sizes="48x48" href="Logo.png">
+    <script src="script.js" defer></script>
+    <!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/346d4269118214d6df49f9de/script.js"></script> <!-- End cookieyes banner -->
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="Logo3.png" alt="Wanhan Rauman Pyörävuokraus">
+        </div>
+        <div class="nav-items">
+            <a href="#" onclick="navigateTo('home')">Koti</a>
+            <a href="#" onclick="navigateTo('about')">Tietoja</a>
+            <a href="#" onclick="navigateTo('bikes')">Pyörät</a>
+            <a href="#" onclick="navigateTo('contact')">Yhteystiedot</a>
+            <a href="#" onclick="navigateTo('rent')">Vuokraa</a>
+
+        </div>
+    </nav>
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="column-left">
+                <img src="Logo1.0.png" alt="Wanha Rauma" class="hero-image">
+            </div>
+            <div class="column-right">
+                <z>WANHAN RAUMAN PYÖRÄVUOKRAAMO</z>
+                <p>KOE RAUMA PYÖRÄN PÄÄLTÄ</p>
+                <button onclick="ShowDetails()">Lisätietoja</button>
+            </div>
+        </div>
+    </section> 
+
+    <!-- Placeholder sections for other pages -->
+    <section id="about" style="display: none;">
+        <h2>Tietoja</h2>
+        <p>
+            Tervetuloa tutustumaan Rauman Pitsikaupungin kesäyrittäjien joukkoon, jossa me, veljekset, olemme mukana luomassa unohtumattomia hetkiä pyöräilyseikkailuiden parissa. Yrityksemme kukoistaa Rauman matkailun ytimessä, vuokraamalla laadukkaita pyöriä suoraan matkailutoimistomme edessä.
+            
+            Meidän tarjonnastamme löydät kahdeksan erilaista pyörää, jotka odottavat innokkaita matkaajia. Jokainen pyörä on huolella huollettu ja valittu tarjoamaan turvallisia ja nautinnollisia pyöräilyhetkiä Rauman historiallisissa maisemissa. Olipa intohimosi kaupunkiseikkailut tai rauhalliset maisemareitit, meiltä löydät sopivan menopelin tarpeisiisi.
+            
+            Olemme sitoutuneet tarjoamaan ystävällistä ja avuliasta palvelua sekä auttamaan sinua löytämään juuri sinulle sopivan pyörän ja reitin, jotta voit kokea Rauman kauneuden täysin siemauksin. Tule vierailemaan luonamme ja lähtemään seikkailuun kanssamme!</p>
+        <p>Olemme avoinna maanantaista perjantaihin klo 9–17 ja lauantaisin klo 10–14. Tervetuloa tutustumaan valikoimaamme!</p>
+    </section>
+    
+    <section id="bikes" style="display: none;">
+        <h2>Pyörät</h2>
+        <p>Meiltä löydät laadukkaat ja hyvin huolletut pyörät eri käyttötarkoituksiin:</p>
+        <p>_</p>
+        <div class="bike-gallery">
+            <img src="mummopyora.jpg" alt="Mummopyörä">
+            <img src="mummopyora.jpg" alt="Hybridipyörä">
+            <img src="mummopyora.jpg" alt="Maastopyörä">
+            <img src="mummopyora.jpg" alt="Sähköpyörä">
+            <img src="mummopyora.jpg" alt="Mummopyörä">
+            <img src="mummopyora.jpg" alt="Hybridipyörä">
+            <img src="mummopyora.jpg" alt="Maastopyörä">
+            <img src="mummopyora.jpg" alt="Sähköpyörä">
+        </div>
+        <p>_</p>
+        <p>Ota <span id="contact-link" onclick="navigateTo('contact')">yhteyttä</span> ja varaa pyöräsi tai vuokraa pyörä paikan päältä!</p>
+    </section>
+    
+    
+    <section id="contact" style="display: none;">
+        <h2>Yhteystiedot</h2>
+        <p>Osoite: <a href="https://maps.google.com/?q=Savilankatu+8,+26100+Rauma" target="_blank">Savilankatu 8, 26100 Rauma</a></p>
+        <p>Puhelinnumerot: <a href="tel:+358449746457">044 974 6457</a> / <a href="tel:+358449787610">044 978 7610</a></p>
+        <p>Sähköposti: <a href="mailto:wrpyoravuokraamo@gmail.com">wrpyoravuokraamo@gmail.com</a></p>
+    </section>
+
+    <section id="rent" style="display: none;">
+        <h2>Vuokraa pyörä täältä</h2>
+        <h4>Voit vuokrata pyörän <a href="https://twice.shop/wanhanraumanpyrvuokraus">netistä</a>, <a href="mailto:wrpyoravuokraamo@gmail.com">sähköpostilla</a> tai <a href="tel:+358449746457">soittamalla</a></h4>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Wanhan Rauman Pyörävuokraus</p>
+        <p>-</p>
+        <p>Site by Riku Silander</p>
+        <div class="logo">
+            <img src="Logo3.png" alt="Wanha Rauma" class="hero-image">
+        </div>
+    </footer>
+</body>
+</html>

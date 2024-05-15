@@ -1,0 +1,301 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+body {
+    background: #000;
+    background-image: url(Logos\(1\).png);
+    background-size: cover;
+    padding: 20px;
+}
+
+/* Lisää CSS-animaatio boksien esiintulolle */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Alustetaan boksien alkutila */
+  section {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  /* Sisältö näkyväksi */
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+nav {
+    height: 70px;
+    background: #9e0000;
+    border-radius: 1cm; /* Reunusalueen pyöristys */
+    box-shadow: 0 0 10px rgb(255, 0, 0); /* Varjo */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0cm calc ((100vw - 1300px) / 2);
+}
+
+.logo img {
+    width: 150px; /* Aseta haluttu leveys */
+    height: auto; /* Automaattinen korkeus suhteessa leveyteen */
+    margin-right: 0px; /* Lisää hieman marginaalia tekstin ja kuvan väliin */
+    margin: 5px;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    padding: 0 0.5cm;
+}
+
+nav a:hover {
+    color: #ff0000;
+}
+
+.hero {
+    background-image: url('Taustakuva.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#contact-link {
+    color: #ff0000; /* Tekstin väri */
+    text-decoration: underline; /* Alleviivaus */
+    cursor: pointer; /* Osoitin muutuksi kädelle vihjeeksi, kun sitä pidetään päällä */
+}
+
+#contact-link:hover {
+    color: #ff7373; /* Uusi väri kun hiiren osoitin on päällä */
+}
+
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 95hv;
+    padding: 1cm calc ((100vw - 1300px) / 2);
+}
+
+.column-left {
+    display: grid;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0cm 2cm;
+}
+
+.column-left h1 {
+    margin-bottom: 1cm;
+    font-size: 40px;
+}
+
+.column-left p {
+    margin-bottom: 5cm;
+    font-size: 29px;
+    line-height: 2;
+    max-width: 100%; /* Rajoita tekstin leveys */
+}
+
+button {
+    padding: 0.5cm 2cm;
+    font-size: 20px;
+    border-radius: 1cm;
+    color: #000;
+    background: #ff0000;
+    cursor: pointer;
+    border-radius: 1cm; /* Reunusalueen pyöristys */
+    box-shadow: 0 0 10px rgb(255, 0, 0); /* Varjo */
+}
+
+button:hover {
+    background: #ff5151;
+    border-radius: 1cm;
+    color: #000;
+    border-radius: 1cm; /* Reunusalueen pyöristys */
+    box-shadow: 0 0 10px rgb(255, 0, 0); /* Varjo */
+}
+
+.column-right z {
+    color: #ffffff;
+    margin-bottom: 2cm;
+    font-size: 40px;
+    line-height: 1;
+    max-width: 100%; /* Rajoita tekstin leveys */
+    text-shadow: 0 0 10px rgb(255, 0, 0); /* Varjo */
+    
+}
+
+.column-right p {
+    color: #ffffff;
+    margin-bottom: 1cm;
+    font-size: 30px;
+    line-height: 1;
+    max-width: 100%; /* Rajoita tekstin leveys */
+    text-shadow: 0 0 10px rgb(0, 0, 0); /* Varjo */
+}
+
+.column-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 6cm 5cm;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+}
+
+/* Yhteiset tyylit kaikille section-elementeille */
+section {
+    stroke: #ff0000;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 20px; /* Ylä- ja alareunan välinen marginaali */
+    padding: 20px; /* Sisäinen täyttö */
+    background-color: #910000; /* Taustaväri */
+    border-radius: 10px; /* Reunusalueen pyöristys */
+    box-shadow: 0 0 10px rgb(255, 0, 0); /* Varjo */
+}
+
+/* Erilliset tyylit eri id:lle */
+#about {
+    background-color: #9e0000; /* Tietoja-sivun taustaväri */
+    font-size: 20px;
+}
+
+#bikes {
+    background-color: #9e0000; /* Pyörät-sivun taustaväri */
+    font-size: 20px;
+}
+
+.bike-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Neljä kuvaa riviä kohti */
+    gap: 10px; /* Väli kuvien välillä */
+}
+
+.bike-gallery img {
+    width: 100%; /* Kuvan leveys täyttää sen sisältämän elementin leveyden */
+    height: auto; /* Kuvan korkeus skaalautuu automaattisesti suhteessa leveyteen */
+}
+
+
+#contact {
+    background-color: #9e0000; /* Yhteystiedot-sivun taustaväri */
+    font-size: 20px;
+}
+
+/* Värit linkeille */
+a {
+    color: #ff0000; /* Punainen väri peruslinkeille */
+}
+
+a:hover {
+    color: #ffc6c6; /* Vaaleanpunainen väri hiiren ollessa linkin päällä */
+}
+
+#contact-link {
+    color: #ff0000; /* Vihreä väri yhteystietolinkille */
+}
+
+#contact-link:hover {
+    color: #ffc6c6; /* Vaaleanvihreä väri hiiren ollessa yhteystietolinkin päällä */
+}
+
+footer {
+    background-color: #910000;
+    color: #000000;
+    text-align: center;
+    border-radius: 0.5cm;
+    padding: 20px 0;
+    bottom: 1;
+    left: 2;
+    width: 100%;
+    height: 2.5cm;
+    box-shadow: 0 0 10px #ffffff;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .nav-items {
+        margin-top: 5px; /* Lisää tilaa yläreunan ja navigointipalkin välille */
+        z-index: 2;
+    }
+
+    nav {
+        flex-direction: row; /* Aseta pystysuuntainen järjestely */
+        align-items: center; /* Keskity navigointipalkki vaakasuunnassa */
+        height: 2.5cm; /* Aseta korkeus automaattisesti sisältöön */
+        border-radius: 0.5cm;
+    }
+
+    a {
+        margin-bottom: 10px; /* Lisää tilaa navigointinappien väliin */
+    }
+    
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 12cm;
+    }
+
+    .column-left h1 {
+        font-size: 24px;
+    }
+
+    .column-left p {
+        font-size: 18px;
+    }
+
+    .column-right {
+        margin-top: -7cm; /* Aseta negatiivinen marginaali siirtääksesi nappia ylöspäin */
+        padding: 7cm 1cm; /* Esimerkiksi */
+        align-items: baseline;
+    }
+
+    .column-right z {
+        font-size: 20px; /* Esimerkiksi */
+    }
+    
+    /* Säädä lisätietojen tekstin koko pienempien näyttöjen mukaan */
+    .column-right p {
+        font-size: 15px; /* Esimerkiksi */
+    }
+    
+    /* Muuta napin kokoa pienempien näyttöjen mukaan */
+    button {
+        padding: 0.3cm 1.5cm; /* Esimerkiksi */
+        font-size: 18px; /* Esimerkiksi */
+    }
+
+    /* Säädä napin koko pienempien näyttöjen mukaan */
+    button {
+        padding: 0.2cm 1cm;
+        font-size: 16px;
+    }
+
+    /* Säädä kuvagallerian kuvien kokoa pienempien näyttöjen mukaan */
+    .bike-gallery {
+        grid-template-columns: 1fr; /* Yksi kuva per rivi pienempien näyttöjen mukaan */
+    }
+
+    #contact {
+        font-size: 15px;
+    }
+    
+}
