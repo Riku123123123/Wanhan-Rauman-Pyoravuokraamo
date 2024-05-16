@@ -50,6 +50,12 @@ nav {
     margin: 5px;
 }
 
+.insta a img {
+    width: 1.5cm;
+    height: auto;
+    margin-left: 27cm;
+}
+
 
 nav a {
     text-decoration: none;
@@ -231,6 +237,12 @@ footer {
 
 @media screen and (max-width: 768px) {
 
+    .insta a img {
+        margin-left: 10px; /* Muuta Instagram-logon vasenta marginaalia pienemmäksi */
+        width: 1cm;
+        height: auto;
+    }
+
     .nav-items {
         margin-top: 5px; /* Lisää tilaa yläreunan ja navigointipalkin välille */
         z-index: 2;
@@ -241,6 +253,13 @@ footer {
         align-items: center; /* Keskity navigointipalkki vaakasuunnassa */
         height: 2.5cm; /* Aseta korkeus automaattisesti sisältöön */
         border-radius: 0.5cm;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #000;
+        padding: 0 0.5cm;
+        margin-bottom: 10px; /* Lisää marginaali myös puhelimenäytöille */
     }
 
     a {
@@ -296,6 +315,11 @@ footer {
 
     #contact {
         font-size: 15px;
+    }
+
+    #rent iframe {
+        max-width: 100%; /* Maksimileveys pienemmillä näytöillä */
+        max-height: 400px; /* Maksimikorkeus pienemmillä näytöillä */
     }
     
 }
