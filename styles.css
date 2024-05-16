@@ -50,8 +50,12 @@ nav {
     margin: 5px;
 }
 
+.insta a {
+    display: inline-block; /* Muuta linkin näyttömuoto lohkoksi */
+}
+
 .insta a img {
-    width: 1.5cm;
+    width: 1cm;
     height: auto;
     margin-left: 27cm;
 }
