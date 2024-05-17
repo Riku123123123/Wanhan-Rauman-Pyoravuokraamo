@@ -18,5 +18,28 @@ function showDetails() {
   }
   
 
+  document.addEventListener('DOMContentLoaded', function() {
+    // Set default language based on browser language or fallback to Finnish
+    const userLang = navigator.language || navigator.userLanguage;
+    const defaultLang = userLang.includes('fi') ? 'fi' : 'en';
+    setLanguage(defaultLang);
+});
+
+function setLanguage(lang) {
+    // Get all elements for both languages
+    const fiElements = document.querySelectorAll('.fi');
+    const enElements = document.querySelectorAll('.en');
+
+    // Show or hide elements based on selected language
+    if (lang === 'fi') {
+        fiElements.forEach(element => element.style.display = '');
+        enElements.forEach(element => element.style.display = 'none');
+    } else if (lang === 'en') {
+        fiElements.forEach(element => element.style.display = 'none');
+        enElements.forEach(element => element.style.display = '');
+    }
+}
+
+
 const express = require('express');
 const app = express();
