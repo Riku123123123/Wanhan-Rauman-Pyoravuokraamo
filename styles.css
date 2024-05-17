@@ -257,6 +257,27 @@ footer {
 
 @media screen and (max-width: 1500px) {
 
+    .language-selector {
+        text-align: center;
+        margin: 20px 0;
+    }
+    
+    .language-selector button {
+        margin: 0 5px;
+        padding: 5px 5px;
+        background-color: #910000;
+        color: #ffffff;
+        border: none;
+        border-radius: 0.2cm;
+        cursor: cus;
+        font-size: 15px;
+    }
+    
+    .language-selector button:hover {
+        background-color: #780000;
+        color: #ff0000;
+    }
+
     .hero {
         background-image: url('Taustakuva\ 3.jpg');
         background-size: cover;
@@ -284,7 +305,7 @@ footer {
     nav a {
         text-decoration: none;
         color: #000;
-        padding: 0 0cm;
+        padding: 0 0.1cm;
         margin-bottom: 10px; /* Lisää marginaali myös puhelimenäytöille */
     }
 
