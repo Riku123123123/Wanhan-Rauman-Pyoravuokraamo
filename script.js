@@ -41,10 +41,22 @@ function showDetails() {
     setLanguage(defaultLang);
 });
 
-function toggleMenu() {
-    const navItems = document.querySelector('.nav-items');
-    navItems.classList.toggle('active');
-}
+document.addEventListener('DOMContentLoaded', function() {
+    // Toggle valikon näyttäminen/piilottaminen
+    function toggleMenu() {
+        const navItems = document.querySelector('.nav-items');
+        navItems.classList.toggle('active');
+    }
+
+    // Aseta tapahtumankäsittelijät
+    document.querySelector('.hamburger').addEventListener('click', toggleMenu);
+    document.querySelectorAll('.nav-items a').forEach(item => {
+        item.addEventListener('click', toggleMenu);
+    });
+});
+
+
+
 
 
 function setLanguage(lang) {
