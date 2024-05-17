@@ -32,6 +32,27 @@ body {
     transform: translateY(0);
   }
 
+  .language-selector {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.language-selector button {
+    margin: 0 10px;
+    padding: 5px 10px;
+    background-color: #910000;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.2cm;
+    cursor: cus;
+    font-size: 20px;
+}
+
+.language-selector button:hover {
+    background-color: #780000;
+    color: #ff0000;
+}
+
 nav {
     height: 70px;
     background: #9e0000;
@@ -50,16 +71,11 @@ nav {
     margin: 5px;
 }
 
-.insta a {
-    display: inline-block; /* Muuta linkin näyttömuoto lohkoksi */
-}
-
 .insta a img {
-    width: 1cm;
+    width: 1.5cm;
     height: auto;
-    margin-left: 27cm;
+    margin-left: 20cm;
 }
-
 
 nav a {
     text-decoration: none;
@@ -69,10 +85,11 @@ nav a {
 
 nav a:hover {
     color: #ff0000;
+    cursor: cell;
 }
 
 .hero {
-    background-image: url('Taustakuva.jpg');
+    background-image: url('Taustakuva\ 2.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -80,7 +97,7 @@ nav a:hover {
 #contact-link {
     color: #ff0000; /* Tekstin väri */
     text-decoration: underline; /* Alleviivaus */
-    cursor: pointer; /* Osoitin muutuksi kädelle vihjeeksi, kun sitä pidetään päällä */
+    cursor: cell; /* Osoitin muutuksi kädelle vihjeeksi, kun sitä pidetään päällä */
 }
 
 #contact-link:hover {
@@ -120,7 +137,7 @@ button {
     border-radius: 1cm;
     color: #000;
     background: #ff0000;
-    cursor: pointer;
+    cursor: cell;
     border-radius: 1cm; /* Reunusalueen pyöristys */
     box-shadow: 0 0 10px rgb(255, 0, 0); /* Varjo */
 }
@@ -214,6 +231,7 @@ a {
 
 a:hover {
     color: #ffc6c6; /* Vaaleanpunainen väri hiiren ollessa linkin päällä */
+    cursor: cell;
 }
 
 #contact-link {
@@ -237,12 +255,16 @@ footer {
     box-shadow: 0 0 10px #ffffff;
 }
 
+@media screen and (max-width: 1500px) {
 
-
-@media screen and (max-width: 768px) {
+    .hero {
+        background-image: url('Taustakuva\ 3.jpg');
+        background-size: cover;
+        background-position: center;
+    }
 
     .insta a img {
-        margin-left: 10px; /* Muuta Instagram-logon vasenta marginaalia pienemmäksi */
+        margin-left: 0px; /* Muuta Instagram-logon vasenta marginaalia pienemmäksi */
         width: 1cm;
         height: auto;
     }
@@ -274,7 +296,7 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 12cm;
+        height: auto;
     }
 
     .column-left h1 {
