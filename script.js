@@ -25,6 +25,12 @@ function showDetails() {
     setLanguage(defaultLang);
 });
 
+function toggleMenu() {
+    const navItems = document.querySelector('.nav-items');
+    navItems.classList.toggle('active');
+}
+
+
 function setLanguage(lang) {
     // Get all elements for both languages
     const fiElements = document.querySelectorAll('.fi');
