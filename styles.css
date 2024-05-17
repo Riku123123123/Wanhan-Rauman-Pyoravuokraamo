@@ -259,16 +259,16 @@ footer {
 
     .language-selector {
         text-align: center;
-        margin: 20px 0;
+        margin: 0px 0px;
     }
     
     .language-selector button {
-        margin: 0 5px;
-        padding: 5px 5px;
+        margin: 0 1px;
+        padding: 10px 5px;
         background-color: #910000;
         color: #ffffff;
         border: none;
-        border-radius: 0.2cm;
+        border-radius: 1cm;
         cursor: cus;
         font-size: 15px;
     }
