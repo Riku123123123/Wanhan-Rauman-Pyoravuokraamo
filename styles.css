@@ -19,6 +19,7 @@ body {
     to { opacity: 1; transform: translateY(0); }
   }
   
+  
   /* Alustetaan boksien alkutila */
   section {
     opacity: 0;
@@ -37,9 +38,30 @@ body {
     margin: 20px 0;
 }
 
+nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #910000;
+    z-index: 3;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.nav-items {
+    display: flex;
+    gap: 1rem;
+}
+
 .language-selector button {
     margin: 0 10px;
-    padding: 5px 10px;
+    padding: 5px 5px;
     background-color: #910000;
     color: #ffffff;
     border: none;
@@ -72,7 +94,7 @@ nav {
 }
 
 .insta a img {
-    width: 1.5cm;
+    width: 1cm;
     height: auto;
     margin-left: 20cm;
 }
@@ -270,7 +292,7 @@ footer {
         border: none;
         border-radius: 1cm;
         cursor: cus;
-        font-size: 15px;
+        font-size: 10px;
     }
     
     .language-selector button:hover {
@@ -290,9 +312,29 @@ footer {
         height: auto;
     }
 
+    .hamburger {
+        display: block;
+    }
+
     .nav-items {
-        margin-top: 5px; /* Lisää tilaa yläreunan ja navigointipalkin välille */
-        z-index: 2;
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #910000;
+    }
+
+    .nav-items.active {
+        display: flex;
+    }
+
+    .nav-items a {
+        padding: 1rem;
+        text-align: center;
+        border-top: 1px solid #ccc;
     }
 
     nav {
