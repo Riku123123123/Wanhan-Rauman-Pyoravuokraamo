@@ -1,9 +1,25 @@
 function navigateTo(sectionId) {
+    // Piilota kaikki osiot
     document.querySelectorAll('section').forEach(section => {
         section.style.display = 'none';
     });
+
+    // Näytä valittu osio
     document.getElementById(sectionId).style.display = 'block';
+
+    // Päivitä URL-osoitteen fragmentti
+    window.location.hash = sectionId;
 }
+
+// Tarkista alussa URL-fragmentti ja näytä vastaava osio
+document.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+        navigateTo(hash);
+    } else {
+        navigateTo('home'); // Oletuksena näytetään kotisivu
+    }
+});
 
 function ShowDetails() {
     document.querySelectorAll('section').forEach(section => {
