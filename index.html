@@ -26,13 +26,6 @@
         <div class="nav-logo">
             <img src="Logo3.png" alt="Wanhan Rauman Pyörävuokraus">
         </div>
-        <div class="language-selector">
-            <button onclick="setLanguage('fi')">Fi</button>
-            <button onclick="setLanguage('en')">En</button>
-        </div>
-        <div class="insta">
-            <a href="https://www.instagram.com/wrpyoravuokraamo/" target="_blank"><img src="Instagram.png" alt="Instagram"></a>
-        </div>
         <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
         <div class="nav-items">
             <a href="#home" onclick="navigateTo('home')"><span class="fi">Koti</span><span class="en" style="display:none;">Home</span></a>
@@ -40,6 +33,13 @@
             <a href="#bikes" onclick="navigateTo('bikes')"><span class="fi">Pyörät</span><span class="en" style="display:none;">Bikes</span></a>
             <a href="#contact" onclick="navigateTo('contact')"><span class="fi">Yhteystiedot</span><span class="en" style="display:none;">Contact</span></a>
             <a href="#rent" onclick="navigateTo('rent')"><span class="fi">Vuokraa</span><span class="en" style="display:none;">Rent</span></a>
+            <div class="insta">
+                <a href="https://www.instagram.com/wrpyoravuokraamo/" target="_blank"><img src="Instagram.png" alt="Instagram"></a>
+            </div>
+            <div class="language-selector">
+                <button onclick="setLanguage('fi')">Fi</button>
+                <button onclick="setLanguage('en')">En</button>
+            </div>
         </div>
     </nav>
     <section id="home" class="hero">
@@ -62,18 +62,27 @@
     <!-- Placeholder sections for other pages -->
     <section id="about" style="display: none;">
         <h2><span class="fi">Tietoja</span><span class="en" style="display:none;">About</span></h2>
+        <br>
         <p class="fi">Me, Wanhan Rauman Pyörävuokraamo, olemme veljeksiä, jotka on perustanut tämän kesäyrityksen Raumalle. Olemme ylpeitä siitä, että voimme tarjota kätevän polkupyörävuokrauspalvelun kaupungin vierailijoille ja asukkaille. Haluamme kannustaa ihmisiä liikkumaan aktiivisesti ja ympäristöystävällisesti, ja polkupyörät ovat siihen loistava tapa.</p>
+        <br>
         <p class="en" style="display:none;">We, Old Rauma Bike Rentals, are brothers who founded this summer business in Rauma. We are proud to offer a convenient bicycle rental service for the city’s visitors and residents. We want to encourage people to move actively and environmentally friendly, and bicycles are a great way to do that.</p>
+        <br>
         <p class="fi">Toimipisteemme sijaitsee Rauman Savilassa, aivan kaupungin ytimessä. Meille on tärkeää, että asiakkaidemme on helppo löytää meidät, ja siksi valitsimme sijainniksemme juuri tämän keskeisen paikan. Olemme aivan Rauman matkailutoimiston vieressä osoitteessa Savilankatu 8, joten meidät löytävät niin paikalliset kuin matkailijatkin.</p>
+        <br>
         <p class="en" style="display:none;">Our office is located in Rauma's Savila, right in the heart of the city. It is important to us that our customers can easily find us, which is why we chose this central location. We are right next to the Rauma Tourist Office at Savilankatu 8, so both locals and tourists can find us easily.</p>
+        <br>
         <p class="fi">Tarjoamme laajan valikoiman erilaisia polkupyöriä, jotta jokainen löytäisi tarpeisiinsa sopivan menopelin. Olipa kyseessä kaupunki- tai retkipyöräily tai perheen yhteinen pyöräretki, meiltä löytyy sopiva vaihtoehto. Jokainen pyörämme huolletaan säännöllisesti, jotta voimme taata asiakkaillemme turvallisen ja mukavan pyöräilykokemuksen.</p>
+        <br>
         <p class="en" style="display:none;">We offer a wide range of different bicycles so that everyone can find the right vehicle for their needs. Whether it’s city or touring cycling or a family bike trip, we have the right option. Each of our bikes is regularly serviced to ensure our customers have a safe and comfortable cycling experience.</p>
+        <br>
         <p class="fi">Pyrimme aina ylittämään asiakkaidemme odotukset ja tarjoamaan unohtumattoman pyöräilykokemuksen Raumalla. Lisäksi haluamme omalta osaltamme edistää kestävää matkailua ja ympäristöystävällisiä liikkumistapoja Raumalla.</p>
+        <br>
         <p class="en" style="display:none;">We always strive to exceed our customers' expectations and provide an unforgettable cycling experience in Rauma. Additionally, we want to promote sustainable tourism and environmentally friendly ways of moving around Rauma.</p>
     </section>
     
     <section id="bikes" style="display: none;">
         <h2><span class="fi">Pyörät</span><span class="en" style="display:none;">Bikes</span></h2>
+        <br>
         <p class="fi">Meiltä löydät laadukkaat ja hyvin huolletut pyörät eri käyttötarkoituksiin:</p>
         <p class="en" style="display:none;">We offer high-quality and well-maintained bikes for different purposes:</p>
         <div class="bike-gallery">
@@ -86,6 +95,7 @@
             <img src="hybrido.jpg" alt="Maastopyörä">
             <img src="mummopyora.jpg" alt="Sähköpyörä">
         </div>
+        <br>
         <p class="fi">Ota <span id="contact-link" onclick="navigateTo('contact')">yhteyttä</span> ja varaa pyöräsi tai vuokraa pyörä paikan päältä!</p>
         <p class="en" style="display:none;"><span id="contact-link" onclick="navigateTo('contact')">Contact</span> us to reserve your bike or rent one on site!</p>
     </section>
@@ -104,16 +114,17 @@
     <section id="rent" style="display: none;">
         <h2 class="fi">Vuokraa pyörä täältä</h2> 
         <h2 class="en" style="display:none;">Rent a bike here</h2>
+        <br>
         <h4>
             <span class="fi">Voit vuokrata pyörän <a href="https://twice.shop/wanhanraumanpyrvuokraus">netistä</a>, <a href="mailto:wrpyoravuokraamo@gmail.com">sähköpostilla</a> tai <a href="tel:+358449746457">soittamalla</a></span>
             <span class="en" style="display:none;">You can rent a bike <a href="https://twice.shop/wanhanraumanpyrvuokraus">online</a>, via <a href="mailto:wrpyoravuokraamo@gmail.com">email</a>, or by <a href="tel:+358449746457">calling</a></span>
         </h4>
-        <iframe width="1000" height="560" src="https://twice.shop/wanhanraumanpyrvuokraus/shop" frameborder="1"></iframe>
+        <iframe width="1600" height="560" src="https://twice.shop/wanhanraumanpyrvuokraus/shop" frameborder="1"></iframe>
     </section>
 
     <footer>
         <p>&copy; 2024 Wanhan Rauman Pyörävuokraamo</p>
-        <p>-</p>
+        <br>
         <p>Site by Riku Silander</p>
         <div class="logo">
             <img src="Logo3.png" alt="Wanha Rauma" class="hero-image">
