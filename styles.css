@@ -48,7 +48,7 @@ nav {
     padding: 1rem;
     background-color: #910000;
     z-index: 3;
-    width: 95%;
+    width: 90%;
     height: 100px;
     border-radius: 1cm;
     box-shadow: 0 0 10px rgb(255, 0, 0);
@@ -241,15 +241,28 @@ a:hover {
 }
 
 footer {
-    font-size: 30px;
+    font-size: 20px;
     background-color: #910000;
     color: #000000;
     text-align: center;
+    justify-content: center;
     border-radius: 0.5cm;
     padding: 20px 0;
-    width: 95%;
-    height: 4cm;
+    width: 92%;
+    height: 3cm;
     box-shadow: 0 0 10px #ffffff;
+}
+
+.footlog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adjust spacing between logos as needed */
+}
+
+.foot-logo {
+    width: 200px; /* Adjust width as needed */
+    height: auto;
 }
 
 @media screen and (max-width: 460px) {
@@ -365,22 +378,26 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    #contact {
-        font-size: 15px;
-    }
-
     #rent iframe {
         max-width: 100%;
         max-height: 400px;
     }
 
     footer {
-        font-size: 20px;
+        font-size: 15px;
         height: 3cm;
+    }
+
+    .footlog {
+        flex-direction: column;
+    }
+
+    .foot-logo {
+        width: 100px; /* Adjust width for smaller screens as needed */
     }
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1156px) {
     
     .hero {
         background-image: url('Taustakuva/3.jpg');
@@ -471,9 +488,6 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    #contact {
-        font-size: 15px;
-    }
 
     #rent iframe {
         max-width: 100%;
@@ -481,8 +495,16 @@ footer {
     }
 
     footer {
-        font-size: 20px;
-        height: 3cm;
+        font-size: 15px;
+        height: 2cm;
+    }
+
+    .footlog {
+        flex-direction: column;
+    }
+
+    .foot-logo {
+        width: 100px; /* Adjust width for smaller screens as needed */
     }
 }
 
@@ -577,18 +599,9 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    #contact {
-        font-size: 15px;
-    }
-
     #rent iframe {
         max-width: 100%;
         max-height: 400px;
-    }
-
-    footer {
-        font-size: 20px;
-        height: 3cm;
     }
 }
 
@@ -674,17 +687,9 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    #contact {
-        font-size: 15px;
-    }
 
     #rent iframe {
         max-width: 100%;
         max-height: 400px;
-    }
-
-    footer {
-        font-size: 20px;
-        height: 3cm;
     }
 }
