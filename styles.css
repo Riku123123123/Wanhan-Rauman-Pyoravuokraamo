@@ -377,6 +377,11 @@ footer {
     .bike-gallery {
         grid-template-columns: 1fr;
     }
+    
+    .bike-gallery img {
+        width: 100%;
+        height: auto;
+    }
 
     #rent iframe {
         max-width: 100%;
@@ -485,7 +490,14 @@ footer {
     }
 
     .bike-gallery {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .bike-gallery img {
+        width: 100%;
+        height: auto;
     }
 
 
@@ -617,7 +629,7 @@ footer {
     }
 
     .hero {
-        background-image: url('Taustakuva\ 3.jpg');
+        background-image: url('Taustakuva\ 2.jpg');
         background-size: cover;
         background-position: center;
     }
@@ -684,7 +696,12 @@ footer {
     }
 
     .bike-gallery {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .bike-gallery img {
+        width: 100%;
+        height: auto;
     }
 
 
