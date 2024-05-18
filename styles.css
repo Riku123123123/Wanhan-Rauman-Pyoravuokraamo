@@ -197,21 +197,19 @@ section {
     border-radius: 10px;
     box-shadow: 0 0 10px rgb(255, 0, 0);
     margin-top: 100px; /* Lisää marginaali navin alle */
+    overflow: hidden; /* Piilottaa ylivuotavan sisällön */
+    word-wrap: break-word; /* Pakottaa pitkät sanat jakautumaan riveille */
 }
 
 /* Erilliset tyylit eri id:lle */
 #about {
     background-color: #9e0000;
     font-size: 25px;
-    overflow: hidden; /* Piilottaa ylivuotavan sisällön */
-    word-wrap: break-word; /* Pakottaa pitkät sanat jakautumaan riveille */
 }
 
 #bikes {
     background-color: #9e0000;
     font-size: 25px;
-    overflow: hidden; /* Piilottaa ylivuotavan sisällön */
-    word-wrap: break-word; /* Pakottaa pitkät sanat jakautumaan riveille */
 }
 
 .bike-gallery {
@@ -228,15 +226,11 @@ section {
 #contact {
     background-color: #9e0000;
     font-size: 25px;
-    overflow: hidden; /* Piilottaa ylivuotavan sisällön */
-    word-wrap: break-word; /* Pakottaa pitkät sanat jakautumaan riveille */
 }
 
 #rent {
     background-color: #9e0000;
     font-size: 25px;
-    overflow: hidden; /* Piilottaa ylivuotavan sisällön */
-    word-wrap: break-word; /* Pakottaa pitkät sanat jakautumaan riveille */
 }
 
 a {
