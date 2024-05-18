@@ -1,3 +1,4 @@
+/* Yleiset tyylit */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,44 +9,48 @@
 
 body {
     background: #000;
-    background-image: url(Logos\(1\).png);
+    background-image: url('Logos/1.png');
     background-size: cover;
     padding: 20px;
 }
 
-/* Lisää CSS-animaatio boksien esiintulolle */
+/* CSS-animaatio boksien esiintulolle */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
-  }
-  
-  
-  /* Alustetaan boksien alkutila */
-  section {
+}
+
+/* Alustetaan boksien alkutila */
+section {
     opacity: 0;
     transform: translateY(-20px);
     animation: fadeIn 0.5s ease forwards;
-  }
-  
-  /* Sisältö näkyväksi */
-  section.visible {
+}
+
+/* Sisältö näkyväksi */
+section.visible {
     opacity: 1;
     transform: translateY(0);
-  }
+}
 
-  .language-selector {
+.language-selector {
     text-align: center;
-    margin: 20px 0;
+    margin: 1px 0;
+    display: flex;
 }
 
 nav {
-    position: relative;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
     background-color: #910000;
     z-index: 3;
+    width: 95%;
+    height: 100px;
+    border-radius: 1cm;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
 }
 
 .hamburger {
@@ -60,13 +65,12 @@ nav {
 }
 
 .language-selector button {
-    margin: 0 10px;
-    padding: 5px 5px;
+    margin: 0px 10px;
+    padding: 10px 10px;
     background-color: #910000;
     color: #ffffff;
-    border: none;
     border-radius: 0.2cm;
-    cursor: cus;
+    cursor: pointer;
     font-size: 20px;
 }
 
@@ -75,39 +79,37 @@ nav {
     color: #ff0000;
 }
 
-nav {
-    height: 70px;
-    background: #9e0000;
-    border-radius: 1cm; /* Reunusalueen pyöristys */
-    box-shadow: 0 0 10px rgb(255, 0, 0); /* Varjo */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0cm calc ((100vw - 1300px) / 2);
-}
+.nav-logo img {
+    width: 200px;
+    height: auto;
+    margin-right: 0px;
+    margin: 20px;
+
+} 
 
 .logo img {
-    width: 150px; /* Aseta haluttu leveys */
-    height: auto; /* Automaattinen korkeus suhteessa leveyteen */
-    margin-right: 0px; /* Lisää hieman marginaalia tekstin ja kuvan väliin */
-    margin: 5px;
+    width: 200px;
+    height: auto;
+    margin-right: 0px;
+    margin: 10px;
 }
 
 .insta a img {
-    width: 1cm;
+    width: 2cm;
     height: auto;
-    margin-left: 20cm;
+    margin-left: 10cm;
 }
 
 nav a {
     text-decoration: none;
     color: #000;
+    font-size: 30px;
     padding: 0 0.5cm;
 }
 
 nav a:hover {
     color: #ff0000;
-    cursor: cell;
+    cursor: pointer;
 }
 
 .hero {
@@ -117,40 +119,20 @@ nav a:hover {
 }
 
 #contact-link {
-    color: #ff0000; /* Tekstin väri */
-    text-decoration: underline; /* Alleviivaus */
-    cursor: cell; /* Osoitin muutuksi kädelle vihjeeksi, kun sitä pidetään päällä */
+    color: #ff0000;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 #contact-link:hover {
-    color: #ff7373; /* Uusi väri kun hiiren osoitin on päällä */
+    color: #ff7373;
 }
-
 
 .hero-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 95hv;
-    padding: 1cm calc ((100vw - 1300px) / 2);
-}
-
-.column-left {
-    display: grid;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0cm 2cm;
-}
-
-.column-left h1 {
-    margin-bottom: 1cm;
-    font-size: 40px;
-}
-
-.column-left p {
-    margin-bottom: 5cm;
-    font-size: 29px;
-    line-height: 2;
-    max-width: 100%; /* Rajoita tekstin leveys */
+    height: 95vh;
+    padding: 1cm calc((100vw - 1300px) / 2);
 }
 
 button {
@@ -159,17 +141,26 @@ button {
     border-radius: 1cm;
     color: #000;
     background: #ff0000;
-    cursor: cell;
-    border-radius: 1cm; /* Reunusalueen pyöristys */
-    box-shadow: 0 0 10px rgb(255, 0, 0); /* Varjo */
+    cursor: pointer;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
 }
 
 button:hover {
     background: #ff5151;
-    border-radius: 1cm;
     color: #000;
-    border-radius: 1cm; /* Reunusalueen pyöristys */
-    box-shadow: 0 0 10px rgb(255, 0, 0); /* Varjo */
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+}
+
+.column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6cm 5cm;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
 }
 
 .column-right z {
@@ -177,9 +168,8 @@ button:hover {
     margin-bottom: 2cm;
     font-size: 40px;
     line-height: 1;
-    max-width: 100%; /* Rajoita tekstin leveys */
-    text-shadow: 0 0 10px rgb(255, 0, 0); /* Varjo */
-    
+    max-width: 100%;
+    text-shadow: 0 0 10px rgb(255, 0, 0);
 }
 
 .column-right p {
@@ -187,8 +177,8 @@ button:hover {
     margin-bottom: 1cm;
     font-size: 30px;
     line-height: 1;
-    max-width: 100%; /* Rajoita tekstin leveys */
-    text-shadow: 0 0 10px rgb(0, 0, 0); /* Varjo */
+    max-width: 100%;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 .column-right {
@@ -199,11 +189,6 @@ button:hover {
     padding: 6cm 5cm;
 }
 
-.hero-image {
-    width: 100%;
-    height: 100%;
-}
-
 /* Yhteiset tyylit kaikille section-elementeille */
 section {
     stroke: #ff0000;
@@ -211,103 +196,191 @@ section {
     height: 90%;
     display: flex;
     justify-content: flex-start;
-    margin: 20px 20px; /* Ylä- ja alareunan välinen marginaali */
-    padding: 20px; /* Sisäinen täyttö */
-    background-color: #910000; /* Taustaväri */
-    border-radius: 10px; /* Reunusalueen pyöristys */
-    box-shadow: 0 0 10px rgb(255, 0, 0); /* Varjo */
+    margin: 20px 20px;
+    padding: 20px;
+    background-color: #910000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+    margin-top: 100px; /* Lisää marginaali navin alle */
 }
 
 /* Erilliset tyylit eri id:lle */
 #about {
-    background-color: #9e0000; /* Tietoja-sivun taustaväri */
+    background-color: #9e0000;
     font-size: 20px;
 }
 
 #bikes {
-    background-color: #9e0000; /* Pyörät-sivun taustaväri */
+    background-color: #9e0000;
     font-size: 20px;
 }
 
 .bike-gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Neljä kuvaa riviä kohti */
-    gap: 10px; /* Väli kuvien välillä */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 }
 
 .bike-gallery img {
-    width: 100%; /* Kuvan leveys täyttää sen sisältämän elementin leveyden */
-    height: auto; /* Kuvan korkeus skaalautuu automaattisesti suhteessa leveyteen */
+    width: 100%;
+    height: auto;
 }
 
-
 #contact {
-    background-color: #9e0000; /* Yhteystiedot-sivun taustaväri */
+    background-color: #9e0000;
     font-size: 20px;
 }
 
-/* Värit linkeille */
 a {
-    color: #ff0000; /* Punainen väri peruslinkeille */
+    color: #ff0000;
 }
 
 a:hover {
-    color: #ffc6c6; /* Vaaleanpunainen väri hiiren ollessa linkin päällä */
-    cursor: cell;
-}
-
-#contact-link {
-    color: #ff0000; /* Vihreä väri yhteystietolinkille */
-}
-
-#contact-link:hover {
-    color: #ffc6c6; /* Vaaleanvihreä väri hiiren ollessa yhteystietolinkin päällä */
+    color: #ffc6c6;
+    cursor: pointer;
 }
 
 footer {
+    font-size: 30px;
     background-color: #910000;
     color: #000000;
     text-align: center;
     border-radius: 0.5cm;
     padding: 20px 0;
-    bottom: 1;
-    left: 2;
-    width: 100%;
-    height: 2.5cm;
+    width: 95%;
+    height: 4cm;
     box-shadow: 0 0 10px #ffffff;
 }
 
-@media screen and (max-width: 1500px) {
-
-    .language-selector {
-        text-align: center;
-        margin: 0px 0px;
-    }
+@media screen and (max-width: 460px) {
     
+
     .language-selector button {
-        margin: 0 1px;
-        padding: 10px 5px;
+        margin: 1px 1px;
+        padding: 1px 1px;
         background-color: #910000;
         color: #ffffff;
-        border: none;
-        border-radius: 1cm;
-        cursor: cus;
-        font-size: 10px;
+        border-radius: 0.2cm;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    .nav-logo {
+        width: 10px;
+        height: auto;
     }
     
     .language-selector button:hover {
         background-color: #780000;
         color: #ff0000;
     }
-
+    
     .hero {
-        background-image: url('Taustakuva\ 3.jpg');
+        background-image: url('Taustakuva/3.jpg');
         background-size: cover;
         background-position: center;
     }
 
     .insta a img {
-        margin-left: 0px; /* Muuta Instagram-logon vasenta marginaalia pienemmäksi */
+        display: flex;
+        margin-left: 0px;
+        margin-bottom: 50px;
+        width: 10%;
+        height: auto;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        background-color: #910000;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .nav-items.active {
+        display: flex;
+    }
+
+    .nav-items a {
+        padding: 1rem;
+        text-align: center;
+        border-top: 1px solid #ccc;
+    }
+
+    nav {
+        flex-direction: row;
+        align-items: center;
+        height: 2.5cm;
+        border-radius: 0.5cm;
+    }
+    
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+
+    .column-right {
+        margin-top: -7cm;
+        padding: 7cm 1cm;
+        align-items: baseline;
+    }
+
+    .column-right z {
+        font-size: 20px;
+    }
+    
+    .column-right p {
+        font-size: 15px;
+    }
+    
+    button {
+        padding: 0.3cm 1.5cm;
+        font-size: 18px;
+    }
+
+    button {
+        padding: 0.2cm 1cm;
+        font-size: 16px;
+    }
+
+    .bike-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    #contact {
+        font-size: 15px;
+    }
+
+    #rent iframe {
+        max-width: 100%;
+        max-height: 400px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    
+    .hero {
+        background-image: url('Taustakuva/3.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .insta a img {
+        display: flex;
+        margin-left: 0px;
+        margin-bottom: 50px;
         width: 1cm;
         height: auto;
     }
@@ -322,12 +395,13 @@ footer {
         gap: 0;
         position: absolute;
         top: 100%;
-        left: 0;
-        width: 100%;
+        right: 0;
+        width: 50%;
         background-color: #910000;
-        border-radius: 10px; /* Pyöristää reunat mobiililaitteilla */
-        overflow: hidden; /* Estää sisältöä ylittämästä pyöristettyjä reunoja */
+        border-radius: 10px;
+        overflow: hidden;
     }
+
 
     .nav-items.active {
         display: flex;
@@ -340,21 +414,10 @@ footer {
     }
 
     nav {
-        flex-direction: row; /* Aseta pystysuuntainen järjestely */
-        align-items: center; /* Keskity navigointipalkki vaakasuunnassa */
-        height: 2.5cm; /* Aseta korkeus automaattisesti sisältöön */
+        flex-direction: row;
+        align-items: center;
+        height: 2.5cm;
         border-radius: 0.5cm;
-    }
-
-    nav a {
-        text-decoration: none;
-        color: #000;
-        padding: 0 0.1cm;
-        margin-bottom: 10px; /* Lisää marginaali myös puhelimenäytöille */
-    }
-
-    a {
-        margin-bottom: 10px; /* Lisää tilaa navigointinappien väliin */
     }
     
     .hero-container {
@@ -364,44 +427,37 @@ footer {
         height: auto;
     }
 
-    .column-left h1 {
-        font-size: 24px;
-    }
-
-    .column-left p {
-        font-size: 18px;
+    .column-left {
+        width: 100px;
+        height: auto;
     }
 
     .column-right {
-        margin-top: -7cm; /* Aseta negatiivinen marginaali siirtääksesi nappia ylöspäin */
-        padding: 7cm 1cm; /* Esimerkiksi */
+        margin-top: -7cm;
+        padding: 7cm 1cm;
         align-items: baseline;
     }
 
     .column-right z {
-        font-size: 20px; /* Esimerkiksi */
+        font-size: 20px;
     }
     
-    /* Säädä lisätietojen tekstin koko pienempien näyttöjen mukaan */
     .column-right p {
-        font-size: 15px; /* Esimerkiksi */
+        font-size: 15px;
     }
     
-    /* Muuta napin kokoa pienempien näyttöjen mukaan */
     button {
-        padding: 0.3cm 1.5cm; /* Esimerkiksi */
-        font-size: 18px; /* Esimerkiksi */
+        padding: 0.3cm 1.5cm;
+        font-size: 18px;
     }
 
-    /* Säädä napin koko pienempien näyttöjen mukaan */
     button {
         padding: 0.2cm 1cm;
         font-size: 16px;
     }
 
-    /* Säädä kuvagallerian kuvien kokoa pienempien näyttöjen mukaan */
     .bike-gallery {
-        grid-template-columns: 1fr; /* Yksi kuva per rivi pienempien näyttöjen mukaan */
+        grid-template-columns: 1fr;
     }
 
     #contact {
@@ -409,8 +465,189 @@ footer {
     }
 
     #rent iframe {
-        max-width: 100%; /* Maksimileveys pienemmillä näytöillä */
-        max-height: 400px; /* Maksimikorkeus pienemmillä näytöillä */
+        max-width: 100%;
+        max-height: 400px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .language-selector {
+        text-align: center;
+        margin: 0px 0px;
+    }
+
+
+    .language-selector button:hover {
+        background-color: #780000;
+        color: #ff0000;
+    }
+
+    .hero {
+        background-image: url('Taustakuva/3.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    
+    nav a {
+        font-size: 22px;
+        padding: 0 0.1cm;
+    }
+
+    .insta a img {
+        display: flex;
+        margin-left: 0px;
+        margin-bottom: 50px;
+        width: 1cm;
+        height: 1cm;
+    }
+
+
+    .nav-items.active {
+        display: flex;
+    }
+
+
+    nav {
+        flex-direction: row;
+        align-items: center;
+        height: 2.5cm;
+        border-radius: 0.5cm;
     }
     
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .column-left {
+        width: 100px;
+        height: auto;
+    }
+
+    .column-right {
+        margin-top: -7cm;
+        padding: 7cm 1cm;
+        align-items: baseline;
+    }
+
+    .column-right z {
+        font-size: 20px;
+    }
+    
+    .column-right p {
+        font-size: 15px;
+    }
+    
+    button {
+        padding: 0.3cm 1.5cm;
+        font-size: 18px;
+    }
+
+    button {
+        padding: 0.2cm 1cm;
+        font-size: 16px;
+    }
+
+    .bike-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    #contact {
+        font-size: 15px;
+    }
+
+    #rent iframe {
+        max-width: 100%;
+        max-height: 400px;
+    }
+}
+
+@media screen and (max-width: 1930px) {
+    .language-selector {
+        text-align: center;
+        margin: 0px 0px;
+    }
+
+    .language-selector button:hover {
+        background-color: #780000;
+        color: #ff0000;
+    }
+
+    .hero {
+        background-image: url('Taustakuva\ 3.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .insta a img {
+        display: flex;
+        margin-left: 0px;
+        margin-bottom: 0px;
+        width: 1cm;
+        height: auto;
+    }
+
+
+    .nav-items.active {
+        display: flex;
+    }
+
+
+    nav {
+        flex-direction: row;
+        align-items: center;
+        height: 2.5cm;
+        border-radius: 0.5cm;
+    }
+    
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .column-left {
+        width: 80%;
+        height: auto;
+    }
+
+    .column-right {
+        margin-top: -10cm;
+        padding: 7cm 1cm;
+        align-items: center;
+    }
+
+    .column-right z {
+        font-size: 20px;
+    }
+    
+    .column-right p {
+        font-size: 15px;
+    }
+    
+    button {
+        padding: 0.3cm 1.5cm;
+        font-size: 18px;
+    }
+
+    button {
+        padding: 0.2cm 1cm;
+        font-size: 16px;
+    }
+
+    .bike-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    #contact {
+        font-size: 15px;
+    }
+
+    #rent iframe {
+        max-width: 100%;
+        max-height: 400px;
+    }
 }

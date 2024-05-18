@@ -32,7 +32,6 @@ function showDetails() {
     const sections = document.querySelectorAll('section');
     sections.forEach(section => section.classList.add('visible'));
   }
-  
 
   document.addEventListener('DOMContentLoaded', function() {
     // Set default language based on browser language or fallback to Finnish
