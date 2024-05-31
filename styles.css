@@ -163,12 +163,29 @@ button:hover {
     
 }
 
+.column-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: fixed; /* Kiinnitä elementti näytön reunaan */
+    top: 50%; /* Aseta elementin yläreuna näytön keskelle */
+    right: 10%;
+    max-width: 100%; /* Säädä maksimileveys tarpeidesi mukaan */
+    padding: 20px;
+    background-color: #91000027;
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Muuta varjovaikutus tarpeidesi mukaan */
+    z-index: 2; /* Varmista, että elementti on päällimmäisenä */
+    overflow: auto;
+}
+
 .column-right z {
-    color: #000000;
     margin-bottom: 2cm;
     font-size: 40px;
     line-height: 1;
-    text-shadow: 0 0 10px rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 .column-right p {
@@ -178,13 +195,6 @@ button:hover {
     line-height: 1;
     max-width: 100%;
     text-shadow: 0 0 10px rgb(0, 0, 0);
-}
-
-.column-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
 }
 
 /* Yhteiset tyylit kaikille section-elementeille */
@@ -271,7 +281,6 @@ footer {
 }
 
 @media screen and (max-width: 460px) {
-    
 
     .language-selector button {
         margin: 1px 1px;
@@ -340,18 +349,22 @@ footer {
         height: 2.5cm;
         border-radius: 0.5cm;
     }
-    
+
     .hero-container {
         overflow: auto;
     }
 
-
-    .column-right {
-        margin-top: -7cm;
-        padding: 7cm 1cm;
-        align-items: baseline;
+    .hero-image {
+        width: 50%;
+        max-width: 100px; /* Tai mikä tahansa haluamasi koko */
+        height: auto;
     }
 
+    .column-right {
+        top: 50%; /* Aseta elementin yläreuna näytön keskelle */
+        right: 10%;
+    }
+    
     .column-right z {
         font-size: 20px;
     }
@@ -409,10 +422,11 @@ footer {
 @media screen and (max-width: 1156px) {
     
     .hero {
-        background-image: url('Taustakuva/3.jpg');
+        background-image: url('Taustakuva\ 3.jpg');
         background-size: cover;
         background-position: center;
     }
+    
 
     .insta a img {
         display: flex;
@@ -465,15 +479,17 @@ footer {
     }
 
     .column-left {
-        width: 100px;
-        height: auto;
+        right: 50%;
+        top: -25%;
+        width: 50%;
     }
 
     .column-right {
-        margin-top: -7cm;
-        padding: 7cm 1cm;
-        align-items: baseline;
+        top: 50%; /* Aseta elementin yläreuna näytön keskelle */
+        right: 10%;
+        max-width: 80%;
     }
+    
 
     .column-right z {
         font-size: 20px;
@@ -535,7 +551,7 @@ footer {
     }
 
     .hero {
-        background-image: url('Taustakuva/3.jpg');
+        background-image: url('Taustakuva\ 2.jpg');
         background-size: cover;
         background-position: center;
         height: 50vh;
@@ -579,16 +595,14 @@ footer {
         align-items: center;
         height: auto;
     }
-
+    
     .column-left {
-        width: 100px;
-        height: auto;
+        margin-left: 10rem;
     }
 
     .column-right {
-        margin-top: -7rem;
-        padding: 7rem 1rem;
-        align-items: baseline;
+        top: 50%; /* Aseta elementin yläreuna näytön keskelle */
+        right: 10%;
     }
 
     .column-right z {
@@ -630,16 +644,12 @@ footer {
         color: #ff0000;
     }
 
-    .hero {
-        background-image: url('Taustakuva\ 2.jpg');
-        background-size: cover;
-        background-position: center;
-    }
-
     .hero-image {
-        width: 100px;
+        width: 75%;
+        max-width: 500px; /* Tai mikä tahansa haluamasi koko */
         height: auto;
     }
+    
 
     .insta a img {
         display: flex;
@@ -668,19 +678,22 @@ footer {
         align-items: center;
         height: auto;
     }
+
     .column-left {
-        width: 80%;
-        height: auto;
+        margin-left: 35rem;
+        margin-top: 5rem;
     }
 
     .column-right {
-        margin-top: -7cm;
-        padding: 10cm 1cm;
-        align-items: center;
+        top: 30%; /* Aseta elementin yläreuna näytön keskelle */
+        right: 10%;
     }
 
+
     .column-right z {
-        font-size: 30px;
+        font-size: 20px;
+        color: #ffffff;
+        border-color: #000;
     }
     
     .column-right p {
