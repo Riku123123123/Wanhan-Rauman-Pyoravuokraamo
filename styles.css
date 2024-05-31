@@ -9,7 +9,7 @@
 
 body {
     background: #000;
-    background-image: url('Logos/1.png');
+    background-image: url('Logos.png');
     background-size: cover;
     padding: 20px;
     position: relative; /* Lisää sivun sijainti */
@@ -96,10 +96,12 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #000;
+    color: #ffbfbf;
     font-size: 25px;
     padding: 0 0.5cm;
     text-align: center; /* Keskitä linkkien teksti vaakasuunnassa */
+    line-height: 1;
+    text-shadow: 0 0 20px rgb(255, 255, 255);
 }
 
 nav a:hover {
@@ -111,6 +113,7 @@ nav a:hover {
     background-image: url('Taustakuva\ 2.jpg');
     background-size: cover;
     background-position: center;
+    min-height: 80vh; /* Varmistaa, että hero-osa vie vähintään yhden näkymän korkuisen tilan */
 }
 
 #contact-link {
@@ -161,11 +164,11 @@ button:hover {
 }
 
 .column-right z {
-    color: #ffffff;
+    color: #000000;
     margin-bottom: 2cm;
     font-size: 40px;
     line-height: 1;
-    text-shadow: 0 0 10px rgb(255, 0, 0);
+    text-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
 .column-right p {
@@ -296,12 +299,6 @@ footer {
         background-position: center;
     }
 
-    .hero-image {
-        width: 1000px;
-        height: auto;
-        
-    }
-
     .insta a img {
         display: flex;
         margin-left: 0px;
@@ -345,10 +342,7 @@ footer {
     }
     
     .hero-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: auto;
+        overflow: auto;
     }
 
 
@@ -377,7 +371,7 @@ footer {
     }
 
     .bike-gallery {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .bike-gallery img {
@@ -592,8 +586,8 @@ footer {
     }
 
     .column-right {
-        margin-top: -7cm;
-        padding: 7cm 1cm;
+        margin-top: -7rem;
+        padding: 7rem 1rem;
         align-items: baseline;
     }
 
@@ -686,7 +680,7 @@ footer {
     }
 
     .column-right z {
-        font-size: 20px;
+        font-size: 30px;
     }
     
     .column-right p {
