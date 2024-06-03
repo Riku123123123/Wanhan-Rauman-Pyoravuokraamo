@@ -154,7 +154,7 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     position: relative; /* Lisää sarakkeen sijainti */
-    right: 15cm;
+    right: 15.5cm;
 }
 
 .hero-image {
@@ -236,6 +236,20 @@ section {
     height: auto;
 }
 
+.feedback {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#feedback iframe {
+    width: 100%;
+    height: 900px;
+    border-radius: 1%;
+}
+
 #contact {
     background-color: #9e0000;
     font-size: 25px;
@@ -245,6 +259,7 @@ section {
     background-color: #9e0000;
     font-size: 25px;
 }
+
 
 a {
     color: #ff0000;
@@ -419,15 +434,14 @@ footer {
     }
 }
 
-@media screen and (max-width: 1156px) {
-    
+@media screen and (max-width: 1289px) {
+
     .hero {
         background-image: url('Taustakuva\ 3.jpg');
         background-size: cover;
         background-position: center;
     }
     
-
     .insta a img {
         display: flex;
         margin-left: 0px;
@@ -453,7 +467,6 @@ footer {
         overflow: hidden;
     }
 
-
     .nav-items.active {
         display: flex;
     }
@@ -470,26 +483,23 @@ footer {
         height: 2.5cm;
         border-radius: 0.5cm;
     }
-    
+
     .hero-container {
-        display: flex;
-        flex-direction: column;
+        display: block;
+        flex-direction: column-reverse; /* Vaihda sarakkeiden järjestys, jotta right tulee ennen left */
         align-items: center;
-        height: auto;
     }
 
     .column-left {
-        right: 50%;
-        top: -25%;
-        width: 50%;
+        position: relative;
+        top: -50%; /* Pysy ylhäällä */
+        width: 50%; /* Aseta haluttu leveys */
     }
 
     .column-right {
-        top: 50%; /* Aseta elementin yläreuna näytön keskelle */
-        right: 10%;
-        max-width: 80%;
+        width: 50%; /* Aseta haluttu leveys */
+        height: 50%; /* Aseta haluttu korkeus */
     }
-    
 
     .column-right z {
         font-size: 20px;
@@ -518,7 +528,6 @@ footer {
         height: auto;
     }
 
-
     #rent iframe {
         max-width: 100%;
         max-height: 400px;
@@ -538,7 +547,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1567px) {
     .language-selector {
         text-align: center;
         margin: 0px 0px;
@@ -623,10 +632,6 @@ footer {
         font-size: 16px;
     }
 
-    .bike-gallery {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
     #rent iframe {
         max-width: 100%;
         max-height: 400px;
@@ -708,10 +713,6 @@ footer {
     button {
         padding: 0.2cm 1cm;
         font-size: 16px;
-    }
-
-    .bike-gallery {
-        grid-template-columns: repeat(3, 1fr);
     }
     
     .bike-gallery img {

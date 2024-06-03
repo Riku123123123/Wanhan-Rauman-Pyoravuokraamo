@@ -42,3 +42,35 @@ document.addEventListener('DOMContentLoaded', function() {
     window.navigateTo = navigateTo;
     window.toggleMenu = toggleMenu;
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Koodi, joka ajetaan vasta, kun DOM on täysin ladattu
+    // Voit asettaa täällä tapahtumankäsittelijät tai suorittaa muita toimintoja
+
+    function navigateTo(sectionId) {
+        // Piilota kaikki osiot
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+
+        // Näytä valittu osio
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+            targetSection.style.display = 'block';
+        }
+    }
+
+    // Alustetaan navigaatio tapahtumat
+    const navItems = document.querySelectorAll('.nav-items a');
+    navItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const sectionId = this.getAttribute('onclick').replace("navigateTo('", "").replace("')", "");
+            navigateTo(sectionId);
+        });
+    });
+
+    // Avaa aloitusosio
+    navigateTo('home');
+});
+

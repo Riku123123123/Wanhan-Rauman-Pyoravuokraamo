@@ -35,9 +35,10 @@ defer
         <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
         <div class="nav-items">
             <a href="javascript:void(0);" onclick="navigateTo('home')"><span class="fi">Koti</span><span class="en" style="display:none;">Home</span></a>
-            <a href="javascript:void(0);" onclick="navigateTo('about')"><span class="fi">Tietoja</span><span class="en" style="display:none;">About</span></a>
-            <a href="javascript:void(0);" onclick="navigateTo('bikes')"><span class="fi">Pyörät</span><span class="en" style="display:none;">Bikes</span></a>
             <a href="javascript:void(0);" onclick="navigateTo('rent')"><span class="fi">Vuokraa</span><span class="en" style="display:none;">Rent</span></a>
+            <a href="javascript:void(0);" onclick="navigateTo('bikes')"><span class="fi">Pyörät</span><span class="en" style="display:none;">Bikes</span></a>
+            <a href="javascript:void(0);" onclick="navigateTo('about')"><span class="fi">Tietoja</span><span class="en" style="display:none;">About</span></a>
+            <a href="javascript:void(0);" onclick="navigateTo('feedback')"><span class="fi">Palaute</span><span class="en" style="display:none;">Feedback</span></a>
             <a href="javascript:void(0);" onclick="navigateTo('contact')"><span class="fi">Yhteystiedot</span><span class="en" style="display:none;">Contact</span></a>
             <div class="insta">
                 <a href="https://www.instagram.com/wrpyoravuokraamo/" target="_blank"><img src="Instagram.png" alt="Instagram"></a>
@@ -57,8 +58,8 @@ defer
             <div class="column-right">
                 <z class="fi">WANHAN RAUMAN PYÖRÄVUOKRAAMO</z>
                 <z class="en" style="display:none;">OLD RAUMA BIKE RENTALS</z>
-                <p class="fi">Aukeaa 1.6.2024</p>
-                <p class="en" style="display:none;">Opens on June 1, 2024</p>
+                <p class="fi">AVOINNA</p>
+                <p class="en" style="display:none;">OPEN</p>
                 <p class="fi">Olemme avoinna joka päivä klo 10-17</p>
                 <p class="en" style="display:none;">We are open every day from 10 to 17</p>
                 <button onclick="navigateTo('rent')"><span class="fi">Vuokraa</span><span class="en" style="display:none;">Rent</span></button>
@@ -107,7 +108,6 @@ defer
         <p class="en" style="display:none;"> Rent a bike <span id="contact-link" onclick="navigateTo('rent')">online</span>!</p>
     </section>
     
-    
     <section id="contact" style="display: none;">
         <h2><span class="fi">Yhteystiedot</span><span class="en" style="display:none;">Contact</span></h2>
         <p class="fi">Osoite: <a href="https://maps.google.com/?q=Savilankatu+8,+26100+Rauma" target="_blank">Savilankatu 8, 26100 Rauma</a></p>
@@ -129,11 +129,19 @@ defer
         <br>
         <p class="fi"><a href="VuokrausehdotFI.pdf" target="_blank">Vuokrausehdot (PDF)</a></p>
     <p class="en" style="display:none;"><a href="RentalTermsEN.pdf" target="_blank">Rental terms (PDF)</a></p>
-    <p class="fi"><a href="OhjeetFI.pdf" target="_blank">Ohjeet (PDF)</a></p>
-    <p class="en" style="display:none;"><a href="GuideEN.pdf" target="_blank">Guide (PDF)</a></p>
+    <p class="fi"><a href="OhjeetFI.pdf" target="_blank">Ohjeet vuokraamiselle (PDF)</a></p>
+    <p class="en" style="display:none;"><a href="GuideEN.pdf" target="_blank">Guide for renting (PDF)</a></p>
     <br>
         <twice-store
 	shop="wanhanraumanpyrvuokraus"/>
+    </section>
+
+    <section id="feedback" style="display: none;">
+        <h2 class="fi">Anna palautetta täällä!</h2> 
+        <h2 class="en" style="display:none;">Give feedback here!</h2>
+        <br>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSejP-I5LMxNS5RaMCNz-EFaz9gsO6fPwB2W_JQVyEdLuWMhVQ/viewform" title="palaute"></iframe>
+
     </section>
 
     <footer>
