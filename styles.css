@@ -167,7 +167,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     position: fixed; /* Kiinnitä elementti näytön reunaan */
     top: 50%; /* Aseta elementin yläreuna näytön keskelle */
     right: 10%;
@@ -186,6 +186,14 @@ button:hover {
     font-size: 40px;
     line-height: 1;
     text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.column-right a {
+    color: white;
+}
+
+.column-right a:hover {
+    color: rgb(255, 169, 169);
 }
 
 .column-right p {
@@ -271,16 +279,30 @@ a:hover {
 }
 
 footer {
+    display: flex;
+    flex-direction: column;
     font-size: 20px;
-    background-color: #910000;
-    color: #000000;
+    background-color: #00000000;
+    color: #ffffff;
     text-align: center;
     justify-content: center;
     border-radius: 0.5cm;
     padding: 20px 0;
     width: 92%;
-    height: 3cm;
-    box-shadow: 0 0 10px #ffffff;
+    height: auto;
+}
+
+footer button {
+    display: flex;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    color: #ffffff;
+    margin: 10px;
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Lisää haluamasi väli nappejen väliin */
 }
 
 .footlog {
@@ -376,8 +398,12 @@ footer {
     }
 
     .column-right {
-        top: 50%; /* Aseta elementin yläreuna näytön keskelle */
-        right: 10%;
+        top: 20%; /* Aseta elementin yläreuna näytön keskelle */
+        right: 50%;
+    }
+
+    .column-right a {
+        font-size: 12px;
     }
     
     .column-right z {
@@ -422,7 +448,11 @@ footer {
 
     footer {
         font-size: 15px;
-        height: 3cm;
+    }
+
+    .footer-buttons {
+        flex-direction: column;
+        gap: 1px;
     }
 
     .footlog {
@@ -491,12 +521,13 @@ footer {
     }
 
     .column-left {
-        position: relative;
-        top: -50%; /* Pysy ylhäällä */
+        display: flex;
+        top: -40%; /* Pysy ylhäällä */
         width: 50%; /* Aseta haluttu leveys */
     }
 
     .column-right {
+        align-items: flex-start;
         width: 50%; /* Aseta haluttu leveys */
         height: 50%; /* Aseta haluttu korkeus */
     }
@@ -527,6 +558,7 @@ footer {
         width: 100%;
         height: auto;
     }
+    
 
     #rent iframe {
         max-width: 100%;
@@ -534,17 +566,13 @@ footer {
     }
 
     footer {
-        font-size: 15px;
-        height: 2.5cm;
+        font-size: 17px;
     }
 
     .footlog {
         flex-direction: column;
     }
 
-    .foot-logo {
-        width: 100px; /* Adjust width for smaller screens as needed */
-    }
 }
 
 @media screen and (max-width: 1567px) {

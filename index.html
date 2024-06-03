@@ -63,6 +63,10 @@ defer
                 <p class="fi">Olemme avoinna joka päivä klo 10-17</p>
                 <p class="en" style="display:none;">We are open every day from 10 to 17</p>
                 <button onclick="navigateTo('rent')"><span class="fi">Vuokraa</span><span class="en" style="display:none;">Rent</span></button>
+                <g class="fi"><a href="VuokrausehdotFI.pdf" target="_blank">Vuokrausehdot (PDF)</a></g>
+                <g class="en" style="display:none;"><a href="RentalTermsEN.pdf" target="_blank">Rental terms (PDF)</a></g>
+                <g class="fi"><a href="OhjeetFI.pdf" target="_blank">Ohjeet vuokraamiselle (PDF)</a></g>
+                <g class="en" style="display:none;"><a href="GuideEN.pdf" target="_blank">Guide for renting (PDF)</a></g>
             </div>
         </div>
     </section>
@@ -140,14 +144,23 @@ defer
         <h2 class="fi">Anna palautetta täällä!</h2> 
         <h2 class="en" style="display:none;">Give feedback here!</h2>
         <br>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSejP-I5LMxNS5RaMCNz-EFaz9gsO6fPwB2W_JQVyEdLuWMhVQ/viewform" title="palaute"></iframe>
-
+        <p class="fi"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSejP-I5LMxNS5RaMCNz-EFaz9gsO6fPwB2W_JQVyEdLuWMhVQ/viewform" title="palaute"></iframe></p>
+        <p class="en" style="display: none;"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLScEHneqnmeUfDQ3o2VAmnHoqD5WOprIWTzm6mNE6VTCo50zvw/viewform" title="feedback"></iframe></p>
     </section>
 
     <footer>
         <p>&copy; 2024 Wanhan Rauman Pyörävuokraamo</p>
         <br>
+        <div class="footer-buttons">
+            <button class="fi" onclick="navigateTo('rent')"><span id="foot">Vuokraa pyörä</span></button>
+            <button class="en" style="display:none;" onclick="navigateTo('rent')"><span id="foot">Rent a bike</span></button>
+            <br>
+            <button class="fi" onclick="navigateTo('contact')"><span id="foot">Yhteystiedot</span></button>
+            <button class="en" style="display:none;" onclick="navigateTo('contact')"><span id="foot">Contact</span></button>
+        </div>
+        <br>
         <p>Site by Riku Silander</p>
+        <br>
         <div class="footlog">
         <div class="logo">
             <img src="Logo3.png" alt="Wanha Rauma" class="hero-image">
