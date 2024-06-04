@@ -70,11 +70,13 @@ nav {
 .language-selector button {
     margin: 15px 10px;
     padding: 10px 10px;
-    background-color: #910000;
+    background-color: #91000000;
     color: #ffffff;
     border-radius: 0.2cm;
     cursor: pointer;
     font-size: 20px;
+    background-image: url(Suomi.png);
+    background-size: contain;
 }
 
 .language-selector button:hover {
@@ -397,8 +399,7 @@ footer button {
     }
 
     .column-right {
-        top: 20%; /* Aseta elementin yläreuna näytön keskelle */
-        right: 50%;
+        width: 100%;
     }
 
     .column-right a {

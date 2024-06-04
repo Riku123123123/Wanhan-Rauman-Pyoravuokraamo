@@ -104,7 +104,8 @@ defer
             <img src="Polkupyorat/Madison.jpg" alt="Sähköpyörä">
             <img src="Polkupyorat/Riveri.jpg" alt="Mummopyörä">
             <img src="Polkupyorat/Hybrid.jpg" alt="Hybridipyörä">
-            <img src="Polkupyorat/Ibrido.jpg" alt="Maastopyörä">
+            <img src="Polkupyorat/hybrido.jpg" alt="Maastopyörä">
+            <img src="Polkupyorat/mummopyora.jpg" alt="Sähköpyörä">
         </div>
         <br>
         <p class="fi">Vuokraa pyörä <span id="contact-link" onclick="navigateTo('rent')">netistä</span>!</p>
@@ -148,7 +149,6 @@ defer
     </section>
 
     <footer>
-        <p>&copy; 2024 Wanhan Rauman Pyörävuokraamo</p>
         <br>
         <div class="footer-buttons">
             <button class="fi" onclick="navigateTo('rent')"><span id="foot">Vuokraa pyörä</span></button>
@@ -158,8 +158,11 @@ defer
             <button class="en" style="display:none;" onclick="navigateTo('contact')"><span id="foot">Contact</span></button>
         </div>
         <br>
-        <p>Site by Riku Silander</p>
         <br>
+        <div class="language-selector">
+            <button onclick="setLanguage('fi')">Fi</button>
+            <button onclick="setLanguage('en')">En</button>
+        </div>
         <div class="footlog">
         <div class="logo">
             <img src="Logo3.png" alt="Wanha Rauma" class="hero-image">
@@ -171,6 +174,9 @@ defer
             <img src="4Hyritys.png" alt="Wanha Rauma" class="hero-image">
         </div>
     </div>
+    <br>
+    <p>&copy; 2024 Wanhan Rauman Pyörävuokraamo</p>
+    <p>Site by Riku Silander</p>
     </footer>
 </body>
 </html>
