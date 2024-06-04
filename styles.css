@@ -58,7 +58,7 @@ nav {
     padding: 1rem;
     background-color: #910000;
     z-index: 3;
-    width: 90%;
+    width: 95%;
     height: 100px;
     border-radius: 1cm;
     box-shadow: 0 0 10px rgb(255, 0, 0);
@@ -80,7 +80,6 @@ nav {
 .language-selector button {
     margin: 15px 10px;
     padding: 10px 10px;
-    background-color: #91000000;
     color: #ffffff;
     border-radius: 1cm;
     cursor: pointer;
@@ -89,8 +88,7 @@ nav {
 }
 
 .language-selector button:hover {
-    background-color: #780000;
-    color: #ff0000;
+    background-image: url(Suomi.png);
 }
 
 .nav-logo img, .logo img {
@@ -239,8 +237,8 @@ button:hover {
 /* Yhteiset tyylit kaikille section-elementeille */
 section {
     stroke: #ff0000;
-    width: 90%;
-    height: 90%;
+    width: 95%;
+    height: auto;
     display: flex;
     justify-content: flex-start;
     margin: 20px 20px;
@@ -319,7 +317,7 @@ footer {
     justify-content: center;
     border-radius: 0.5cm;
     padding: 20px 0;
-    width: 92%;
+    width: 95%;
     height: auto;
 }
 
@@ -328,6 +326,10 @@ footer button {
     box-shadow: 0 0 10px rgb(255, 255, 255);
     color: #ffffff;
     margin: 10px;
+}
+
+.Pin {
+    width: 30px;
 }
 
 .footer-buttons {
@@ -353,11 +355,6 @@ footer button {
     .nav-logo {
         width: 250px;
         height: auto;
-    }
-    
-    .language-selector button:hover {
-        background-color: #780000;
-        color: #ff0000;
     }
     
     .hero {
@@ -404,8 +401,15 @@ footer button {
     nav {
         flex-direction: row;
         align-items: center;
+        width: 90%;
         height: 2.5cm;
         border-radius: 0.5cm;
+    }
+
+    section {
+        width: 90%;
+        margin-top: 125px;
+        margin-left: 17.5px;
     }
 
     .hero-container {
@@ -608,11 +612,6 @@ footer button {
     }
 
 
-    .language-selector button:hover {
-        background-color: #780000;
-        color: #ff0000;
-    }
-
     .hero {
         background-image: url('Taustakuva\ 2.jpg');
         background-size: cover;
@@ -696,11 +695,6 @@ footer button {
     .language-selector {
         text-align: center;
         margin: 0px 0px;
-    }
-
-    .language-selector button:hover {
-        background-color: #780000;
-        color: #ff0000;
     }
 
     .hero-image {
