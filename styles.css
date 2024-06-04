@@ -34,10 +34,22 @@ section.visible {
 }
 
 .language-selector {
-    text-align: center;
-    margin: 1px 0;
     display: flex;
+    justify-content: center;
+    gap: 20px; /* Lisää haluamasi väli nappejen väliin */
 }
+
+.flag-fi {
+    background-image: url('Suomi.png');
+    background-size: cover; /* Skaalaa kuva kuvakehykseen */
+}
+
+.flag-en {
+    background-image: url('british.jpg');
+    background-size: contain; /* Skaalaa kuva kuvakehykseen */
+    background-position: center;
+}
+
 
 nav {
     position: absolute;
@@ -72,11 +84,10 @@ nav {
     padding: 10px 10px;
     background-color: #91000000;
     color: #ffffff;
-    border-radius: 0.2cm;
+    border-radius: 1cm;
     cursor: pointer;
-    font-size: 20px;
-    background-image: url(Suomi.png);
-    background-size: contain;
+    width: 50px;
+    height: 50px;
 }
 
 .language-selector button:hover {
