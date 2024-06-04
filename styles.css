@@ -331,16 +331,6 @@ footer button {
 
 @media screen and (max-width: 460px) {
 
-    .language-selector button {
-        margin: 1px 1px;
-        padding: 1px 1px;
-        background-color: #910000;
-        color: #ffffff;
-        border-radius: 0.2cm;
-        cursor: pointer;
-        font-size: 20px;
-    }
-
     .nav-logo {
         width: 250px;
         height: auto;
