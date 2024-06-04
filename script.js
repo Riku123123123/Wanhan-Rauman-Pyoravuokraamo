@@ -74,3 +74,17 @@ document.addEventListener('DOMContentLoaded', function() {
     navigateTo('home');
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('button');
+    
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            button.classList.add('animate');
+            
+            // Poistetaan animaatioluokka, jotta se voidaan lisätä uudelleen seuraavalla painalluksella
+            setTimeout(() => {
+                button.classList.remove('animate');
+            }, 500);
+        });
+    });
+});
