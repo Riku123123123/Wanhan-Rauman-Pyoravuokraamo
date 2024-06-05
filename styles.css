@@ -314,10 +314,18 @@ footer {
     color: #ffffff;
     text-align: center;
     justify-content: center;
+    align-items: center; /* Lisää tämä */
     border-radius: 0.5cm;
     padding: 20px 0;
     width: 95%;
     height: auto;
+}
+
+footer iframe {
+    display: block; /* Muuta flex:ksi, jos haluat käyttää flex-ominaisuuksia */
+    width: 25%; /* Voit säätää leveyttä tarpeen mukaan */
+    min-height: 500px;
+    margin: 0 auto; /* Varmistaa keskittämisen */
 }
 
 footer button {
@@ -424,7 +432,6 @@ footer button {
     .column-left {
         position: absolute;
         right: -5%;
-        margin-top: 10%;
         bottom: 90%;
         margin-bottom: -100%;
         min-width: 90%;
@@ -487,6 +494,11 @@ footer button {
 
     footer {
         font-size: 15px;
+    }
+
+    footer iframe {
+        width: 75%; /* Voit säätää leveyttä tarpeen mukaan */
+        min-height: 250px;
     }
 
     footer button {
@@ -617,6 +629,11 @@ footer button {
 
     footer {
         font-size: 17px;
+    }
+
+    footer iframe {
+        width: 50%; /* Voit säätää leveyttä tarpeen mukaan */
+        min-height: 250px;
     }
 
     .footlog {
