@@ -206,12 +206,11 @@ button:hover {
     color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Muuta varjovaikutus tarpeidesi mukaan */
-    z-index: 2; /* Varmista, että elementti on päällimmäisenä */
     overflow: auto;
 }
 
 .column-right z {
-    margin-bottom: 2cm;
+    margin-bottom: 20px;
     font-size: 40px;
     line-height: 1;
     text-shadow: 0 0 10px rgb(0, 0, 0);
@@ -227,7 +226,7 @@ button:hover {
 
 .column-right p {
     color: #ffffff;
-    margin-bottom: 1cm;
+    margin-bottom: 40px;
     font-size: 30px;
     line-height: 1;
     max-width: 100%;
@@ -413,7 +412,7 @@ footer button {
     }
 
     .hero-container {
-        overflow: auto;
+        overflow: visible;
     }
 
     .hero-image {
@@ -422,8 +421,20 @@ footer button {
         height: auto;
     }
 
+    .column-left {
+        position: absolute;
+        right: -5%;
+        margin-top: 10%;
+        bottom: 90%;
+        margin-bottom: -100%;
+        min-width: 90%;
+    }
+
     .column-right {
-        width: 100%;
+        position: relative;
+        left: 5%;
+        margin-top: 50%;
+        min-width: 90%;
     }
 
     .column-right a {
@@ -463,6 +474,10 @@ footer button {
 
     #contact {
         font-size: 20px;
+    }
+
+    #rent {
+        font-size: 18px;
     }
 
     #rent iframe {
@@ -559,15 +574,17 @@ footer button {
     .column-right {
         align-items: flex-start;
         width: 50%; /* Aseta haluttu leveys */
-        height: 50%; /* Aseta haluttu korkeus */
+        height: auto; /* Aseta haluttu korkeus */
     }
 
     .column-right z {
         font-size: 20px;
+        margin-bottom: 30px;
     }
     
     .column-right p {
         font-size: 15px;
+        margin-bottom: 30px;
     }
     
     button {
@@ -589,6 +606,9 @@ footer button {
         height: auto;
     }
     
+    #rent {
+        font-size: 20px;
+    }
 
     #rent iframe {
         max-width: 100%;
