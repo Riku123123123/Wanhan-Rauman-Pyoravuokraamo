@@ -650,7 +650,7 @@ footer button {
         margin-left: 0px;
         box-shadow: 0 0 10px rgb(0, 0, 0);
         text-align: center;
-        height: 300px;
+        max-height: 300px;
         overflow: auto;
         border-radius: 0.5cm;
     }
@@ -816,7 +816,7 @@ footer button {
     .modalright {
         margin-left: 0px;
         text-align: center;
-        height: 300px;
+        max-height: 300px;
         overflow: auto;
         border-radius: 0.5cm;
     }
