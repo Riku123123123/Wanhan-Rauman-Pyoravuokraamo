@@ -50,6 +50,34 @@ section.visible {
     background-position: center;
 }
 
+.notification-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #910000;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+    z-index: 1000;
+    display: none; /* Piilotetaan boksi aluksi */
+}
+
+.notification-box button {
+    margin-top: 20px;
+    padding: 5px 10px;
+    background-color: #ff0000;
+    color: #000000;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.notification-box button:hover {
+    background-color: #333;
+}
+
 nav {
     position: absolute;
     display: flex;
@@ -263,14 +291,144 @@ section {
 
 .bike-gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Määritä pyöräitemien leveys tässä */
+    gap: 20px; /* Voit säätää tilaa pyöräitemien välillä */
+    justify-content: space-between; /* Aseta tila itemien välillä */
+}
+
+.bike-item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    color: #ffffff;
+    text-align: center; /* Lisää tähän */
 }
 
 .bike-gallery img {
-    width: 100%;
-    height: auto;
+    border-radius: 1cm;
 }
+
+.bike-gallery img:hover {
+    cursor: pointer;
+}
+
+  /* Fade-in animation for modal background */
+  @keyframes modalOpen {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes modalClose {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-50px); }
+}
+
+/* Slide-in animation for modal content */
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0, 0, 0, 0.568); 
+    padding-top: 60px;
+    z-index: 5;
+  }
+  
+  .modal-content {
+    background-color: #910000;
+    margin: 10% auto; 
+    padding: 20px;
+    border: 1px solid #910000;
+    width: 70%; 
+    height: auto;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+    border-radius: 10px;
+    animation: modalOpen 0.5s forwards; /* Avautumisefekti */
+  }
+
+  .modal button {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .modal h2 {
+    color: #ffffff;
+  }
+
+  .modal a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal p {
+    font-size: xx-large ;
+  }
+
+  .modal-content img {
+    width: 60%; /* Kuva skaalautuu moduulin sisään */
+    border-radius: 1cm;
+}
+
+.modal-ots {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.modalright {
+    background-color: #920000;
+    color: #ffffff;
+    position: relative;
+    border-radius: 1cm;
+    margin-left: 50px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    text-align: center;
+}
+
+.modal-cen {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-close {
+    animation: modalClose 0.5s forwards; /* Sulkeutumisanimaatio */
+}
+
+  
+  .close {
+    color: #000000;
+    text-shadow: 0 0 10px rgb(255, 0, 0);
+    float: right;
+    font-size: 50px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 .feedback {
     width: 100%;
@@ -295,7 +453,6 @@ section {
     background-color: #9e0000;
     font-size: 25px;
 }
-
 
 a {
     color: #ff0000;
@@ -465,14 +622,48 @@ footer button {
         padding: 0.2cm 1cm;
         font-size: 16px;
     }
-
-    .bike-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
     
     .bike-gallery img {
         width: 100%;
         height: auto;
+    }
+
+    .modal-content {
+        width: 80%; 
+        height: 90% auto;
+    }
+    
+    .modal-content img {
+        max-width: 100%; /* Kuva skaalautuu moduulin sisään */
+        border-radius: 0.5cm;
+    }
+
+    .modal-ots {
+        font-size: 30px;
+    }
+
+    .modal p {
+        font-size: 15px;
+    }
+    
+    .modalright {
+        margin-left: 0px;
+        box-shadow: 0 0 10px rgb(0, 0, 0);
+        text-align: center;
+        height: 300px;
+        overflow: auto;
+        border-radius: 0.5cm;
+    }
+    
+    .modal-cen {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .close {
+        font-size: 40px;
     }
 
     #about {
@@ -608,14 +799,26 @@ footer button {
         padding: 0.2cm 1cm;
         font-size: 16px;
     }
-
-    .bike-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
     
-    .bike-gallery img {
-        width: 100%;
-        height: auto;
+    .modal-content img {
+        min-width: 100%; /* Kuva skaalautuu moduulin sisään */
+        border-radius: 0.5cm;
+    }
+
+    .modal-cen {
+        flex-direction: column;
+    }
+
+    .modal p {
+        font-size: 20px;
+    }
+
+    .modalright {
+        margin-left: 0px;
+        text-align: center;
+        height: 300px;
+        overflow: auto;
+        border-radius: 0.5cm;
     }
     
     #rent {
@@ -779,7 +982,6 @@ footer button {
         right: 10%;
     }
 
-
     .column-right z {
         font-size: 20px;
         color: #ffffff;
@@ -788,6 +990,15 @@ footer button {
     
     .column-right p {
         font-size: 15px;
+    }
+
+    .modal-content img {
+        width: 50%; /* Kuva skaalautuu moduulin sisään */
+        height: auto;
+    }
+
+    .modal p {
+        font-size: 20px;
     }
     
     button {
@@ -798,11 +1009,6 @@ footer button {
     button {
         padding: 0.2cm 1cm;
         font-size: 16px;
-    }
-    
-    .bike-gallery img {
-        width: 100%;
-        height: auto;
     }
 
 

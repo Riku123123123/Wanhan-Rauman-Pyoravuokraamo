@@ -88,3 +88,60 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+const bikeUrls = {
+    'terässiipi': 'https://twice.shop/wanhanraumanpyrvuokraus/product/voCeBmWjfU8iu3wyRonv',
+    'nopsa': 'https://twice.shop/wanhanraumanpyrvuokraus/product/JCiNiKKAoZf2uZcjABfI',
+    'helkama': 'https://twice.shop/wanhanraumanpyrvuokraus/product/Olp0IztcX7TJTXPGg77k',
+    'madison': 'https://twice.shop/wanhanraumanpyrvuokraus/product/MVCFG2UdZqkmkaASCE6k',
+    'riveri': 'https://twice.shop/wanhanraumanpyrvuokraus/product/Pd3Zvd2TmurVqUUNH3dH',
+    'hybrid': 'https://twice.shop/wanhanraumanpyrvuokraus/product/w1XL8k7ThBrftyOJePLc',
+    'ibrido': 'https://twice.shop/wanhanraumanpyrvuokraus/product/BkXWgHwo7cneQ5DzmEQn'
+};
+
+function openModal(name, image, description) {
+    document.getElementById('bikeName').innerText = name;
+    document.getElementById('bikeImage').src = image;
+    document.getElementById('bikeDescription').innerText = description;
+
+    const url = bikeUrls[name.toLowerCase()] || '';
+
+    const bikeURL = document.getElementById('bikeURL');
+    bikeURL.href = url;
+    const modal = document.getElementById('bikeModal');
+    modal.style.display = "block";
+    modal.classList.remove('modal-close');
+    modal.classList.add('modal-open');
+}
+  
+function closeModal() {
+    const modal = document.getElementById('bikeModal');
+    modal.classList.remove('modal-open');
+    modal.classList.add('modal-close');
+    setTimeout(() => {
+        modal.style.display = "none";
+    }, 500); // Sama kesto kuin modalClose-animaatiolla
+}
+  
+// Close the modal when the user clicks outside of it
+window.onclick = function(event) {
+    const modal = document.getElementById('bikeModal');
+    if (event.target == modal) {
+        closeModal();
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    showNotification();
+});
+
+function showNotification() {
+    const notificationBox = document.getElementById('notification-box');
+    notificationBox.style.display = 'block';
+}
+
+function closeNotification() {
+    const notificationBox = document.getElementById('notification-box');
+    notificationBox.style.display = 'none';
+}
