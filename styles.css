@@ -62,11 +62,15 @@ section.visible {
     box-shadow: 0 0 10px rgb(255, 0, 0);
     z-index: 1000;
     display: none; /* Piilotetaan boksi aluksi */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .notification-box button {
     margin-top: 20px;
     padding: 5px 10px;
+    width: 100%;
     background-color: #ff0000;
     color: #000000;
     border: none;
@@ -75,7 +79,7 @@ section.visible {
 }
 
 .notification-box button:hover {
-    background-color: #333;
+    background-color: #3b0000;
 }
 
 nav {
@@ -111,8 +115,8 @@ nav {
     color: #ffffff;
     border-radius: 1cm;
     cursor: pointer;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 
 .language-selector button:hover {
@@ -306,6 +310,8 @@ section {
 
 .bike-gallery img {
     border-radius: 1cm;
+    border-color: #000000;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 .bike-gallery img:hover {
@@ -379,6 +385,7 @@ section {
   .modal-content img {
     width: 60%; /* Kuva skaalautuu moduulin sisään */
     border-radius: 1cm;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 .modal-ots {
