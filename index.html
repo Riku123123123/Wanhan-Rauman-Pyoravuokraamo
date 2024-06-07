@@ -30,7 +30,7 @@ defer
 <body>
     <nav>
         <div class="nav-logo">
-            <img src="Logo3.png" alt="Wanhan Rauman Pyörävuokraus">
+            <img src="Logo3.png" alt="Wanhan Rauman Pyörävuokraamo">
         </div>
         <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
         <div class="nav-items">
@@ -104,7 +104,7 @@ defer
         <p class="fi">
             Tästä löydät vielä <a href="OhjeetFI.pdf" target="_blank">Ohjeet vuokraamiseen</a>, <a href="VuokrausehdotFI.pdf" target="_blank">vuokrausehdot</a> ja <a href="Tietosuojaseloste.pdf" target="_blank">tietosuojaselosteen</a>.
         </p>
-<p class="en" style="display: none;" >Hello, we are brothers from Rauma.</p>
+        <p class="en" style="display: none;" >Hello, we are brothers from Rauma.</p>
 <br>
 <p class="en" style="display: none;">
     We are participating in the 2024 Pitsikaupunki Summer Entrepreneurs. Our 4-hour company rents bicycles in front of the tourist information office in Old Rauma's Savila <a href="https://www.google.fi/maps/place/Savilankatu+8,+26100+Rauma/@61.1278038,21.5076158,18z/data=!4m6!3m5!1s0x46897e0931664b93:0x631b3dd93d3e7838!8m2!3d61.1279172!4d21.5076591!16s%2Fg%2F11c4cgxx36?hl=fi&entry=ttu">Savilankatu 8</a>. Our goal is to provide both locals and tourists an easy and enjoyable way to explore the city by bike.
@@ -140,7 +140,7 @@ defer
           <div class="modal-body">
             <h2 class="modal-ots" id="bikeName"></h2>
             <p class="modalright" id="bikeDescription"></p>
-            <a id="bikeURL" href="" target="_blank"><button>Vuokraa</button></a>
+            <a id="bikeURL" href="" target="_blank" class><button class="fi">Vuokraa</button><button class="en" style="display: none;">Rent</button></a>
         </div>
         </div>
         </div>
@@ -164,6 +164,10 @@ defer
             <img src="Polkupyorat/Helkama.jpg" alt="Helkama" onclick="openModal('Helkama', 'Polkupyorat/Helkama.jpg', 'Helkama on luotettava pyörä...')">
         </div>
         <div class="bike-item">
+            <p>Ibrido</p>
+            <img src="Polkupyorat/Ibrido.jpg" alt="Ibrido" onclick="openModal('Ibrido', 'Polkupyorat/Ibrido.jpg', 'Ibrido on moderni pyörä...')">
+        </div>
+        <div class="bike-item">
             <p>Madison</p>
             <img src="Polkupyorat/Madison.jpg" alt="Madison" onclick="openModal('Madison', 'Polkupyorat/Madison.jpg', 'Madison on tyylikäs pyörä...')">
         </div>
@@ -174,10 +178,6 @@ defer
         <div class="bike-item">
             <p>Nakamura</p>
             <img src="Polkupyorat/Hybrid.jpg" alt="Hybrid" onclick="openModal('Hybrid', 'Polkupyorat/Hybrid.jpg', 'Hybrid on monipuolinen pyörä...')">
-        </div>
-        <div class="bike-item">
-            <p>Ibrido</p>
-            <img src="Polkupyorat/Ibrido.jpg" alt="Ibrido" onclick="openModal('Ibrido', 'Polkupyorat/Ibrido.jpg', 'Ibrido on moderni pyörä...')">
         </div>
         </div>      
         <br>
