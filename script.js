@@ -94,9 +94,19 @@ const bikeUrls = {
     'nopsa': 'https://twice.shop/wanhanraumanpyrvuokraus/product/JCiNiKKAoZf2uZcjABfI',
     'helkama': 'https://twice.shop/wanhanraumanpyrvuokraus/product/Olp0IztcX7TJTXPGg77k',
     'madison': 'https://twice.shop/wanhanraumanpyrvuokraus/product/MVCFG2UdZqkmkaASCE6k',
-    'riveri': 'https://twice.shop/wanhanraumanpyrvuokraus/product/Pd3Zvd2TmurVqUUNH3dH',
-    'hybrid': 'https://twice.shop/wanhanraumanpyrvuokraus/product/w1XL8k7ThBrftyOJePLc',
+    'carraro': 'https://twice.shop/wanhanraumanpyrvuokraus/product/Pd3Zvd2TmurVqUUNH3dH',
+    'nakamura': 'https://twice.shop/wanhanraumanpyrvuokraus/product/w1XL8k7ThBrftyOJePLc',
     'ibrido': 'https://twice.shop/wanhanraumanpyrvuokraus/product/BkXWgHwo7cneQ5DzmEQn'
+};
+
+const bikeVideoUrls = {
+    'terässiipi': 'none.mp4',
+    'nopsa': 'none.mp4',
+    'helkama': 'none.mp4',
+    'madison': 'none.mp4',
+    'carraro': 'none.mp4',
+    'nakamura': 'none.mp4',
+    'ibrido': 'none.mp4'
 };
 
 function openModal(name, image, description) {
@@ -105,17 +115,30 @@ function openModal(name, image, description) {
     document.getElementById('bikeDescription').innerText = description;
 
     const url = bikeUrls[name.toLowerCase()] || '';
+    const videoUrl = bikeVideoUrls[name.toLowerCase()] || '';
 
     const bikeURL = document.getElementById('bikeURL');
     bikeURL.href = url;
+
+    const bikeVideoSource = document.getElementById('bikeVideoSource');
+    bikeVideoSource.src = videoUrl;
+
+    const bikeVideo = document.getElementById('bikeVideo');
+    bikeVideo.load(); // Load the new video URL
+    bikeVideo.pause(); // Play the video
+
     const modal = document.getElementById('bikeModal');
     modal.style.display = "block";
     modal.classList.remove('modal-close');
     modal.classList.add('modal-open');
 }
-  
+
+
 function closeModal() {
     const modal = document.getElementById('bikeModal');
+    const bikeVideo = document.getElementById('bikeVideo');
+    bikeVideo.pause(); // Pause the video when closing the modal
+
     modal.classList.remove('modal-open');
     modal.classList.add('modal-close');
     setTimeout(() => {
@@ -138,7 +161,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 function showNotification() {
     const notificationBox = document.getElementById('notification-box');
-    notificationBox.style.display = 'block';
+    notificationBox.style.display = 'none';  // TÄHÄN 'block' NIIN SAA ILMOITUSLAATIKON PÄÄLLE!!
 }
 
 function closeNotification() {

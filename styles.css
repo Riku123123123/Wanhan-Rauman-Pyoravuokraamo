@@ -402,6 +402,7 @@ section {
     margin-left: 50px;
     box-shadow: 0 0 10px rgb(0, 0, 0);
     text-align: center;
+    padding: 10px; /* Add padding for better spacing */
 }
 
 .modal-cen {
