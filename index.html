@@ -41,13 +41,14 @@ defer
             <a href="javascript:void(0);" onclick="navigateTo('feedback')"><span class="fi">Palaute</span><span class="en" style="display:none;">Feedback</span></a>
             <a href="javascript:void(0);" onclick="navigateTo('contact')"><span class="fi">Yhteystiedot</span><span class="en" style="display:none;">Contact</span></a>
             <div class="insta">
-                <a href="https://www.instagram.com/wrpyoravuokraamo/" target="_blank"><img src="Instagram.png" alt="Instagram"></a>
+                <a href="https://www.instagram.com/wrpyoravuokraamo/" target="_blank" class="insta"></a>
             </div>
             <div class="language-selector">
                 <button onclick="setLanguage('fi')" class="flag-fi"></button>
                 <button onclick="setLanguage('en')" class="flag-en"></button>
             </div>
         </div>
+    </div>
     </nav>
 
     <div id="notification-box" class="notification-box" style="display: none;">
@@ -108,32 +109,33 @@ defer
         <p class="fi">
             Tästä löydät vielä <a href="OhjeetFI.png" target="_blank">Ohjeet vuokraamiseen</a>, <a href="VuokrausehdotFI.pdf" target="_blank">vuokrausehdot</a> ja <a href="Tietosuojaseloste.pdf" target="_blank">tietosuojaselosteen</a>.
         </p>
+        <button id="Ohje" class="fi"><a href="OhjeetFI.png" target="_blank">.</a></button>
         <p class="en" style="display: none;" >Hello, we are brothers from Rauma.</p>
 <br>
 <p class="en" style="display: none;">
     We are participating in the 2024 Pitsikaupunki Summer Entrepreneurs. Our 4-hour company rents bicycles in front of the tourist information office in Old Rauma's Savila <a href="https://www.google.fi/maps/place/Savilankatu+8,+26100+Rauma/@61.1278038,21.5076158,18z/data=!4m6!3m5!1s0x46897e0931664b93:0x631b3dd93d3e7838!8m2!3d61.1279172!4d21.5076591!16s%2Fg%2F11c4cgxx36?hl=fi&entry=ttu">Savilankatu 8</a>. Our goal is to provide both locals and tourists an easy and enjoyable way to explore the city by bike.
 </p>
-<br>
+<br class="en" style="display: none;">
 <p class="en" style="display: none;">
     We have seven different bikes available for rent, which you can explore more in the <a onclick="navigateTo('bikes')">Bikes</a> section.
 </p>
-<br>
+<br class="en" style="display: none;">
 <p class="en" style="display: none;">
     You can rent a bike from us <a href="https://twice.shop/wanhanraumanpyrvuokraus" target="_blank">online</a> or by contacting us by phone or email <a onclick="navigateTo('contact')">(Contact)</a>. The bike must be reserved online at least half an hour in advance if we are not on site.
 </p>
-<br>
+<br class="en" style="display: none;">
 <p class="en" style="display: none;">
     Cycling is a great way to explore the beautiful landscapes and historical center of Rauma. Whether you're a tourist or a local resident, cycling allows you to experience the city in a unique way and move freely wherever you want.
 </p>
-<br>
+<br class="en" style="display: none;">
 <p class="en" style="display: none;">
     Welcome to enjoy cycling in the idyllic landscapes of Rauma! Feel free to <a onclick="navigateTo('contact')">contact us</a> if you have any questions or need more information about renting bikes.
 </p>
-<br>
+<br class="en" style="display: none;">
 <p class="en" style="display: none;">
     Here you can find <a href="GuideEN.png" target="_blank">Instructions for renting</a>, <a href="RentalTermsEN.pdf" target="_blank">rental terms</a>, and <a href="Tietosuojaseloste.pdf" target="_blank">privacy policy</a> (site 3).
 </p>
-
+<button id="Guide" class="en" style="display: none;"><a href="GuideEN.png" target="_blank">.</a></button>
     </section>
 
     <div id="bikeModal" class="modal">

@@ -107,6 +107,8 @@ nav {
     justify-content: center;
     align-items: center; /* Lisää nav-items -elementin sisällön keskittäminen */
     gap: 2rem;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    border-radius: 0.5cm;
 }
 
 .language-selector button {
@@ -128,10 +130,14 @@ nav {
     height: auto;
 }
 
-.insta a img {
-    width: 2cm;
-    height: auto;
-    margin-left: 10cm;
+.insta a {
+    display: flex;
+    background-image: url('Instagram.png');
+    background-size: contain; /* Skaalaa kuva kuvakehykseen */
+    background-position: center;
+    width: 1.4cm;
+    height: 1.4cm;
+    border-radius: 0.5cm;
 }
 
 nav a {
@@ -145,12 +151,11 @@ nav a {
 }
 
 /* Lisää hover-animaatio kaikkiin linkkeihin */
-nav a:hover {
+.nav-items a:hover {
     color: #ff0000;
     scale: 1.2;
     cursor: pointer;
-    transition: scale 0.3s ease;
-    transition: color 0.6s ease;
+    transition: scale 0.3s ease, color 0.6s ease;
 }
 
 .hero {
@@ -288,6 +293,20 @@ section {
     font-size: 25px;
 }
 
+#Ohje {
+    background-image: url('OhjeetFI.png');
+    background-size: contain;
+    width: 700px;
+    height: 1000px;
+}
+
+#Guide {
+    background-image: url('GuideEN.png');
+    background-size: contain;
+    width: 700px;
+    height: 1000px;
+}
+
 #bikes {
     background-color: #9e0000;
     font-size: 25px;
@@ -305,6 +324,7 @@ section {
     flex-direction: column;
     flex-wrap: nowrap;
     color: #ffffff;
+    border-radius: 1cm;
     text-align: center; /* Lisää tähän */
 }
 
@@ -314,8 +334,11 @@ section {
     box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
-.bike-gallery img:hover {
+.bike-item:hover {
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    scale: 1.1;
     cursor: pointer;
+    transition: scale 0.4s ease, box-shadow 0.6s ease;
 }
 
   /* Fade-in animation for modal background */
@@ -548,26 +571,14 @@ footer button {
     }
 
     .nav-items {
-        display: none;
-        flex-direction: column;
-        gap: 0;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 50%;
-        background-color: #910000;
-        border-radius: 10px;
-        overflow: hidden;
-    }
-
-    .nav-items.active {
-        display: flex;
+        overflow: auto;
     }
 
     .nav-items a {
-        padding: 1rem;
         text-align: center;
         border-top: 1px solid #ccc;
+        overflow: auto;
+        font-size: 16px;
     }
 
     nav {
@@ -575,7 +586,6 @@ footer button {
         align-items: center;
         width: 90%;
         height: 2.5cm;
-        border-radius: 0.5cm;
     }
 
     section {
@@ -727,14 +737,6 @@ footer button {
         background-size: cover;
         background-position: center;
     }
-    
-    .insta a img {
-        display: flex;
-        margin-left: 0px;
-        margin-bottom: 50px;
-        width: 1cm;
-        height: auto;
-    }
 
     .hamburger {
         display: block;
@@ -746,21 +748,65 @@ footer button {
         gap: 0;
         position: absolute;
         top: 100%;
-        right: 0;
         width: 50%;
-        background-color: #910000;
-        border-radius: 10px;
-        overflow: hidden;
+        opacity: 1;
+        box-shadow: 0 0 0px rgb(255, 0, 0);
     }
 
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
     .nav-items.active {
         display: flex;
+        animation: slideDown 0.5s ease forwards;
     }
 
     .nav-items a {
+        width: 100%;
         padding: 1rem;
+        background-color: #910000;
         text-align: center;
         border-top: 1px solid #ccc;
+        border-bottom: 5px solid #000000;
+        border-radius: 0.5cm;
+    }
+
+    .language-selector {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #910000;
+        border-top: 1px solid #ccc;
+        border-bottom: 5px solid #000000;
+        width: 100%;
+        height: 1.5cm;
+        border-radius: 0.5cm;
+    }
+
+    .insta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #910000;
+        border-top: 1px solid #ccc;
+        border-bottom: 5px solid #000000;
+        width: 100%;
+        border-radius: 0.5cm;
+    }
+
+    .insta a {
+        border-top: 0px solid #ccc;
+        border-bottom: 0px solid #000000;
+        width: 50px;
+        height: 50px;
     }
 
     nav {
@@ -878,15 +924,6 @@ footer button {
         padding: 0 0.1cm;
     }
 
-    .insta a img {
-        display: flex;
-        margin-left: 0px;
-        margin-bottom: 50px;
-        width: 1cm;
-        height: 1cm;
-    }
-
-
     .nav-items.active {
         display: flex;
     }
@@ -950,16 +987,6 @@ footer button {
         max-width: 500px; /* Tai mikä tahansa haluamasi koko */
         height: auto;
     }
-    
-
-    .insta a img {
-        display: flex;
-        margin-left: 0px;
-        margin-bottom: 0px;
-        width: 1cm;
-        height: auto;
-    }
-
 
     .nav-items.active {
         display: flex;

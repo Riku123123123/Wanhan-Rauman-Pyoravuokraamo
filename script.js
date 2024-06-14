@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 function showNotification() {
     const notificationBox = document.getElementById('notification-box');
-    notificationBox.style.display = 'none';  // TÄHÄN 'block' NIIN SAA ILMOITUSLAATIKON PÄÄLLE!!
+    notificationBox.style.display = 'none';  // TÄHÄN KOHTAAN 'block' NIIN SAA ILMOITUSLAATIKON PÄÄLLE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 }
 
 function closeNotification() {
