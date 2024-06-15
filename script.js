@@ -38,9 +38,11 @@ document.addEventListener('DOMContentLoaded', function() {
         notificationBox.classList.remove('active'); // Varmista, että ilmoitus ei ole aktiivinen avattaessa valikko
 
         if (navItems.classList.contains('active')) {
-            hamtausta.style.display = 'block';
+            if (window.innerWidth <= 1289) { // Näytä hamtausta vain näytöillä, joiden leveys on enintään 1289px
+                hamtausta.classList.add('show');
+            }
         } else {
-            hamtausta.style.display = 'none';
+            hamtausta.classList.remove('show');
         }
     }
 
@@ -61,7 +63,16 @@ document.addEventListener('DOMContentLoaded', function() {
             toggleMenu(); // Sulje valikko kun navigoidaan
         });
     });
-});
+
+    // Lisätään kuuntelija, joka sulkee valikon kun klikataan muualle sivulle
+    document.addEventListener('click', function(event) {
+        const navItems = document.querySelector('.nav-items');
+        const hamtausta = document.getElementById('hamtausta');
+        if (!event.target.closest('.nav-items') && !event.target.closest('.hamburger')) {
+            navItems.classList.remove('active');
+            hamtausta.classList.remove('show');
+        }
+    });
 
     // Button animaatio
     const buttons = document.querySelectorAll('button');
@@ -73,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 500);
         });
     });
+});
 
     // Modal-toiminnallisuus
     const bikeUrls = {
@@ -152,13 +164,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Käynnistä ilmoitus
     showNotification();
-
-    // Lisätään kuuntelija, joka sulkee valikon kun klikataan muualle sivulle
-    document.addEventListener('click', function(event) {
-        var navItems = document.querySelector('.nav-items');
-        if (!event.target.closest('.hamburger') && !event.target.closest('.nav-items')) {
-            navItems.classList.remove('active');
-            hamtausta.style.display = 'none';
-        }
-    });
-

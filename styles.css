@@ -762,6 +762,10 @@ footer button {
         display: block;
     }
 
+    #hamtausta.show {
+        display: block;
+    }
+
     .nav-items {
         display: none;
         flex-direction: column;
