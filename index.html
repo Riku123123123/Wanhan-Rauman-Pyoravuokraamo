@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wanhan Rauman Pyörävuokraamo</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" sizes="48x48" href="Logo1.0.png">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="icon" type="image/png" sizes="48x48" href="KUVAT + MUUT/Logo1.0.png">
+    <script src="JS/IndexJS.js" defer></script>
+    <script src="JS/LanguageJS.js" defer></script>
     <!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/346d4269118214d6df49f9de/script.js"></script> <!-- End cookieyes banner -->
 </head>
 
@@ -31,22 +32,22 @@ defer
     <div id="hamtausta" class="hamtausta"></div>
     <nav>
         <div class="nav-logo">
-            <img src="Logo3.png" alt="Wanhan Rauman Pyörävuokraamo">
+            <img src="KUVAT + MUUT/Logo3.png" alt="Wanhan Rauman Pyörävuokraamo">
         </div>
         <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
         <div class="nav-items">
-            <a href="javascript:void(0);" onclick="navigateTo('home')"><span class="fi">Koti</span><span class="en" style="display:none;">Home</span></a>
-            <a href="javascript:void(0);" onclick="navigateTo('rent')"><span class="fi">Vuokraa</span><span class="en" style="display:none;">Rent</span></a>
-            <a href="javascript:void(0);" onclick="navigateTo('bikes')"><span class="fi">Pyörät</span><span class="en" style="display:none;">Bikes</span></a>
-            <a href="javascript:void(0);" onclick="navigateTo('about')"><span class="fi">Meistä</span><span class="en" style="display:none;">About us</span></a>
-            <a href="javascript:void(0);" onclick="navigateTo('feedback')"><span class="fi">Palaute</span><span class="en" style="display:none;">Feedback</span></a>
-            <a href="javascript:void(0);" onclick="navigateTo('contact')"><span class="fi">Yhteystiedot</span><span class="en" style="display:none;">Contact</span></a>
+            <a href="#home" onclick="navigateTo('home')"><span class="fi">Koti</span><span class="en" style="display:none;">Home</span></a>
+            <a href="#rent" onclick="navigateTo('rent')"><span class="fi">Vuokraa</span><span class="en" style="display:none;">Rent</span></a>
+            <a href="#bikes" onclick="navigateTo('bikes')"><span class="fi">Pyörät</span><span class="en" style="display:none;">Bikes</span></a>
+            <a href="#about" onclick="navigateTo('about')"><span class="fi">Meistä</span><span class="en" style="display:none;">About us</span></a>
+            <a href="#feedback" onclick="navigateTo('feedback')"><span class="fi">Palaute</span><span class="en" style="display:none;">Feedback</span></a>
+            <a href="#contact" onclick="navigateTo('contact')"><span class="fi">Yhteystiedot</span><span class="en" style="display:none;">Contact</span></a>
             <div class="insta">
                 <a href="https://www.instagram.com/wrpyoravuokraamo/" target="_blank" class="insta"></a>
             </div>
             <div class="language-selector">
-                <button onclick="setLanguage('fi')" class="flag-fi"></button>
-                <button onclick="setLanguage('en')" class="flag-en"></button>
+                <button class="flag-fi"></button>
+                <button class="flag-en"></button>
             </div>
         </div>
     </div>
@@ -57,15 +58,15 @@ defer
         <p class="en" style="display: none;">OPEN DAILY KLO 10-17</p>
         <button onclick="closeNotification()">OK</button>
         <div class="language-selector">
-            <button onclick="setLanguage('fi')" class="flag-fi"></button>
-            <button onclick="setLanguage('en')" class="flag-en"></button>
+            <button class="flag-fi"></button>
+            <button class="flag-en"></button>
         </div>
     </div>
     <section id="home" class="hero">
         </div>
         <div class="hero-container">
             <div class="column-left">
-                <img src="Logo1.0.png" alt="Wanha Rauma" class="hero-image">
+                <img src="KUVAT + MUUT/Logo1.0.png" alt="Wanha Rauma" class="hero-image">
             </div>
             <div class="column-right">
                 <z class="fi">WANHAN RAUMAN PYÖRÄVUOKRAAMO</z>
@@ -75,10 +76,10 @@ defer
                 <p class="fi">Vuokraa pyörä netin kautta</p>
                 <p class="en" style="display:none;">Rent a bike online</p>
                 <button onclick="navigateTo('rent')"><span class="fi">Vuokraa</span><span class="en" style="display:none;">Rent</span></button>
-                <g class="fi"><a href="VuokrausehdotFI.pdf" target="_blank">Vuokrausehdot (PDF)</a></g>
-                <g class="en" style="display:none;"><a href="RentalTermsEN.pdf" target="_blank">Rental terms (PDF)</a></g>
-                <g class="fi"><a href="OhjeetFI.png" target="_blank">Ohjeet vuokraamiselle</a></g>
-                <g class="en" style="display:none;"><a href="GuideEN.png" target="_blank">Guide for renting</a></g>
+                <g class="fi"><a href="HTML/Terms.html">Vuokrausehdot</a></g>
+                <g class="en" style="display:none;"><a href="HTML/Terms.html">Rental terms</a></g>
+                <g class="fi"><a href="HTML/Guide.html">Ohjeet vuokraamiselle</a></g>
+                <g class="en" style="display:none;"><a href="HTML/Guide.html">Guide for renting</a></g>
             </div>
         </div>
     </section>
@@ -109,9 +110,9 @@ defer
         </p>
         <br class="fi">
         <p class="fi">
-            Tästä löydät vielä <a href="OhjeetFI.png" target="_blank">Ohjeet vuokraamiseen</a>, <a href="VuokrausehdotFI.pdf" target="_blank">vuokrausehdot</a> ja <a href="Tietosuojaseloste.pdf" target="_blank">tietosuojaselosteen</a>.
+            Tästä löydät vielä <a href="HTML/Guide.html" class="fi">Ohjeet vuokraamiseen</a>, <a href="HTML/Terms.html">vuokrausehdot</a> ja  <a href="HTML/Privacy.html" class="fi">Tietosuojaselosteen</a>
         </p>
-        <button id="Ohje" class="fi"><a href="OhjeetFI.png" target="_blank">.</a></button>
+        <button id="Ohje" class="fi"><a href="KUVAT + MUUT/OhjeetFI.png" target="_blank">.</a></button>
         <p class="en" style="display: none;" >Hello, we are brothers from Rauma.</p>
 <br>
 <p class="en" style="display: none;">
@@ -135,9 +136,8 @@ defer
 </p>
 <br class="en" style="display: none;">
 <p class="en" style="display: none;">
-    Here you can find <a href="GuideEN.png" target="_blank">Instructions for renting</a>, <a href="RentalTermsEN.pdf" target="_blank">rental terms</a>, and <a href="Tietosuojaseloste.pdf" target="_blank">privacy policy</a> (site 3).
-</p>
-<button id="Guide" class="en" style="display: none;"><a href="GuideEN.png" target="_blank">.</a></button>
+    Here you can find <a href="HTML/Guide.html" target="_blank">Instructions for renting</a>, <a href="HTML/Terms.html">rental terms</a>, and <a href="HTML/Privacy.html" class="en">Privacy policy.</a></p>
+<button id="Guide" class="en" style="display: none;"><a href="KUVAT + MUUT/GuideEN.png" target="_blank">.</a></button>
     </section>
 
     <div id="bikeModal" class="modal">
@@ -206,8 +206,8 @@ defer
     
     <section id="contact" style="display: none;">
         <h2><span class="fi">Yhteystiedot</span><span class="en" style="display:none;">Contact</span></h2>
-        <p class="fi"> Osoite <img src="Pin.png" alt="Osoite" class="Pin">:<a href="https://maps.google.com/?q=Savilankatu+8,+26100+Rauma" target="_blank">Savilankatu 8, 26100 Rauma</a></p>
-        <p class="en" style="display:none;">Address <img src="Pin.png" alt="Osoite" class="Pin">:<a href="https://maps.google.com/?q=Savilankatu+8,+26100+Rauma" target="_blank">Savilankatu 8, 26100 Rauma</a></p>
+        <p class="fi"> Osoite <img src="KUVAT + MUUT/Pin.png" alt="Osoite" class="Pin">:<a href="https://maps.google.com/?q=Savilankatu+8,+26100+Rauma" target="_blank">Savilankatu 8, 26100 Rauma</a></p>
+        <p class="en" style="display:none;">Address <img src="KUVAT + MUUT/Pin.png" alt="Osoite" class="Pin">:<a href="https://maps.google.com/?q=Savilankatu+8,+26100+Rauma" target="_blank">Savilankatu 8, 26100 Rauma</a></p>
         <p class="fi">Puhelinnumerot: <a href="tel:+358449746457">044 974 6457</a> (Valtteri) / <a href="tel:+358449787610">044 978 7610</a> (Riku)</p>
         <p class="en" style="display:none;">Phone numbers: <a href="tel:+358449746457">044 974 6457</a> (Valtteri) / <a href="tel:+358449787610">044 978 7610</a> (Riku)</p>
         <p class="fi">Sähköposti: <a href="mailto:wrpyoravuokraamo@gmail.com">wrpyoravuokraamo@gmail.com</a></p>
@@ -226,10 +226,10 @@ defer
         <p class="fi">Mikäli haluat vuokrata pyörän pidemmäksi aikaa, ota meihin yhteyttä <a href="mailto:wrpyoravuokraamo@gmail.com">sähköpostin</a> kautta</p>
         <p class="en" style="display: none;">If you are interested in renting a bike for a longer duration, contact us via <a href="mailto:wrpyoravuokraamo@gmail.com">gmail</a></p>
         <br>
-        <p class="fi"><a href="VuokrausehdotFI.pdf" target="_blank">Vuokrausehdot (PDF)</a></p>
-    <p class="en" style="display:none;"><a href="RentalTermsEN.pdf" target="_blank">Rental terms (PDF)</a></p>
-    <p class="fi"><a href="OhjeetFI.png" target="_blank">Ohjeet vuokraamiselle</a></p>
-    <p class="en" style="display:none;"><a href="GuideEN.png" target="_blank">Guide for renting</a></p>
+        <p class="fi"><a href="HTML/Terms.html">Vuokrausehdot</a></p>
+    <p class="en" style="display:none;"><a href="HTML/Terms.html">Rental terms</a></p>
+    <p class="fi"><a href="HTML/Guide.html">Ohjeet vuokraamiseen</a></p>
+    <p class="en" style="display:none;"><a href="HTML/Guide.html">Guide for renting</a></p>
     <br>
         <twice-store
 	shop="wanhanraumanpyrvuokraus"/>
@@ -254,10 +254,10 @@ defer
         </div>
         <br>
         <div class="language-selector">
-            <button onclick="setLanguage('fi')" class="flag-fi"></button>
-            <button onclick="setLanguage('en')" class="flag-en"></button>
+            <button class="flag-fi"></button>
+            <button class="flag-en"></button>
         </div>
-    <p><img src="Pin.png" alt="Osoite" class="Pin"> Savilankatu 8</p>
+    <p><img src="KUVAT + MUUT/Pin.png" alt="Osoite" class="Pin"> Savilankatu 8</p>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.1234536802363!2d21.514634815379417!3d61.12815727995933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468bcaa888888889%3A0x1234567890abcdef!2sSavilankatu%208%2C%2026100%20Rauma%2C%20Finland!5e0!3m2!1sen!2sus!4v1621521205123!5m2!1sen!2sus"></iframe>
     <br>
     <p>&copy; 2024 Wanhan Rauman Pyörävuokraamo</p>
@@ -266,13 +266,13 @@ defer
 
     <div class="footlog">
         <div class="logo">
-            <img src="Logo3.png" alt="Wanha Rauma" class="hero-image">
+            <img src="KUVAT + MUUT/Logo3.png" alt="Wanha Rauma" class="hero-image">
         </div>
         <div class="logo">
-            <img src="Pitsikaupungin kesäyrittäjät logo 2.png" alt="Wanha Rauma" class="hero-image">
+            <img src="KUVAT + MUUT/Pitsikaupungin kesäyrittäjät logo 2.png" alt="Wanha Rauma" class="hero-image">
         </div>
         <div class="logo">
-            <img src="4Hyritys.png" alt="Wanha Rauma" class="hero-image">
+            <img src="KUVAT + MUUT/4Hyritys.png" alt="Wanha Rauma" class="hero-image">
         </div>
     </div>
     </footer>
