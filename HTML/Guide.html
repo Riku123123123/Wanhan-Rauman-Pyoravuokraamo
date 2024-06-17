@@ -14,7 +14,7 @@
     <header>
         <nav>
         <div class="nav-items">
-            <button onclick="handleNavigation('../index.html')" class="nuoli"></button>
+            <button onclick="handleNavigation('../index.html#home')" class="nuoli"></button>
             <div class="language-selector">
                 <button onclick="setLanguage('fi')" class="flag-fi"></button>
                 <button onclick="setLanguage('en')" class="flag-en"></button>
@@ -31,23 +31,30 @@
         <h3 class="fi">VARAUKSEN PITÄÄ TEHDÄ 30 MINUUTTIA ETUKÄTEEN, JOS EMME OLE PAIKAN PÄÄLLÄ!</h3>
         <h3 class="en" style="display: none;">RESERVATION MUST BE MADE 30 MINUTES IN ADVANCE IF WE ARE NOT ON SITE!</h3>
         <br>
+        <div class="button-container">
+            <a href="#guide"><button onclick="navigateTo('guide')" class="fi">"Miten vuokraan pyörän?"</button></a>
+            <a href="#guide"><button onclick="navigateTo('guide')" class="en" style="display: none;">"How to rent bike?"</button></a>
+            <br>
+            <a href="#long"><button onclick="navigateTo('long')" class="fi">"Miten pystyn vuokraamaan pyörän pidemmäksi ajaksi?"</button></a>
+            <a href="#long"><button onclick="navigateTo('long')" class="en" style="display: none;">"How can I rent a bike for a longer period?"</button></a>
+            <br>
+            <a href="#keys"><button onclick="navigateTo('keys')" class="fi">"Mites avaimet?"</button></a>
+            <a href="#keys"><button onclick="navigateTo('keys')" class="en" style="display: none;">"How about the keys?"</button></a>
+            <br>
+            <a href="#kids"><button onclick="navigateTo('kids')" class="fi">"Entä lapset?"</button></a>
+            <a href="#kids"><button onclick="navigateTo('kids')" class="en" style="display: none;">"What about the children?"</button></a>
+            <br>
+            <a href="#price"><button onclick="navigateTo('price')" class="fi">"Sul olis tuotteelle varmaa jokin hinta?"</button></a>
+            <a href="#price"><button onclick="navigateTo('price')" class="en" style="display: none;">Price?"</button></a>
+            <br>
+        </div>
+        <br>
         <h3 class="fi">Jos jokin jäi kuitenkin mietityttämään, ota meihin <a href="../index.html#contact">yhteyttä</a></h3>
         <h3 class="en" style="display: none;">If you still have any questions, please <a href="../index.html#contact">contact us</a></h3>
         <br>
         <p class="fi">Lisää tulossa!</p>
         <p class="en" style="display: none;">More coming!</p>
-        <br>
-        <div class="button-container">
-            <button onclick="navigateTo('guide')" class="fi">"Miten vuokraan pyörän?"</button>
-            <button onclick="navigateTo('guide')" class="en" style="display: none;">"How to rent bike?"</button>
-            <br>
-            <button onclick="navigateTo('long')" class="fi">"Miten pystyn vuokraamaan pyörän pidemmäksi ajaksi?"</button>
-            <button onclick="navigateTo('long')" class="en" style="display: none;">"How can I rent a bike for a longer period?"</button>
-            <br>
-            <button onclick="navigateTo('keys')" class="fi">"Mites avaimet?"</button>
-            <button onclick="navigateTo('keys')" class="en" style="display: none;">"How about the keys?"</button>
-            <br>
-        </div>        
+        <br>      
     </section>
     
 
@@ -105,6 +112,8 @@
         <h2 class="fi">Ohjeet polkupyörän vuokraamiseen pidemmäksi aikaa</h2>
         <h2 class="en" style="display: none;">Instructions for Renting a Bike for a Longer Period</h2>
         <br>
+        <div class="container">
+        <div class="left">
         <p class="fi">Lähetä meille <a href="mailto:wrpyoravuokraamo@gmail.com">sähköpostilla</a> viestiä, jossa ilmoitat muunmuassa:</p>
         <p class="en" style="display: none;">Send us an <a href="mailto:wrpyoravuokraamo@gmail.com">email</a> with the following details:</p>
         <ul class="fi">
@@ -144,19 +153,157 @@
         <a href="mailto:wrpyoravuokraamo@gmail.com" class="en" style="display: none;">
             <button>CONTACT US</button>
         </a>
+        <br>
+    </div>
+    <div class="right">
+        <h1 class="fi">Hinnasto:</h1>
+        <h1 class="en" style="display: none;">Price List:</h1>
+        <ul class="fi">
+            <li> klo 10-17:</li>
+            <ul>
+                <li>1 tunti / 5€</li>
+                <li>2 tunti / 8€</li>
+                <li>3 tunti / 10€</li>
+                <li>4 tunti / 12€</li>
+                <li><a href="#price">...</a></li>
+            </ul>
+        </ul>
+        <ul class="en" style="display: none;">
+            <li> from 10 to 17:</li>
+            <ul>
+                <li>1 hour / 5€</li>
+                <li>2 hour / 8€</li>
+                <li>3 hour / 10€</li>
+                <li>4 hour / 12€</li>
+                <li><a href="#price">...</a></li>
+            </ul>
+        </ul>
+        <br>
+        <ul class="fi">
+            <li>24H (1 vrk) / 20€</li>
+            <li>48H (2 vrk) / 25€</li>
+            <li>72H (3 vrk) / 30€</li>
+            <li><a href="#price">...</a></li>
+        </ul>
+        <ul class="en" style="display: none;">
+            <li>24H (1 day) / 20€</li>
+            <li>48H (2 day) / 25€</li>
+            <li>72H (3 day) / 30€</li>
+            <li><a href="#price">...</a></li>
+        </ul>
+    </div>
+</div>
     </section>
 
     <section id="keys">
-        <h2 class="fi">Pyörän avainten haku</h2>
-        <h2 class="en" style="display: none;">Collecting bicycle keys</h2>
+        <h3 class="fi">Pyörän avainten haku</h3>
+        <h3 class="en" style="display: none;">Collecting bicycle keys</h3>
         <br>
         <ul class="fi">
-            <li>Pyörän avaimet voit noutaa Rauman matkailuneuvonnan edustalta <a href="https://www.google.com/maps/place/Savilankatu+8,+26100+Rauma/@61.1279198,21.5050842,17z/data=!3m1!4b1!4m6!3m5!1s0x46897e0931664b93:0x631b3dd93d3e7838!8m2!3d61.1279172!4d21.5076591!16s%2Fg%2F11c4cgxx36?entry=ttu">Savilankatu 8</a> vuokra-ajan alkaessasi</li>
-            <br>
-            <li>Avainta tulee säilyttää siten, ettei se mene hukkaan, eikä sitä pystytä varastamaan.</li>
-            <br>
-            <li>Avaimet luovutetaan matkailuneuvonnan työntekijälle, mikäli emme ole paikalla.</li>
+            <li>Pyörän avaimet voit noutaa Rauman matkailuneuvonnan edustalta <a href="https://www.google.com/maps/place/Savilankatu+8,+26100+Rauma/@61.1279198,21.5050842,17z/data=!3m1!4b1!4m6!3m5!1s0x46897e0931664b93:0x631b3dd93d3e7838!8m2!3d61.1279172!4d21.5076591!16s%2Fg%2F11c4cgxx36?entry=ttu">Savilankatu 8</a> vuokra-ajan alkaessasi.</li>
+            <li>Sieltä saat käyttöösi:</li>
+            <ul>
+                <li>Polkupyörän</li>
+                <li>Vaijerilukko</li>
+                <li>Avaimet</li>
+                <li>Kypärän</li>
+            </ul>
+            <li>Paikan päällä katsomme myös, että pyörä on sopivan kokoinen ja renkaissa on ilmaa.</li>
         </ul>
+        <ul class="en" style="display: none;">
+            <li>You can pick up the bike keys from in front of the Rauma tourist information office at <a href="https://www.google.com/maps/place/Savilankatu+8,+26100+Rauma/@61.1279198,21.5050842,17z/data=!3m1!4b1!4m6!3m5!1s0x46897e0931664b93:0x631b3dd93d3e7838!8m2!3d61.1279172!4d21.5076591!16s%2Fg%2F11c4cgxx36?entry=ttu">Savilankatu 8</a> when your rental period begins.</li>
+            <li>There you will receive:</li>
+            <ul>
+                <li>Bicycle</li>
+                <li>Cable lock</li>
+                <li>Keys</li>
+                <li>Helmet</li>
+            </ul>
+            <li>On site, we will also ensure that the bike is the right size and the tires are inflated.</li>
+        </ul>
+        <br>
+        <h3 class="fi">Pyörän avainten säilytys:</h3>
+        <h3 class="en" style="display: none;">Storing bike keys:</h3>
+        <br>
+        <ul class="fi">
+            <li>Pyörän avaimia tulee säilyttää siten, että:</li>
+            <ul>
+                <li>ne eivät pääse tippumaan esimerkiksi taskusta.</li>
+                <li>niitä ei pysty varastamaan.</li>
+            </ul>
+        </ul>
+        <ul class="en" style="display: none;">
+            <li>Bicycle keys must be stored in a way that:</li>
+            <ul>
+                <li>they do not accidentally fall out, for example from a pocket.</li>
+                <li>they cannot be stolen.</li>
+            </ul>
+        </ul>
+        
+    </section>
+
+    <section id="kids">
+        <h1 class="fi">Valitettavasti meillä ei ole tällä hetkellä lastenpyöriä.</h1>
+        <h1 class="en" style="display: none;">Unfortunately, we do not have children's bikes at the moment.</h1>
+        <br>
+        <h3 class="fi">Mikäli meille tulee toivomuksia lastenpyöristä, pyrimme toteuttamaan toiveenne.</h3>
+        <h3 class="en" style="display: none;">If we receive requests for children's bikes, we will do our best to fulfill your wishes.</h3>
+    </section>
+
+    <section id="price">
+        <h1 class="fi">Hinnasto:</h1>
+        <h1 class="en" style="display: none;">Price List:</h1>
+        <div class="hinnasto">
+            <ul class="fi">
+                <li> klo 10-17:</li>
+                <ul>
+                    <li>1 tunti / 5€</li>
+                    <li>2 tunti / 8€</li>
+                    <li>3 tunti / 10€</li>
+                    <li>4 tunti / 12€</li>
+                    <li>5 tunti / 14€</li>
+                    <li>6 tunti / 16€</li>
+                    <li>7 tunti / 18€</li>
+                </ul>
+            </ul>
+            <ul class="en" style="display: none;">
+                <li> from 10 to 17:</li>
+                <ul>
+                    <li>1 hour / 5€</li>
+                    <li>2 hour / 8€</li>
+                    <li>3 hour / 10€</li>
+                    <li>4 hour / 12€</li>
+                    <li>5 hour / 14€</li>
+                    <li>6 hour / 16€</li>
+                    <li>7 hour / 18€</li>
+                </ul>
+            </ul>
+            <br>
+            <ul class="fi">
+                <li>Vuorokausi:</li>
+                <ul>
+                    <li>24H (1 vrk) / 20€</li>
+                    <li>48H (2 vrk) / 25€</li>
+                    <li>72H (3 vrk) / 30€</li>
+                    <li>96H (4 vrk) / 35€</li>
+                    <li>120H (5 vrk) / 40€</li>
+                    <li>144H (6 vrk) / 45€</li>
+                    <li>168H (7 vrk) / 50€</li>
+                </ul>
+            </ul>
+            <ul class="en" style="display: none;">
+                <li>Vuorokausi:</li>
+                <ul>
+                    <li>24H (1 day) / 20€</li>
+                    <li>48H (2 day) / 25€</li>
+                    <li>72H (3 day) / 30€</li>
+                    <li>96H (4 day) / 35€</li>
+                    <li>120H (5 day) / 40€</li>
+                    <li>144H (6 day) / 45€</li>
+                    <li>168H (7 day) / 50€</li>
+                </ul>
+            </ul>
+        </div>
     </section>
 
     <footer>
