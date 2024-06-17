@@ -201,7 +201,7 @@ section {
     margin: 20px 20px;
     padding: 20px;
     background-color: #910000;
-    border-radius: 10px;
+    border-radius: 1cm;
     box-shadow: 0 0 10px rgb(0, 0, 0);
     margin-top: 100px; /* Lisää marginaali navin alle */
     overflow: hidden; /* Piilottaa ylivuotavan sisällön */
@@ -226,32 +226,63 @@ section {
 }
 
 #home {
-    display: flex;
-    flex-direction: column;
-    background-color: #9e0000;
     font-size: 20px;
 }
 
 
 #guide {
-    display: flex;
-    flex-direction: column;
-    background-color: #9e0000;
     font-size: 25px;
 }
 
 #long {
-    display: flex;
-    flex-direction: column;
-    background-color: #9e0000;
     font-size: 25px;
 }
 
-#keys {
+.container {
     display: flex;
-    flex-direction: column;
-    background-color: #9e0000;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.right {
+    height: fit-content;
+    padding: 20px 50px;
+    background-color: #810000;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+    border-radius: 1cm;
+}
+
+.right h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+#keys {
     font-size: 25px;
+}
+
+#kids {
+    text-align: center;
+    font-size: 25px;
+}
+
+#price {
+    justify-content: center; /* Keskittää sisällön vaakasuunnassa */
+    font-size: 25px;
+    font-weight: bold;
+    width: 50%;
+    margin: 3cm auto; /* Keskittää elementin sivun keskelle */
+}
+
+.hinnasto {
+    display: flex;
+    justify-content: space-between;
+}
+
+#price h1 {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
 }
 
 a {
@@ -344,6 +375,16 @@ footer button:hover {
 
 
 @media screen and (max-width: 623px) {
+
+    body {
+        cursor: auto;
+    }
+    
+    #cursor {
+        display: none;
+    }
+    
+
     .nav-logo {
         display: none;
     }
@@ -356,9 +397,69 @@ footer button:hover {
     .nuoli {
         width: 10px;
     }
+
+    #home {
+        font-size: 15px;
+    }
+
+    button {
+        font-size: 20px;
+        padding: auto;
+    }
+    
+    
+    #guide {
+        font-size: 20px;
+    }
+    
+    #long {
+        font-size: 20px;
+    }
+
+    #kids {
+        font-size: 20px;
+    }    
+    
+    #keys {
+        font-size: 20px;
+    }
+
+    .footer-buttons {
+        flex-direction: column;
+        gap: 0; /* Lisää haluamasi väli nappejen väliin */
+    }
+    
 }
 
 @media screen and (max-width: 1289px) {
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }    
+
+    #price {
+        justify-content: center; /* Keskittää sisällön vaakasuunnassa */
+        font-size: 20px;
+        font-weight: bold;
+        width: 100%;
+        height: 100%;
+        margin: 2 auto; /* Keskittää elementin sivun keskelle */
+    }
+    
+    .hinnasto {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    #price h1 {
+        display: flex;
+        justify-content: flex-start;
+        text-decoration: underline;
+    }
+
     footer {
         font-size: 17px;
     }
@@ -371,4 +472,6 @@ footer button:hover {
     .footlog {
         flex-direction: column;
     }
+
+    
 }
