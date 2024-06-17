@@ -34,48 +34,66 @@ document.addEventListener('mousemove', function (e) {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-        let navigationHistory = [];
+    let navigationHistory = [];
 
-        function navigateTo(sectionId) {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
-            const targetSection = document.getElementById(sectionId);
-            if (targetSection) {
-                targetSection.style.display = 'block';
-                window.scrollTo(0, 0); // Siirrä näkymä sivun alkuun
-            }
-        
-            if (navigationHistory.length === 0 || navigationHistory[navigationHistory.length - 1] !== sectionId) {
-                navigationHistory.push(sectionId); // Lisää osio historiaan
-            }
+    function navigateTo(sectionId) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+            targetSection.style.display = 'block';
+            window.scrollTo(0, 0); // Estää automaattisen siirtymisen alaspäin navigoidessa
+    
+            // Update the URL hash without reloading the page
+            history.pushState(null, null, '#' + sectionId);
         }
-
-        function navigateBack() {
-            if (navigationHistory.length > 1) {
-                navigationHistory.pop();
-                const previousSection = navigationHistory[navigationHistory.length - 1];
-                navigateTo(previousSection);
-            }
+    
+        if (navigationHistory.length === 0 || navigationHistory[navigationHistory.length - 1] !== sectionId) {
+            navigationHistory.push(sectionId); // Add section to navigation history
         }
-
-        function handleNavigation() {
-            // Tarkista onko navigointihistoria tyhjä
-            if (navigationHistory.length > 1) {
-                navigateBack(); // Jos historia ei ole tyhjä, navigoi taaksepäin
-            } else {
-                navigateToPage('../index.html'); // Muuten palaa alkuperäiselle sivulle
-            }
+    }
+    
+    function checkAnchorAndNavigate() {
+        const hash = window.location.hash;
+        let sectionId = 'home'; // Default to #home if no hash
+    
+        if (hash) {
+            sectionId = hash.substring(1); // Remove leading #
         }
+    
+        navigateTo(sectionId);
+    }    
 
-        window.navigateTo = navigateTo;
-        window.navigateBack = navigateBack;
-        window.handleNavigation = handleNavigation;
+    // Kuuntele hash-muutoksia
+    window.addEventListener('hashchange', checkAnchorAndNavigate);
 
-        navigateTo('home');
-    });
+    // Avaa aloitusosio
+    checkAnchorAndNavigate();
+
+    function navigateBack() {
+        if (navigationHistory.length > 1) {
+            navigationHistory.pop();
+            const previousSection = navigationHistory[navigationHistory.length - 1];
+            navigateTo(previousSection);
+        }
+    }
+
+    function handleNavigation() {
+        // Tarkista onko navigointihistoria tyhjä
+        if (navigationHistory.length > 1) {
+            navigateBack(); // Jos historia ei ole tyhjä, navigoi taaksepäin
+        } else {
+            navigateToPage('../index.html#home'); // Muuten palaa alkuperäiselle sivulle
+        }
+    }
+
+    window.navigateTo = navigateTo;
+    window.navigateBack = navigateBack;
+    window.handleNavigation = handleNavigation;
 
     function navigateToPage(url) {
         window.location.href = url;
     }
+});

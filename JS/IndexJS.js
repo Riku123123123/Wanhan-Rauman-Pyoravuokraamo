@@ -18,12 +18,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Tarkista ankkuri URL:ssa ja navigoi tarvittaessa
     function checkAnchorAndNavigate() {
         const hash = window.location.hash;
+        let sectionId = 'home'; // Default to #home if no hash
+    
         if (hash) {
-            const sectionId = hash.substring(1); // Poista #-merkki ankkurista
-            navigateTo(sectionId);
+            sectionId = hash.substring(1); // Remove leading #
         }
-    }
-
+    
+        navigateTo(sectionId);
+    }    
+    
     // Kuuntele hash-muutoksia
     window.addEventListener('hashchange', checkAnchorAndNavigate);
 
