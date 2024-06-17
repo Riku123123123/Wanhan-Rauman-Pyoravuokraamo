@@ -32,6 +32,10 @@ document.addEventListener('mousemove', function (e) {
     }, 500); // Poista jälki 0.5 sekunnin kuluttua
 });
 
+document.addEventListener('gesturestart', function (e) {
+    e.preventDefault();
+});
+
 
 document.addEventListener('DOMContentLoaded', function() {
     let navigationHistory = [];
