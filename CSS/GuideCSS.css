@@ -278,7 +278,20 @@ section {
     font-size: 25px;
     font-weight: bold;
     width: 50%;
-    margin: 3cm auto; /* Keskittää elementin sivun keskelle */
+    margin: 3cm auto;
+}
+
+#long button {
+    transition: background-color 1s ease, box-shadow 1s ease, border-radius 1s ease, transform 1s ease;
+}
+#long  button:hover {
+    transition: background-color 1s ease, box-shadow 1s ease, border-radius 1s ease, transform 1s ease;
+}
+#price button {
+    transition: background-color 1s ease, box-shadow 1s ease, border-radius 1s ease, transform 1s ease;
+}
+#price button:hover {
+    transition: background-color 1s ease, box-shadow 1s ease, border-radius 1s ease, transform 1s ease;
 }
 
 .hinnasto {
