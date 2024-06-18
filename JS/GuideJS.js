@@ -32,10 +32,6 @@ document.addEventListener('mousemove', function (e) {
     }, 500); // Poista jälki 0.5 sekunnin kuluttua
 });
 
-document.addEventListener('gesturestart', function (e) {
-    e.preventDefault();
-});
-
 
 document.addEventListener('DOMContentLoaded', function() {
     let navigationHistory = [];
@@ -89,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (navigationHistory.length > 1) {
             navigateBack(); // Jos historia ei ole tyhjä, navigoi taaksepäin
         } else {
-            navigateToPage('../index.html#home'); // Muuten palaa alkuperäiselle sivulle
+            navigateToPage('../index.html'); // Muuten palaa alkuperäiselle sivulle
         }
     }
 
