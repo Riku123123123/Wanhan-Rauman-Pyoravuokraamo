@@ -36,12 +36,12 @@ defer
         </div>
         <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
         <div class="nav-items">
-            <a href="#home" onclick="navigateTo('home')"><span class="fi">Koti</span><span class="en" style="display:none;">Home</span></a>
-            <a href="#rent" onclick="navigateTo('rent')"><span class="fi">Vuokraa</span><span class="en" style="display:none;">Rent</span></a>
-            <a href="#bikes" onclick="navigateTo('bikes')"><span class="fi">Pyörät</span><span class="en" style="display:none;">Bikes</span></a>
-            <a href="#about" onclick="navigateTo('about')"><span class="fi">Meistä</span><span class="en" style="display:none;">About us</span></a>
-            <a href="#feedback" onclick="navigateTo('feedback')"><span class="fi">Palaute</span><span class="en" style="display:none;">Feedback</span></a>
-            <a href="#contact" onclick="navigateTo('contact')"><span class="fi">Yhteystiedot</span><span class="en" style="display:none;">Contact</span></a>
+            <a href="#home"><span class="fi">Koti</span><span class="en" style="display:none;">Home</span></a>
+            <a href="#rent"><span class="fi">Vuokraa</span><span class="en" style="display:none;">Rent</span></a>
+            <a href="#bikes"><span class="fi">Pyörät</span><span class="en" style="display:none;">Bikes</span></a>
+            <a href="#about"><span class="fi">Meistä</span><span class="en" style="display:none;">About us</span></a>
+            <a href="#feedback"><span class="fi">Palaute</span><span class="en" style="display:none;">Feedback</span></a>
+            <a href="#contact""><span class="fi">Yhteystiedot</span><span class="en" style="display:none;">Contact</span></a>
             <div class="insta">
                 <a href="https://www.instagram.com/wrpyoravuokraamo/" target="_blank" class="insta"></a>
             </div>
@@ -75,7 +75,7 @@ defer
                 <p class="en" style="display:none;">OPEN DAILY KLO 10-17</p>
                 <p class="fi">Vuokraa pyörä netin kautta</p>
                 <p class="en" style="display:none;">Rent a bike online</p>
-                <button onclick="navigateTo('rent')"><span class="fi">Vuokraa</span><span class="en" style="display:none;">Rent</span></button>
+                <a href="#rent"><button class="fi">Vuokraa</button><button class="en" style="display: none;">Rent</button></a>
                 <g class="fi"><a href="HTML/Terms.html">Vuokrausehdot</a></g>
                 <g class="en" style="display:none;"><a href="HTML/Terms.html">Rental terms</a></g>
                 <g class="fi"><a href="HTML/Guide.html">Ohjeet vuokraamiselle</a></g>
@@ -94,7 +94,7 @@ defer
         </p>
         <br class="fi">
         <p class="fi">
-            Meillä on vuokrattavana seitsemän erilaista pyörää, joita pystyt tutkimaan enemmän <a onclick="navigateTo('bikes')">Pyörät</a> -osiosta.
+            Meillä on vuokrattavana seitsemän erilaista pyörää, joita pystyt tutkimaan enemmän <a href="#bikes">Pyörät</a> -osiosta.
         </p>
         <br class="fi">
         <p class="fi">
@@ -106,7 +106,7 @@ defer
         </p>
         <br class="fi">
         <p class="fi">
-            Tervetuloa nauttimaan pyöräilystä Rauman idyllisissä maisemissa! Ota rohkeasti <a onclick="navigateTo('contact')">yhteyttä</a>, jos sinulla on kysyttävää tai tarvitset lisätietoja pyörien vuokraamisesta.
+            Tervetuloa nauttimaan pyöräilystä Rauman idyllisissä maisemissa! Ota rohkeasti <a href="#contact">yhteyttä</a>, jos sinulla on kysyttävää tai tarvitset lisätietoja pyörien vuokraamisesta.
         </p>
         <br class="fi">
         <p class="fi">
@@ -120,7 +120,7 @@ defer
 </p>
 <br class="en" style="display: none;">
 <p class="en" style="display: none;">
-    We have seven different bikes available for rent, which you can explore more in the <a onclick="navigateTo('bikes')">Bikes</a> section.
+    We have seven different bikes available for rent, which you can explore more in the <a href="#bikes">Bikes</a> section.
 </p>
 <br class="en" style="display: none;">
 <p class="en" style="display: none;">
@@ -132,7 +132,7 @@ defer
 </p>
 <br class="en" style="display: none;">
 <p class="en" style="display: none;">
-    Welcome to enjoy cycling in the idyllic landscapes of Rauma! Feel free to <a onclick="navigateTo('contact')">contact us</a> if you have any questions or need more information about renting bikes.
+    Welcome to enjoy cycling in the idyllic landscapes of Rauma! Feel free to <a href="#contact">contact us</a> if you have any questions or need more information about renting bikes.
 </p>
 <br class="en" style="display: none;">
 <p class="en" style="display: none;">
@@ -199,8 +199,8 @@ defer
             </div>
         </div>
         <br>
-        <p class="fi">Vuokraa pyörä <span id="contact-link" onclick="navigateTo('rent')">netistä</span>!</p>
-        <p class="en" style="display:none;">Rent a bike <span id="contact-link" onclick="navigateTo('rent')">online</span>!</p>
+        <p class="fi">Vuokraa pyörä <a href="#rent">netistä</a>!</p>
+        <p class="en" style="display:none;">Rent a bike <a href="#rent">online</a>!</p>
     </section>
     
     
@@ -246,11 +246,9 @@ defer
     <footer>
         <br>
         <div class="footer-buttons">
-            <button class="fi" onclick="navigateTo('rent')"><span id="foot">Vuokraa pyörä</span></button>
-            <button class="en" style="display:none;" onclick="navigateTo('rent')"><span id="foot">Rent a bike</span></button>
+            <a href="#rent"><button class="fi">Vuokraa pyörä</button><button class="en" style="display: none;">Rent a bike</button></a>
             <br>
-            <button class="fi" onclick="navigateTo('contact')"><span id="foot">Yhteystiedot</span></button>
-            <button class="en" style="display:none;" onclick="navigateTo('contact')"><span id="foot">Contact</span></button>
+            <a href="#contact"><button class="fi">Yhteystiedot</button><button class="en" style="display: none;">Contact</button></a>
         </div>
         <br>
         <div class="language-selector">
