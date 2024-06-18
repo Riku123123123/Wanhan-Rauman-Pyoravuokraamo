@@ -187,16 +187,6 @@ nav a {
     min-height: 80vh; /* Varmistaa, että hero-osa vie vähintään yhden näkymän korkuisen tilan */
 }
 
-#contact-link {
-    color: #ff0000;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-#contact-link:hover {
-    color: #ff7373;
-}
-
 .hero-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -514,6 +504,7 @@ section {
 
 a {
     color: #ff0000;
+    text-decoration: none;
 }
 
 a:hover {
