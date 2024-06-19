@@ -58,13 +58,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Alustetaan navigaatio tapahtumat
     const navItems = document.querySelectorAll('.nav-items a');
-    navItems.forEach(item => {
-        item.addEventListener('click', function() {
-            const sectionId = this.getAttribute('onclick').replace("navigateTo('", "").replace("')", "");
-            navigateTo(sectionId);
-            toggleMenu(); // Sulje valikko kun navigoidaan
-        });
+navItems.forEach(item => {
+    item.addEventListener('click', function() {
+        toggleMenu(); // Sulje valikko kun navigoidaan
     });
+});
 
     // Lisätään kuuntelija, joka sulkee valikon kun klikataan muualle sivulle
     document.addEventListener('click', function(event) {
