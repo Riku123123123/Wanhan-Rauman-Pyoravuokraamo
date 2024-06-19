@@ -6,11 +6,21 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-100px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Alustetaan boksien alkutila */
+section {
+    animation: fadeIn 1s ease forwards;
+}
+
 @keyframes changeColor {
     0% { background-color: #000000; } /* Alkuväri */
-    25% { background-color: #810000; } /* Alkuväri */
-    50% { background-color: #550000; } /* Värimuutos puolivälissä */
-    75% { background-color: #910000; } /* Värimuutos puolivälissä */
+    25% { background-color: #000000; } /* Alkuväri */
+    50% { background-color: #520000; } /* Värimuutos puolivälissä */
+    75% { background-color: #000000; } /* Alkuväri */
     100% { background-color: #000000; } /* Lopullinen väri */
 }
 
@@ -20,7 +30,7 @@ body {
     padding: 20px;
     position: relative; /* Lisää sivun sijainti */
     cursor: none;
-    animation: changeColor 60s infinite;
+    animation: changeColor 10s infinite;
 }
 
 #cursor {
@@ -174,7 +184,7 @@ nav a {
 
 button {
     padding: 0.5cm 1cm;
-    width: 100%;
+    width: 99%;
     font-size: 30px;
     border-radius: 0.5cm;
     color: #000;
@@ -211,17 +221,30 @@ section {
 }
 
 .button-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap: 10px; /* Adjust the gap between buttons */
 }
 
 .button-container button {
+    width: 100%;
+    font-size: 50px;
     transform: translateY(0px);
     border-radius: 0.5cm;
-    background-color: #910000;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
-    transition: background-color 1s ease, box-shadow 1s ease, border-radius 1s ease, transform 1s ease;;
+    border-color: #ad0000;
+    background-color: #ffffff8f;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+    transition: background-color 1s ease, box-shadow 1s ease, border-radius 1s ease, transform 1s ease, color 1s ease;
+}
+
+.button-container a button{
+    color: #000000;
+}
+
+.button-container a button:hover{
+    color: #ffffff;
 }
 
 .button-container button:hover {
@@ -229,7 +252,7 @@ section {
     border-radius: 1cm;
     background-color: #ff0000;
     box-shadow: 0 0 10px rgb(255, 0, 0);
-    transition: background-color 1s ease, box-shadow 1s ease, border-radius 1s ease, transform 1s ease;
+    transition: background-color 1s ease, box-shadow 1s ease, border-radius 1s ease, transform 1s ease, color 1s ease;
 }
 
 #home {
@@ -431,7 +454,10 @@ footer button:hover {
     .button-container button{
         background-color: #d80000;
     }
-    
+
+    .button-container a{
+        width: 100%;
+    }
 
     button {
         font-size: 20px;
@@ -468,7 +494,11 @@ footer button:hover {
         display: flex;
         justify-content: center;
         flex-direction: column;
-    }    
+    }
+
+    .button-container a button{
+        font-size: 25px;
+    }
 
     #price {
         justify-content: center; /* Keskittää sisällön vaakasuunnassa */
