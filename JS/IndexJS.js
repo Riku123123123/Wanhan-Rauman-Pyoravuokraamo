@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (targetSection) {
             targetSection.style.display = 'block';
             window.scrollTo(0, 0); // Estää automaattisen siirtymisen alaspäin navigoidessa
+
+            document.title = targetSection.dataset.title || "Wanhan Rauman Pyörävuokraamo";
         }
     }
 

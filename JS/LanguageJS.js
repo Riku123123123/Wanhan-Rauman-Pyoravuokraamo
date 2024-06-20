@@ -40,6 +40,26 @@ function applyLanguage(language) {
     // Tallennetaan valittu kieli paikalliseen tallennustilaan
     localStorage.setItem('language', language);
 
+    // Vaihdetaan HTML-tagin lang-attribuutti
+    document.documentElement.lang = language;
+
+    // Vaihdetaan sivun otsikko valitun kielen mukaiseksi
+    const titleElement = document.querySelector('title');
+    if (language === 'fi') {
+        document.title = titleElement.getAttribute('data-title-fi') || "Wanhan Rauman Pyörävuokraamo";
+    } else if (language === 'en') {
+        document.title = titleElement.getAttribute('data-title-en') || "Wanhan Rauman Bike Rental";
+    }
+
+    // Vaihdetaan sectionien titlet
+    document.querySelectorAll('section').forEach(section => {
+        if (language === 'fi') {
+            section.dataset.title = section.getAttribute('data-title-fi') || "Wanhan Rauman Pyörävuokraamo";
+        } else if (language === 'en') {
+            section.dataset.title = section.getAttribute('data-title-en') || "Wanhan Rauman Bike Rental";
+        }
+    });
+
     // Näytetään oikea kieliversio
     document.querySelectorAll('.fi').forEach(el => {
         el.style.display = (language === 'fi') ? 'block' : 'none';
