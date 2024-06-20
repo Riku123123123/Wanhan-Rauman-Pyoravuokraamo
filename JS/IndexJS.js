@@ -60,11 +60,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Alustetaan navigaatio tapahtumat
     const navItems = document.querySelectorAll('.nav-items a');
-navItems.forEach(item => {
-    item.addEventListener('click', function() {
-        toggleMenu(); // Sulje valikko kun navigoidaan
+    navItems.forEach(item => {
+        item.addEventListener('click', function() {
+            toggleMenu(); // Sulje valikko kun navigoidaan
+        });
     });
-});
 
     // Lisätään kuuntelija, joka sulkee valikon kun klikataan muualle sivulle
     document.addEventListener('click', function(event) {
@@ -86,7 +86,6 @@ navItems.forEach(item => {
             }, 500);
         });
     });
-});
 
     // Modal-toiminnallisuus
     const bikeUrls = {
@@ -152,17 +151,31 @@ navItems.forEach(item => {
             closeModal();
         }
     };
+});
 
     // Ilmoitusnäyttö
     function showNotification() {
         const notificationBox = document.getElementById('notification-box');
-        notificationBox.style.display = 'none'; // Muuta 'none' -> 'block' halutessasi näyttää ilmoituslaatikon
+        const nottausta = document.getElementById('nottausta');
+        notificationBox.style.display = 'block'; // Muuta 'none' -> 'block' halutessasi näyttää ilmoituslaatikon
+        nottausta.style.display = 'flex'; // Muuta 'none' -> 'block' halutessasi näyttää ilmoituslaatikon
     }
 
     function closeNotification() {
         const notificationBox = document.getElementById('notification-box');
-        notificationBox.style.display = 'none';
+        const nottausta = document.getElementById('nottausta');
+        notificationBox.classList.add('fade-out');
+        nottausta.classList.add('fade-out');
+
+        // Odota animaation loppumista, ennen kuin piilotat elementit kokonaan
+        setTimeout(() => {
+            notificationBox.classList.add('hidden');
+            nottausta.classList.add('hidden');
+        }, 500);
     }
 
     // Käynnistä ilmoitus
     showNotification();
+
+    // Esimerkki ilmoituksen sulkemisesta 3 sekunnin kuluttua
+    setTimeout(closeNotification, 10000);
