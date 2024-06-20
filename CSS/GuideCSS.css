@@ -4,7 +4,39 @@
     margin: 0;
     padding: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
 }
+
+.fade-out {
+    animation: fadeOut 0.5s ease;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0)
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-100px)
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        scale: 10;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-100px); }
@@ -25,7 +57,6 @@ section {
 }
 
 body {
-    font-weight: bold;
     background-color: #000;
     padding: 20px;
     position: relative; /* Lisää sivun sijainti */
