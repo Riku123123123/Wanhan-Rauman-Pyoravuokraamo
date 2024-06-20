@@ -365,10 +365,17 @@ footer button {
     display: flex;
     box-shadow: 0 0 10px rgb(255, 255, 255);
     color: #ffffff;
-    padding: 0.2cm 1cm;
+    border-radius: 1cm;
+    margin: 10px;
+    padding: 0.3cm 1cm;
     font-size: 20px;
     cursor: none;
     box-shadow: 0 0 10px rgb(255, 0, 0);
+}
+
+
+footer a {
+    text-decoration: none;
 }
 
 footer button:hover {
@@ -449,10 +456,6 @@ footer button:hover {
     .button-container {
         display: flex;
         flex-direction: column;
-    }
-    
-    .button-container button{
-        background-color: #d80000;
     }
 
     .button-container a{
