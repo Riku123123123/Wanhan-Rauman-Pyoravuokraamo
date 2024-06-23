@@ -12,6 +12,54 @@ body {
     background-size: cover;
     padding: 20px;
     position: relative; /* Lisää sivun sijainti */
+    cursor: none;
+}
+
+#cursor {
+    z-index: 1000;
+    position: fixed;
+    pointer-events: none;
+    background-image: url('../KUVAT + MUUT/Cursor.png');
+    background-size: cover;
+    width: 16.25px;
+    height: 25px;
+    transition: background-image 0.5s ease; /* Lisää smooth transition */
+}
+
+#pointer {
+    z-index: 1000;
+    position: fixed;
+    pointer-events: none;
+    background-image: url('../KUVAT + MUUT/Pointer.png');
+    background-size: cover;
+    width: 20px;
+    height: 25px;
+    transition: background-image 0.5s ease; /* Lisää smooth transition */
+    display: none; /* Piilotetaan oletuksena */
+}
+
+.cursor-trail {
+    position: absolute;
+    background-color: #ff0000;
+    box-shadow: 0 0 10px #ffffff;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    z-index: 900; /* Asetetaan hieman alemmaksi kuin pääkurssi */
+    pointer-events: none;
+    opacity: 0.7; /* Alhainen läpinäkyvyys */
+    animation: cursorTrail 0.5s forwards;
+}
+
+@keyframes cursorTrail {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(3); /* Lisää hieman koon muutosta */
+        opacity: 0;
+    }
 }
 
 .fade-out {
@@ -84,6 +132,10 @@ section.visible {
     display: none; /* Piilota oletuksena */
     opacity: 1;
     transition: opacity 0.5s ease-out;
+}
+
+#notification-box button {
+    cursor: none;
 }
 
 /* Alkuperäinen tyyli taustalle */
@@ -163,7 +215,7 @@ nav {
 .hamburger {
     display: none;
     font-size: 2rem;
-    cursor: pointer;
+    cursor: none;
     z-index: 1000; /* varmista, että popup on muiden elementtien päällä */
 }
 
@@ -199,7 +251,7 @@ nav {
     padding: 10px 10px;
     color: #ffffff;
     border-radius: 1cm;
-    cursor: pointer;
+    cursor: none;
     width: 40px;
     height: 40px;
 }
@@ -227,6 +279,7 @@ nav a {
     text-align: center; /* Keskitä linkkien teksti vaakasuunnassa */
     line-height: 1;
     text-shadow: 0 0 20px rgb(255, 255, 255);
+    transition: all 1s ease;
 }
 
 .link {
@@ -240,7 +293,7 @@ nav a {
 .nav-items a:hover {
     color: #ff0000;
     scale: 1.2;
-    cursor: pointer;
+    cursor: none;
     transition: scale 0.3s ease, color 0.6s ease;
 }
 
@@ -264,7 +317,7 @@ button {
     border-radius: 1cm;
     color: #000;
     background: #ff0000;
-    cursor: pointer;
+    cursor: none;
     box-shadow: 0 0 10px rgb(255, 0, 0);
     transition: transform 0.3s ease; /* Lisää tämä rivi */
 }
@@ -539,7 +592,7 @@ section {
   .close:focus {
     color: rgb(255, 0, 0);
     text-decoration: none;
-    cursor: pointer;
+    cursor: none;
   }
 
 .feedback {
@@ -573,7 +626,7 @@ a {
 
 a:hover {
     color: #ffc6c6;
-    cursor: pointer;
+    cursor: none;
 }
 
 footer {

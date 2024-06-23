@@ -65,13 +65,25 @@ body {
 
 #cursor {
     z-index: 1000;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #ff0000;
-    box-shadow: 0 0 10px #ffffff;
     position: fixed;
     pointer-events: none;
+    background-image: url('../KUVAT + MUUT/Cursor.png');
+    background-size: cover;
+    width: 16.25px;
+    height: 25px;
+    transition: background-image 0.5s ease; /* Lisää smooth transition */
+}
+
+#pointer {
+    z-index: 1000;
+    position: fixed;
+    pointer-events: none;
+    background-image: url('../KUVAT + MUUT/Pointer.png');
+    background-size: cover;
+    width: 20px;
+    height: 25px;
+    transition: background-image 0.5s ease; /* Lisää smooth transition */
+    display: none; /* Piilotetaan oletuksena */
 }
 
 .cursor-trail {
