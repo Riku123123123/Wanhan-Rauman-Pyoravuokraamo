@@ -389,6 +389,17 @@ footer button:hover {
 }
 
 @media screen and (max-width: 1289px) {
+
+    #cursor {
+        display: none;
+        background-image: none;
+    }
+
+    #pointer {
+        display: none;
+        background-image: none;
+    }
+
     footer {
         font-size: 17px;
     }

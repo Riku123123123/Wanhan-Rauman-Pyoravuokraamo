@@ -473,11 +473,6 @@ footer button:hover {
     body {
         cursor: auto;
     }
-    
-    #cursor {
-        display: none;
-    }
-    
 
     .nav-logo {
         display: none;
@@ -535,6 +530,16 @@ footer button:hover {
 }
 
 @media screen and (max-width: 1289px) {
+
+    #cursor {
+        display: none;
+        background-image: none;
+    }
+
+    #pointer {
+        display: none;
+        background-image: none;
+    }
     
     .container {
         display: flex;

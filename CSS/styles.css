@@ -862,6 +862,16 @@ footer button {
 
 @media screen and (max-width: 1289px) {
 
+    #cursor {
+        display: none;
+        background-image: none;
+    }
+
+    #pointer {
+        display: none;
+        background-image: none;
+    }
+
     .hero {
         background-image: url('../KUVAT + MUUT/Taustakuva\ 3.jpg');
         background-size: cover;
