@@ -1,4 +1,54 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const cursor = document.getElementById('cursor');
+    const pointer = document.getElementById('pointer');
+    const buttons = document.querySelectorAll('button');
+    const links = document.querySelectorAll('a');
+
+    buttons.forEach(button => {
+        button.addEventListener('mouseover', function() {
+            cursor.style.display = 'none';
+            pointer.style.display = 'block';
+        });
+
+        button.addEventListener('mouseout', function() {
+            cursor.style.display = 'block';
+            pointer.style.display = 'none';
+        });
+    });
+
+    links.forEach(link => {
+        link.addEventListener('mouseover', function() {
+            cursor.style.display = 'none';
+            pointer.style.display = 'block';
+        });
+
+        link.addEventListener('mouseout', function() {
+            cursor.style.display = 'block';
+            pointer.style.display = 'none';
+        });
+    });
+
+    document.addEventListener('mousemove', function(e) {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+        pointer.style.left = e.clientX + 'px';
+        pointer.style.top = e.clientY + 'px';
+    });
+});
+
+document.addEventListener('mousemove', function (e) {
+    var trail = document.createElement('div');
+    trail.className = 'cursor-trail';
+    trail.style.left = e.pageX + 'px';
+    trail.style.top = e.pageY + 'px';
+    document.body.appendChild(trail);
+    setTimeout(function () {
+        trail.remove();
+    }, 500);
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
     // Estää automaattisen siirtymisen alaspäin sivustoa avatessa
     window.scrollTo(0, 0);
 
@@ -65,6 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
             toggleMenu(); // Sulje valikko kun navigoidaan
         });
     });
+});
 
     // Lisätään kuuntelija, joka sulkee valikon kun klikataan muualle sivulle
     document.addEventListener('click', function(event) {
@@ -151,7 +202,6 @@ document.addEventListener('DOMContentLoaded', function() {
             closeModal();
         }
     };
-});
 
     // Ilmoitusnäyttö
     function showNotification() {
@@ -172,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
             notificationBox.classList.add('hidden');
             nottausta.classList.add('hidden');
         }, 500);
-    }
+    };
 
     // Käynnistä ilmoitus
     showNotification();

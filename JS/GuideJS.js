@@ -1,27 +1,42 @@
 document.addEventListener('DOMContentLoaded', function() {
     const cursor = document.getElementById('cursor');
+    const pointer = document.getElementById('pointer');
     const buttons = document.querySelectorAll('button');
+    const links = document.querySelectorAll('a');
 
     buttons.forEach(button => {
         button.addEventListener('mouseover', function() {
-            cursor.style.transition = 'background-color 0.5s ease'; // Lisää smooth transition
-            cursor.style.backgroundColor = '#ffffff'; // Muuta väriä nappia hoveroidessa
+            cursor.style.display = 'none';
+            pointer.style.display = 'block';
         });
 
         button.addEventListener('mouseout', function() {
-            cursor.style.transition = 'background-color 0.5s ease'; // Lisää smooth transition
-            cursor.style.backgroundColor = '#ff0000'; // Palauta alkuperäinen väri kun poistutaan napin päältä
+            cursor.style.display = 'block';
+            pointer.style.display = 'none';
+        });
+    });
+
+    links.forEach(link => {
+        link.addEventListener('mouseover', function() {
+            cursor.style.display = 'none';
+            pointer.style.display = 'block';
+        });
+
+        link.addEventListener('mouseout', function() {
+            cursor.style.display = 'block';
+            pointer.style.display = 'none';
         });
     });
 
     document.addEventListener('mousemove', function(e) {
         cursor.style.left = e.clientX + 'px';
         cursor.style.top = e.clientY + 'px';
+        pointer.style.left = e.clientX + 'px';
+        pointer.style.top = e.clientY + 'px';
     });
 });
 
 document.addEventListener('mousemove', function (e) {
-    var cursor = document.getElementById('cursor');
     var trail = document.createElement('div');
     trail.className = 'cursor-trail';
     trail.style.left = e.pageX + 'px';
@@ -29,8 +44,9 @@ document.addEventListener('mousemove', function (e) {
     document.body.appendChild(trail);
     setTimeout(function () {
         trail.remove();
-    }, 500); // Poista jälki 0.5 sekunnin kuluttua
+    }, 500);
 });
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
