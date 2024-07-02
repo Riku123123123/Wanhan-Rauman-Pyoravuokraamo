@@ -298,7 +298,7 @@ nav a {
 }
 
 .hero {
-    background-image: url('../KUVAT + MUUT/Tausta1.jpg');
+    background-image: url('../KUVAT + MUUT/Tausta5.jpg');
     background-size: cover;
     background-position: center;
     min-height: 80vh; /* Varmistaa, että hero-osa vie vähintään yhden näkymän korkuisen tilan */
