@@ -154,21 +154,33 @@ defer
 
     <div id="bikeModal" class="modal">
         <div class="modal-content">
-          <span class="close" onclick="closeModal()">&times;</span>
-          <div class="modal-cen">
-          <img id="bikeImage" src="" alt="Bike Image">
-          <div class="modal-body">
-            <h2 class="modal-ots" id="bikeName"></h2>
-            <p class="modalright" id="bikeDescription"></p>
-            <a id="bikeURL" href="" target="_blank" class><button class="fi">Vuokraa</button><button class="en" style="display: none;">Rent</button></a>
-            <video style="display: none;" id="bikeVideo" width="320" height="240" controls>
-                <source id="bikeVideoSource" src="" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-cen">
+                <div class="modal-gallery">
+                    <div style="position: relative;">
+                        <img id="bikeImage" src="" alt="Bike Image">
+                        <div class="modal-controls">
+                            <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+                            <button class="next" onclick="plusSlides(1)">&#10095;</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <h2 class="modal-ots" id="bikeName"></h2>
+                    <p class="modalright" id="bikeDescription"></p>
+                    <a id="bikeURL" href="" target="_blank">
+                        <button class="fi">Vuokraa</button>
+                        <button class="en" style="display: none;">Rent</button>
+                    </a>
+                    <video style="display: none;" id="bikeVideo" width="320" height="240" controls>
+                        <source id="bikeVideoSource" src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
         </div>
-        </div>
-        </div>
-      </div>
+    </div>    
+    
     
       <section id="bikes" style="display: none;" data-title-fi="Pyörät - WRP" data-title-en="Bikes - WRP">
         <h2><span class="fi">Pyörät</span><span class="en" style="display:none;">Bikes</span></h2>
@@ -176,38 +188,43 @@ defer
         <div class="bike-gallery">
             <div class="bike-item">
                 <p>Terässiipi</p>
-                <img src="Polkupyorat/Terassiipi.jpg" alt="Terässiipi" onclick="openModal('Terässiipi', 'Polkupyorat/Terassiipi.jpg', 'Terässiipi, suomalainen ylpeydenaihe! Tutustu Rauman keskustaan tällä vanhanliiton pyörällä.\n\nTerässiipi on niin perinteistä suomalaista työtä, että voit melkein kuulla Sibeliuksen sinfoniat kaikumassa jokaisella pyöräilysi askeleella. Vaikka pyörässä ei ole vaihteita, se on täynnä suomalaista sisua ja laatua. Penkin jouset tekevät matkanteosta yhtä mukavan kuin saunan löylyt.\n\nJa renkaat? No, ne ovat niin vanhoja, että niissä saattaa olla jopa ripaus neuvostoliittolaista historiaa! Terässiipi on kuin suomalaisen kesän kaiku menneiltä ajoilta – kestävä, mukava ja täynnä luonnonvoimaa.\n\nTule ja koe, kuinka retro voi olla suomalaista ylpeyttä ja kestävyyttä!')" class="fi">
-                <img src="Polkupyorat/Terassiipi.jpg" alt="Terässiipi" onclick="openModal('Terässiipi', 'Polkupyorat/Terassiipi.jpg', 'Terässiipi, a Finnish pride! Explore the city center of Rauma with this old-school bike.\n\nTerässiipi is so traditional Finnish craftsmanship that you can almost hear Sibelius´s symphonies echoing with every step of your bike ride. Even though the bike doesn´t have gears, it´s full of Finnish determination and quality. The springs of the seat make the journey as comfortable as a sauna bath.\n\nAnd the tires? Well, they are so old that they might even have a touch of Soviet history! Terässiipi is like an echo of the Finnish summer from times gone by – durable, comfortable, and full of natural power.\n\nCome and experience how retro can be Finnish pride and durability!')" class="en" style="display: none;">
+                <img src="Polkupyorat/Terassiipi.jpg" alt="Terässiipi" onclick="openModal('Terässiipi', 'Terässiipi, suomalainen ylpeydenaihe! Tutustu Rauman keskustaan tällä vanhanliiton pyörällä.\n\nTerässiipi on niin perinteistä suomalaista työtä, että voit melkein kuulla Sibeliuksen sinfoniat kaikumassa jokaisella pyöräilysi askeleella. Vaikka pyörässä ei ole vaihteita, se on täynnä suomalaista sisua ja laatua. Penkin jouset tekevät matkanteosta yhtä mukavan kuin saunan löylyt.\n\nJa renkaat? No, ne ovat niin vanhoja, että niissä saattaa olla jopa ripaus neuvostoliittolaista historiaa! Terässiipi on kuin suomalaisen kesän kaiku menneiltä ajoilta – kestävä, mukava ja täynnä luonnonvoimaa.\n\nTule ja koe, kuinka retro voi olla suomalaista ylpeyttä ja kestävyyttä!')" class="fi">
+                <img src="Polkupyorat/Terassiipi.jpg" alt="Terässiipi" onclick="openModal('Terässiipi', 'Terässiipi, a Finnish pride! Explore the city center of Rauma with this old-school bike.\n\nTerässiipi is so traditional Finnish craftsmanship that you can almost hear Sibelius´s symphonies echoing with every step of your bike ride. Even though the bike doesn´t have gears, it´s full of Finnish determination and quality. The springs of the seat make the journey as comfortable as a sauna bath.\n\nAnd the tires? Well, they are so old that they might even have a touch of Soviet history! Terässiipi is like an echo of the Finnish summer from times gone by – durable, comfortable, and full of natural power.\n\nCome and experience how retro can be Finnish pride and durability!')" class="en" style="display: none;">
+            </div>
+            <div class="bike-item">
+                <p>Crescent</p>
+                <img src="Polkupyorat/Crescent.jpg" alt="Crescent" onclick="openModal('Crescent', 'Crescent, vanha, mutta arvokas, ruotsalainen klassikko, musta yksivaihteinen Crescent-polkupyörä. Tämä ei ole mikä tahansa pyörä, vaan oikea mestariteos, sillä rungossa luki ylpeänä världsmästarcykeln - maailmanmestarin pyörä! Eikä siinä vielä kaikki, pyörän rungolle ja haarukalle annetaan kymmenen vuoden takuu, joten voit olla varma, että tämä menopeli kestää kovatkin koettelemukset. \n\nWanhassa Raumassa tämä Crescent-pyörä odottaa sinua vuokraamossamme, valmiina viemään sinut aikamatkalle idyllisten katujen ja kauniiden puutalojen keskelle. Crescentin vanha sielu huokuu skandinaavista laatua ja kestävyyttä, ja tämä pyörä on suorastaan kuin ruotsalainen muinaisjäänne, joka on nähnyt tuhannet seikkailut ja silti se vain porskuttaa eteenpäin kuin uusi. Yksivaihteinen mekaniikka takaa sen, että ylimääräisistä huolista ei tarvitse murehtia - yksi vaihde, yksi suunta: suoraan kohti uusia seikkailuja! \n\nEikö olekin hauska ajatus, että tällä pyörällä voisi kuvitella ajaneensa itse Gösta Pettersson, joka valloitti maanteitä mestarin elkein? Nyt sinulla on mahdollisuus kokea sama mestarillinen ajotunne Wanhassa Raumassa. Vuokraa tämä upea Crescent-pyörä ja koe kaupungin kauneus aivan uudella tavalla. Täydellinen sekä turisteille että paikallisille, jotka haluavat tutustua kotikaupunkinsa helmiin nostalgisella ja tyylikkäällä tavalla.')" class="fi">
+                <img src="Polkupyorat/Crescent.jpg" alt="Crescent" onclick="openModal('Crescent', 'Crescent, an old yet valuable Swedish classic, a black single-speed Crescent bicycle. This is not just any bike, but a true masterpiece, with världsmästarcykeln - world champion bicycle - proudly inscribed on its frame! And that´s not all, the frame and fork come with a ten-year warranty, so you can be sure this ride will withstand the toughest challenges. \n\nIn Old Rauma, this Crescent bike awaits you at our rental shop, ready to take you on a journey through the picturesque streets and beautiful wooden houses. The old soul of Crescent exudes Scandinavian quality and durability, and this bike is like a Swedish relic that has seen thousands of adventures and still rides like new. The single-speed mechanism ensures you won´t have to worry about extra maintenance - one gear, one direction: straight towards new adventures! \n\nIsn´t it fun to imagine that this bike could have been ridden by Gösta Pettersson himself, conquering roads with a champion´s flair? Now you have the chance to experience the same masterful ride in Old Rauma. Rent this magnificent Crescent bike and explore the city´s beauty in a whole new way. Perfect for both tourists and locals who want to discover the gems of their hometown in a nostalgic and stylish manner.')" class="en" style="display: none;">
             </div>
             <div class="bike-item">
                 <p>Nopsa</p>
-                <img src="Polkupyorat/Nopsa.jpg" alt="Nopsa" onclick="openModal('Nopsa', 'Polkupyorat/Nopsa.jpg', 'Nopsa - vapauden ja vauhdin yhdistelmä. Kolmella vaihteella varustettuna Nopsa tarjoaa sinulle mahdollisuuden tutustua Rauman kauniisiin kohteisiin ja maisemiin rauhassa, mutta tehokkaasti.\n\nNopsa valmistettu Suomessa vai olikohan vain suunniteltu. No kumminkin tämä pyörä on luotu liikkumaan vaivattomasti ja tyylikkäästi, juuri kuten sinäkin.\n\nVuokraa ja koe, miten Nopsa voi tehdä pyöräilystäsi ainutlaatuisen elämyksen.')" class="fi">
-                <img src="Polkupyorat/Nopsa.jpg" alt="Nopsa" onclick="openModal('Nopsa', 'Polkupyorat/Nopsa.jpg', 'Nopsa – a blend of freedom and speed. Equipped with three gears, Nopsa offers you the chance to explore the beautiful sights and landscapes of Rauma at your own pace, but efficiently.\n\nNopsa is manufactured in Finland, or was it just designed here? Either way, this bike is made to move effortlessly and stylishly, just like you.\n\nRent one and discover how Nopsa can make your cycling experience truly unique.')" class="en" style="display: none;">
+                <img src="Polkupyorat/Nopsa.jpg" alt="Nopsa" onclick="openModal('Nopsa', 'Nopsa - vapauden ja vauhdin yhdistelmä. Kolmella vaihteella varustettuna Nopsa tarjoaa sinulle mahdollisuuden tutustua Rauman kauniisiin kohteisiin ja maisemiin rauhassa, mutta tehokkaasti.\n\nNopsa valmistettu Suomessa vai olikohan vain suunniteltu. No kumminkin tämä pyörä on luotu liikkumaan vaivattomasti ja tyylikkäästi, juuri kuten sinäkin.\n\nVuokraa ja koe, miten Nopsa voi tehdä pyöräilystäsi ainutlaatuisen elämyksen.')" class="fi">
+                <img src="Polkupyorat/Nopsa.jpg" alt="Nopsa" onclick="openModal('Nopsa', 'Nopsa – a blend of freedom and speed. Equipped with three gears, Nopsa offers you the chance to explore the beautiful sights and landscapes of Rauma at your own pace, but efficiently.\n\nNopsa is manufactured in Finland, or was it just designed here? Either way, this bike is made to move effortlessly and stylishly, just like you.\n\nRent one and discover how Nopsa can make your cycling experience truly unique.')" class="en" style="display: none;">
             </div>
             <div class="bike-item">
                 <p>Helkama</p>
-                <img src="Polkupyorat/Helkama.jpg" alt="Helkama" onclick="openModal('Helkama', 'Polkupyorat/Helkama.jpg', 'Helkama - Made in Finland - No siinä on suomalainen tuote. Se ei edes esittelyitä kaipaa. 3 vaihdetta ja kori. Kaikki mitä voit täydelliseen kesäretkeen tarvita.\n\nVuokraa ja koe suomalaisuuden tunne Rauman kauneissa maisemissa.')" class="fi">
-                <img src="Polkupyorat/Helkama.jpg" alt="Helkama" onclick="openModal('Helkama', 'Polkupyorat/Helkama.jpg', 'Helkama - Made in Finland - Now there is a Finnish product. It doesn`t even need an introduction. 3 gears and a basket. Everything you need for a perfect summer trip.\n\nRent one and feel the Finnish spirit in the beautiful landscapes of Rauma.')" class="en" style="display: none;">
+                <img src="Polkupyorat/Helkama.jpg" alt="Helkama" onclick="openModal('Helkama', 'Helkama - Made in Finland - No siinä on suomalainen tuote. Se ei edes esittelyitä kaipaa. 3 vaihdetta ja kori. Kaikki mitä voit täydelliseen kesäretkeen tarvita.\n\nVuokraa ja koe suomalaisuuden tunne Rauman kauneissa maisemissa.')" class="fi">
+                <img src="Polkupyorat/Helkama.jpg" alt="Helkama" onclick="openModal('Helkama', 'Helkama - Made in Finland - Now there is a Finnish product. It doesn`t even need an introduction. 3 gears and a basket. Everything you need for a perfect summer trip.\n\nRent one and feel the Finnish spirit in the beautiful landscapes of Rauma.')" class="en" style="display: none;">
             </div>
             <div class="bike-item">
                 <p>Ibrido</p>
-                <img src="Polkupyorat/Ibrido.jpg" alt="Ibrido" onclick="openModal('Ibrido', 'Polkupyorat/Ibrido.jpg', 'Uudemman sukupolven alumiinirungolla varustettu sähköpyörä tosin ilman akkua. Tämä pyörä on erityisen mukava polkea sen hyvin istuvan satulan ja ergonomisen istuma-asennon ansiosta. Tässä vekottimessa on kolme vaihdetta, joilla pääsee minuuteissa Rauman toiselle puolelle.\n\nVuokraa ja koe sähköpyörä ilman sähköä.')" class="fi">
-                <img src="Polkupyorat/Ibrido.jpg" alt="Ibrido" onclick="openModal('Ibrido', 'Polkupyorat/Ibrido.jpg', 'A new generation electric bike with an aluminum frame, but without a battery. This bike is particularly comfortable to pedal thanks to its well-fitting saddle and ergonomic sitting position. It has three gears, allowing you to reach the other side of Rauma in minutes.\n\nRent one and experience an electric bike without electricity.')" class="en" style="display: none;">
+                <img src="Polkupyorat/Ibrido.jpg" alt="Ibrido" onclick="openModal('Ibrido', 'Uudemman sukupolven alumiinirungolla varustettu sähköpyörä tosin ilman akkua. Tämä pyörä on erityisen mukava polkea sen hyvin istuvan satulan ja ergonomisen istuma-asennon ansiosta. Tässä vekottimessa on kolme vaihdetta, joilla pääsee minuuteissa Rauman toiselle puolelle.\n\nVuokraa ja koe sähköpyörä ilman sähköä.')" class="fi">
+                <img src="Polkupyorat/Ibrido.jpg" alt="Ibrido" onclick="openModal('Ibrido', 'A new generation electric bike with an aluminum frame, but without a battery. This bike is particularly comfortable to pedal thanks to its well-fitting saddle and ergonomic sitting position. It has three gears, allowing you to reach the other side of Rauma in minutes.\n\nRent one and experience an electric bike without electricity.')" class="en" style="display: none;">
             </div>
             <div class="bike-item">
                 <p>Madison</p>
-                <img src="Polkupyorat/Madison.jpg" alt="Madison" onclick="openModal('Madison', 'Polkupyorat/Madison.jpg', 'Voi, tämä todellinen naistenpyörien mersu, mutta vain ilman ruostetta. Uuden sukupolven pyörä on erittäin mukava polkea ja saat koriin kaiken travitsemasi mukaan. 3 vaihdetta antaa sinulle mahdollisuuden polkea monenlaisissa nopeuksissa.\n\nVuokraa ja koe naistenpyörien mersu.')" class="fi">
-                <img src="Polkupyorat/Madison.jpg" alt="Madison" onclick="openModal('Madison', 'Polkupyorat/Madison.jpg', 'Oh, this is the true Mercedes of women´s bikes, but without the rust. This new generation bike is extremely comfortable to pedal, and you can fit everything you need in the basket. 3 gears allow you to pedal at various speeds.\n\nRent one and experience the Mercedes of women´s bikes.')" class="en" style="display: none;">
+                <img src="Polkupyorat/Madison.jpg" alt="Madison" onclick="openModal('Madison', 'Voi, tämä todellinen naistenpyörien mersu, mutta vain ilman ruostetta. Uuden sukupolven pyörä on erittäin mukava polkea ja saat koriin kaiken travitsemasi mukaan. 3 vaihdetta antaa sinulle mahdollisuuden polkea monenlaisissa nopeuksissa.\n\nVuokraa ja koe naistenpyörien mersu.')" class="fi">
+                <img src="Polkupyorat/Madison.jpg" alt="Madison" onclick="openModal('Madison', 'Oh, this is the true Mercedes of women´s bikes, but without the rust. This new generation bike is extremely comfortable to pedal, and you can fit everything you need in the basket. 3 gears allow you to pedal at various speeds.\n\nRent one and experience the Mercedes of women´s bikes.')" class="en" style="display: none;">
             </div>
             <div class="bike-item">
                 <p>Carraro</p>
-                <img src="Polkupyorat/Riveri.jpg" alt="Riveri" onclick="openModal('Carraro', 'Polkupyorat/Riveri.jpg', 'Carraroa voisi kuvailla Madisonin pikkusiskoksi. Pyörä on suhteellisen samanlainen; siinä on 3 vaihdetta sekä kori. Väriltään pyörä on myös punainen ja erittäin luotettava kelpopeli.\n\nVuokraa ja koe erittäin luotettava kelpopeli Rauman maisemissa.')" class="fi">
-                <img src="Polkupyorat/Riveri.jpg" alt="Riveri" onclick="openModal('Carraro', 'Polkupyorat/Riveri.jpg', 'Carraro could be described as Madison´s little sister. The bike is relatively similar; it has 3 gears and a basket. The bike is also red in color and a very reliable ride.\n\nRent one and experience a very reliable bike in the landscapes of Rauma.')" class="en" style="display: none;">
+                <img src="Polkupyorat/Carraro.jpg" alt="Carraro" onclick="openModal('Carraro', 'Carraroa voisi kuvailla Madisonin pikkusiskoksi. Pyörä on suhteellisen samanlainen; siinä on 3 vaihdetta sekä kori. Väriltään pyörä on myös punainen ja erittäin luotettava kelpopeli.\n\nVuokraa ja koe erittäin luotettava kelpopeli Rauman maisemissa.')" class="fi">
+                <img src="Polkupyorat/Carraro.jpg" alt="Carraro" onclick="openModal('Carraro', 'Carraro could be described as Madison´s little sister. The bike is relatively similar; it has 3 gears and a basket. The bike is also red in color and a very reliable ride.\n\nRent one and experience a very reliable bike in the landscapes of Rauma.')" class="en" style="display: none;">
             </div>
             <div class="bike-item">
                 <p>Nakamura</p>
-                <img src="Polkupyorat/Hybrid.jpg" alt="Hybrid" onclick="openModal('Nakamura', 'Polkupyorat/Hybrid.jpg', 'Nimensä mukaisesti Nakamuralla takalokasuojasi on kuralla. Tällä 21 vaihteisella naisten hybridpyörällä pääset lähes F1 autojen nopeuksiin, tosin pyörässä ei toimi etuvaihtajan vaihteet 1 ja 3, joten tällä pyörällä saat tyytyä vain ralliauton vauhtiin.\n\nVuokraa ja koe ralliauton nopeus.')" class="fi">
-                <img src="Polkupyorat/Hybrid.jpg" alt="Hybrid" onclick="openModal('Nakamura', 'Polkupyorat/Hybrid.jpg', 'As its name suggests, Nakamura will have your rear fender muddy. With this 21-gear women´s hybrid bike, you can reach almost F1 car speeds, although the front derailleur gears 1 and 3 don´t work, so with this bike, you´ll have to settle for rally car speed.\n\nRent one and experience rally car speed.')" class="en" style="display: none;">
+                <img src="Polkupyorat/Nakamura.jpg" alt="Nakamura" onclick="openModal('Nakamura', 'Nimensä mukaisesti Nakamuralla takalokasuojasi on kuralla. Tällä 21 vaihteisella naisten hybridpyörällä pääset lähes F1 autojen nopeuksiin, tosin pyörässä ei toimi etuvaihtajan vaihteet 1 ja 3, joten tällä pyörällä saat tyytyä vain ralliauton vauhtiin.\n\nVuokraa ja koe ralliauton nopeus.')" class="fi">
+                <img src="Polkupyorat/Nakamura.jpg" alt="Nakamura" onclick="openModal('Nakamura', 'As its name suggests, Nakamura will have your rear fender muddy. With this 21-gear women´s hybrid bike, you can reach almost F1 car speeds, although the front derailleur gears 1 and 3 don´t work, so with this bike, you´ll have to settle for rally car speed.\n\nRent one and experience rally car speed.')" class="en" style="display: none;">
             </div>
         </div>
         <br>
@@ -235,13 +252,13 @@ defer
             <span class="en" style="display:none;">You can rent a bike <a href="https://twice.shop/wanhanraumanpyrvuokraus">online</a>, via <a href="mailto:wrpyoravuokraamo@gmail.com">email</a>, or by <a href="tel:+358449746457">calling</a></span>
         </h4>
         <br>
-        <p class="fi">Mikäli haluat vuokrata pyörän pidemmäksi aikaa, ota meihin yhteyttä <a href="mailto:wrpyoravuokraamo@gmail.com">sähköpostin</a> kautta</p>
-        <p class="en" style="display: none;">If you are interested in renting a bike for a longer duration, contact us via <a href="mailto:wrpyoravuokraamo@gmail.com">gmail</a></p>
+        <h2 class="fi"><a href="HTML/Guide.html">Ohjeet vuokraamiseen</a></h2>
+        <h2 class="en" style="display:none;"><a href="HTML/Guide.html">Guide for renting</a></h2>
         <br>
         <p class="fi"><a href="HTML/Terms.html">Vuokrausehdot</a></p>
     <p class="en" style="display:none;"><a href="HTML/Terms.html">Rental terms</a></p>
-    <p class="fi"><a href="HTML/Guide.html">Ohjeet vuokraamiseen</a></p>
-    <p class="en" style="display:none;"><a href="HTML/Guide.html">Guide for renting</a></p>
+    <p class="fi"><a href="HTML/Privacy.html">Tietosuojaseloste</a></p>
+    <p class="en" style="display:none;"><a href="HTML/Privacy.html">Privacy policy</a></p>
     <br>
         <twice-store
 	shop="wanhanraumanpyrvuokraus"/>
