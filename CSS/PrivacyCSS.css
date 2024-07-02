@@ -6,6 +6,61 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+body {
+    background: #000;
+    background-size: cover;
+    padding: 20px;
+    position: relative; /* Lisää sivun sijainti */
+    cursor: none;
+}
+
+#cursor {
+    z-index: 1000;
+    position: fixed;
+    pointer-events: none;
+    background-image: url('../KUVAT + MUUT/Cursor.png');
+    background-size: cover;
+    width: 16.25px;
+    height: 25px;
+    transition: background-image 0.5s ease; /* Lisää smooth transition */
+}
+
+#pointer {
+    z-index: 1000;
+    position: fixed;
+    pointer-events: none;
+    background-image: url('../KUVAT + MUUT/Pointer.png');
+    background-size: cover;
+    width: 20px;
+    height: 25px;
+    transition: background-image 0.5s ease; /* Lisää smooth transition */
+    display: none; /* Piilotetaan oletuksena */
+}
+
+.cursor-trail {
+    position: absolute;
+    background-color: #ff0000;
+    box-shadow: 0 0 10px #ffffff;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    z-index: 900; /* Asetetaan hieman alemmaksi kuin pääkurssi */
+    pointer-events: none;
+    opacity: 0.7; /* Alhainen läpinäkyvyys */
+    animation: cursorTrail 0.5s forwards;
+}
+
+@keyframes cursorTrail {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(3); /* Lisää hieman koon muutosta */
+        opacity: 0;
+    }
+}
+
 .fade-out {
     animation: fadeOut 0.5s ease;
 }
@@ -106,7 +161,7 @@ nav {
 .hamburger {
     display: none;
     font-size: 2rem;
-    cursor: pointer;
+    cursor: none;
     z-index: 1000; /* varmista, että popup on muiden elementtien päällä */
 }
 
@@ -142,7 +197,7 @@ nav {
     padding: 10px 10px;
     color: #ffffff;
     border-radius: 1cm;
-    cursor: pointer;
+    cursor: none;
     width: 40px;
     height: 40px;
 }
@@ -176,21 +231,21 @@ nav a {
 .nav-items a:hover {
     color: #ff0000;
     scale: 1.2;
-    cursor: pointer;
+    cursor: none;
     transition: scale 0.3s ease, color 0.6s ease;
 }
 
 #contact-link {
     color: #ff0000;
     text-decoration: underline;
-    cursor: pointer;
+    cursor: none;
 }
 
 #contact-link:hover {
     color: #ff7373;
 }
 
-button {
+.nuoli {
     background-image: url(../KUVAT\ +\ MUUT/Arrowleft.png);
     display: flex;
     width: 50px;
@@ -200,7 +255,19 @@ button {
     border-radius: 1cm;
 }
 
-button:hover {
+button {
+    font-size: 20px;
+    border-radius: 1cm;
+    color: #000;
+    background: #ff0000;
+    cursor: none;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+    transition: transform 0.3s ease; /* Lisää tämä rivi */
+}
+
+
+.nuoli:hover {
+
     background-color: #ff0000;
 }
 
@@ -237,7 +304,7 @@ a {
 
 a:hover {
     color: #ffc6c6;
-    cursor: pointer;
+    cursor: none;
 }
 
 footer {
@@ -267,6 +334,7 @@ footer button {
     box-shadow: 0 0 10px rgb(255, 255, 255);
     color: #ffffff;
     margin: 10px;
+    padding: 0.2cm 1cm;
 }
 
 .Pin {
@@ -292,7 +360,28 @@ footer button {
 }
 
 
+@media screen and (max-width: 623px) {
+    .nav-logo {
+        display: none;
+    }
 
+    .nav-items {
+        padding: 0 0;
+        gap: 1;
+    }
+
+    button {
+        font-size: 20px;
+        padding: auto;
+    }
+
+    .footer-buttons {
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+        justify-content: center;
+    }
+}
 
 @media screen and (max-width: 1289px) {
 

@@ -375,6 +375,11 @@ footer button:hover {
         gap: 1;
     }
 
+    button {
+        font-size: 20px;
+        padding: auto;
+    }
+
     .nuoli {
         width: 10px;
     }
@@ -385,6 +390,13 @@ footer button:hover {
     
     #home li {
         font-size: 20px;
+    }
+
+    .footer-buttons {
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+        justify-content: center;
     }
 }
 
