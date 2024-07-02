@@ -141,6 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Modal-toiminnallisuus
     const bikeUrls = {
         'terässiipi': 'https://twice.shop/wanhanraumanpyrvuokraus/product/voCeBmWjfU8iu3wyRonv',
+        'crescent': 'https://twice.shop/wanhanraumanpyrvuokraus/product/qfpNQsnQEGr6rc2bZ0Aw',
         'nopsa': 'https://twice.shop/wanhanraumanpyrvuokraus/product/JCiNiKKAoZf2uZcjABfI',
         'helkama': 'https://twice.shop/wanhanraumanpyrvuokraus/product/Olp0IztcX7TJTXPGg77k',
         'madison': 'https://twice.shop/wanhanraumanpyrvuokraus/product/MVCFG2UdZqkmkaASCE6k',
@@ -159,41 +160,149 @@ document.addEventListener('DOMContentLoaded', function() {
         'ibrido': 'none.mp4'
     };
 
-    function openModal(name, image, description) {
-        document.getElementById('bikeName').innerText = name;
-        document.getElementById('bikeImage').src = image;
-        document.getElementById('bikeDescription').innerText = description;
+    // Lisää uusi array, jossa on kuvat
+const bikeImages = {
+    'terässiipi': [
+        'Polkupyorat/Terassiipi.jpg',
+        'Polkupyorat/Terassiipi2.jpg',
+        'Polkupyorat/Terassiipi3.jpg',
+        'Polkupyorat/Terassiipi4.jpg',
+        'Polkupyorat/Terassiipi5.jpg',
+        'Polkupyorat/Terassiipi6.jpg',
+        'Polkupyorat/Terassiipi7.jpg',
+        'Polkupyorat/CrescTeras.jpg',
+    ],
+    'crescent': [
+        'Polkupyorat/Crescent.jpg',
+        'Polkupyorat/Crescent2.jpg',
+        'Polkupyorat/Crescent3.jpg',
+        'Polkupyorat/CrescTeras.jpg',
+    ],
+    'nopsa': [
+        'Polkupyorat/Nopsa.jpg',
+    ],
+    'helkama': [
+        'Polkupyorat/Helkama.jpg',
+    ],
+    'ibrido': [
+        'Polkupyorat/Ibrido.jpg',
+    ],
+    'madison': [
+        'Polkupyorat/Madison.jpg',
+    ],
+    'carraro': [
+        'Polkupyorat/Carraro.jpg',
+    ],
+    'nakamura': [
+        'Polkupyorat/Nakamura.jpg',
+        'Polkupyorat/Nakamura2.jpg',
+    ],
+    // Lisää muut pyörät tarvittaessa
+};
 
-        const url = bikeUrls[name.toLowerCase()] || '';
-        const videoUrl = bikeVideoUrls[name.toLowerCase()] || '';
+// Lisää uusi muuttuja nykyiselle kuvan indeksille
+let currentSlideIndex = 0;
 
-        const bikeURL = document.getElementById('bikeURL');
-        bikeURL.href = url;
+function openModal(name, description) {
+    document.getElementById('bikeName').innerText = name;
+    // Aseta ensimmäinen kuva modaliin
+    document.getElementById('bikeImage').src = bikeImages[name.toLowerCase()][0];
+    document.getElementById('bikeDescription').innerText = description;
 
-        const bikeVideoSource = document.getElementById('bikeVideoSource');
-        bikeVideoSource.src = videoUrl;
+    // Tallenna nykyinen pyörä muuttujaan
+    currentBike = name.toLowerCase();
 
-        const bikeVideo = document.getElementById('bikeVideo');
-        bikeVideo.load(); // Load the new video URL
-        bikeVideo.pause(); // Pause the video
+    const url = bikeUrls[currentBike] || '';
+    const videoUrl = bikeVideoUrls[currentBike] || '';
 
-        const modal = document.getElementById('bikeModal');
-        modal.style.display = "block";
-        modal.classList.remove('modal-close');
-        modal.classList.add('modal-open');
+    const bikeURL = document.getElementById('bikeURL');
+    bikeURL.href = url;
+
+    const bikeVideoSource = document.getElementById('bikeVideoSource');
+    bikeVideoSource.src = videoUrl;
+
+    const bikeVideo = document.getElementById('bikeVideo');
+    bikeVideo.load(); // Lataa uusi video URL
+    bikeVideo.pause(); // Pysäytä video
+
+    // Näytä modal
+    const modal = document.getElementById('bikeModal');
+    modal.style.display = "block";
+    modal.classList.remove('modal-close');
+    modal.classList.add('modal-open');
+}
+
+
+function closeModal() {
+    const modal = document.getElementById('bikeModal');
+    const bikeVideo = document.getElementById('bikeVideo');
+    bikeVideo.pause(); // Pysäytä video suljettaessa modal
+
+    modal.classList.remove('modal-open');
+    modal.classList.add('modal-close');
+    setTimeout(() => {
+        modal.style.display = "none";
+    }, 500); // Sama kesto kuin modalClose-animaatiolla
+}
+
+// Sulje modal klikkaamalla ulkopuolella
+window.onclick = function(event) {
+    const modal = document.getElementById('bikeModal');
+    if (event.target == modal) {
+        closeModal();
+    }
+};
+
+let isAnimating = false;
+
+function plusSlides(n) {
+    if (isAnimating) return; // Estetään toistuvat klikkaukset animaation aikana
+    currentSlideIndex += n;
+    showSlides(currentSlideIndex, n);
+}
+
+function showSlides(index, direction) {
+    const images = bikeImages[currentBike];
+    if (!images) return;
+
+    // Määritellään indeksi modulo-operaatiolla, jotta kuvat kiertyvät ympäri
+    currentSlideIndex = (index + images.length) % images.length;
+
+    // Haetaan kuvaelementti
+    const bikeImage = document.getElementById('bikeImage');
+
+    // Asetetaan kuvalle luokka animaation suunnan mukaan
+    if (direction > 0) {
+        bikeImage.classList.add('hide-slide-right');
+    } else {
+        bikeImage.classList.add('show-slide-left');
     }
 
-    function closeModal() {
-        const modal = document.getElementById('bikeModal');
-        const bikeVideo = document.getElementById('bikeVideo');
-        bikeVideo.pause(); // Pause the video when closing the modal
+    // Odota hetki, ennen kuin vaihdetaan kuva
+    isAnimating = true;
+    setTimeout(() => {
+        // Aseta uusi kuva lataamalla se ja näytä se
+        bikeImage.src = images[currentSlideIndex];
 
-        modal.classList.remove('modal-open');
-        modal.classList.add('modal-close');
+        // Poista hide-slide-right ja show-slide-left -luokat, lisää active-luokka
         setTimeout(() => {
-            modal.style.display = "none";
-        }, 500); // Sama kesto kuin modalClose-animaatiolla
+            bikeImage.classList.remove('hide-slide-right', 'show-slide-left');
+
+            // Aseta lyhyt aikaviive, jotta transition resetoituu
+            setTimeout(() => {
+                isAnimating = false;
+            }, 100);
+        }, 200); // Transition ajan pituus
+    }, 100); // Odota hetki ennen kuin vaihdetaan kuvaa
+}
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'ArrowLeft') {
+        plusSlides(-1); // Previous slide
+    } else if (event.key === 'ArrowRight') {
+        plusSlides(1); // Next slide
     }
+});
 
     // Sulje modal klikkaamalla ulkopuolella
     window.onclick = function(event) {
