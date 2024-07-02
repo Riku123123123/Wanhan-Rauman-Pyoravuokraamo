@@ -680,6 +680,14 @@ section {
     font-size: 25px;
 }
 
+.ohjenappi button {
+font-size: 30px;
+}
+
+.ohjenapit button {
+    font-size: 20px;
+}
+
 a {
     color: #ff0000;
     text-decoration: none;
@@ -890,6 +898,14 @@ footer button {
     #rent iframe {
         max-width: 100%;
         max-height: 400px;
+    }
+
+    .ohjenappi button {
+        font-size: 17px;
+    }
+
+    .ohjenapit button {
+        font-size: 15px;
     }
 
     footer {
