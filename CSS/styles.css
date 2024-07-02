@@ -298,7 +298,7 @@ nav a {
 }
 
 .hero {
-    background-image: url('../KUVAT + MUUT/Taustakuva 2.jpg');
+    background-image: url('../KUVAT + MUUT/Tausta1.jpg');
     background-size: cover;
     background-position: center;
     min-height: 80vh; /* Varmistaa, että hero-osa vie vähintään yhden näkymän korkuisen tilan */
@@ -448,7 +448,7 @@ section {
 
 .bike-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Määritä pyöräitemien leveys tässä */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Määritä pyöräitemien leveys tässä */
     gap: 20px; /* Voit säätää tilaa pyöräitemien välillä */
     justify-content: space-between; /* Aseta tila itemien välillä */
 }
@@ -457,9 +457,10 @@ section {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    color: #ffffff;
+    color: #000000;
     border-radius: 1cm;
     text-align: center; /* Lisää tähän */
+    transition: scale 0.4s ease, box-shadow 0.6s ease;
 }
 
 .bike-gallery img {
@@ -539,10 +540,54 @@ section {
     font-size: xx-large ;
   }
 
-  .modal-content img {
-    width: 60%; /* Kuva skaalautuu moduulin sisään */
+  .modal-gallery {
+    position: relative;
+    display: flex;
+    min-width: 200% auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.modal-controls button {
+    background-color: rgba(255, 0, 0, 0.3);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 1cm;
+    transition: background-color 0.3s;
+}
+
+.modal-controls button:hover {
+    background-color: #910000;
+}
+
+#bikeImage {
+    width: 100%;
     border-radius: 1cm;
     box-shadow: 0 0 10px rgb(0, 0, 0);
+    transition: transform 0.2s ease, opacity 0.1s ease;
+    transform: translateX(0%);
+}
+
+#bikeImage.hide-slide-right {
+    transform: translateX(50%);
+    opacity: 0;
+}
+
+#bikeImage.show-slide-left {
+    transform: translateX(-50%);
+    opacity: 0;
 }
 
 .modal-ots {
@@ -573,6 +618,22 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.modal-content .prev,
+.modal-content .next {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    border-radius: 1cm;
+    background-color: transparent;
+}
+
+.modal-content .prev {
+    left: 10px;
+}
+
+.modal-content .next {
+    right: 10px;
 }
 
 .modal-close {
@@ -809,7 +870,7 @@ footer button {
         flex-direction: row;
         width: 100%;
     }
-
+    
     .close {
         font-size: 40px;
     }
@@ -873,7 +934,7 @@ footer button {
     }
 
     .hero {
-        background-image: url('../KUVAT + MUUT/Taustakuva\ 3.jpg');
+        background-image: url('../KUVAT + MUUT/Tausta2.jpg');
         background-size: cover;
         background-position: center;
     }
