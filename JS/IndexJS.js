@@ -316,8 +316,8 @@ document.addEventListener('keydown', function(event) {
     function showNotification() {
         const notificationBox = document.getElementById('notification-box');
         const nottausta = document.getElementById('nottausta');
-        notificationBox.style.display = 'block'; // Muuta 'none' -> 'block' halutessasi näyttää ilmoituslaatikon
-        nottausta.style.display = 'flex'; // Muuta 'none' -> 'flex' halutessasi näyttää ilmoituslaatikon
+        notificationBox.style.display = 'none'; // Muuta 'none' -> 'block' halutessasi näyttää ilmoituslaatikon
+        nottausta.style.display = 'none'; // Muuta 'none' -> 'flex' halutessasi näyttää ilmoituslaatikon
     }
 
     function closeNotification() {
