@@ -368,10 +368,10 @@ button:hover {
     right: 10%;
     max-width: 100%; /* Säädä maksimileveys tarpeidesi mukaan */
     padding: 20px;
-    background-color: #91000027;
+    background-color: #9100006e;
     color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Muuta varjovaikutus tarpeidesi mukaan */
+    box-shadow: 0 0 10px rgb(255, 171, 171); /* Muuta varjovaikutus tarpeidesi mukaan */
     overflow: auto;
 }
 
