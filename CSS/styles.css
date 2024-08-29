@@ -386,6 +386,13 @@ button:hover {
     color: white;
 }
 
+.column-right button {
+    color: white;
+}
+.column-right button:hover {
+    color: rgb(255, 169, 169);
+}
+
 .column-right a:hover {
     color: rgb(255, 169, 169);
 }
